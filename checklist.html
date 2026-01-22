@@ -233,7 +233,8 @@
             border-bottom-color: var(--text-primary);
         }
 
-        .level-item:hover .level-tooltip {
+        .level-item:hover .level-tooltip,
+        .level-item.active .level-tooltip {
             opacity: 1;
             visibility: visible;
         }
@@ -339,7 +340,8 @@
             border-bottom-color: var(--text-primary);
         }
 
-        .badge-item:hover .badge-tooltip {
+        .badge-item:hover .badge-tooltip,
+        .badge-item.active .badge-tooltip {
             opacity: 1;
             visibility: visible;
         }
@@ -1316,6 +1318,43 @@
             renderBadges();
             updateStats();
             setupViewToggle();
+            setupTooltips();
+        }
+
+        // 移动端 tooltip 点击控制
+        function setupTooltips() {
+            // 点击页面其他地方关闭所有 tooltip
+            document.addEventListener('click', function(e) {
+                // 如果点击的不是 badge-item 或 level-item，关闭所有 tooltip
+                if (!e.target.closest('.badge-item') && !e.target.closest('.level-item')) {
+                    document.querySelectorAll('.badge-item.active, .level-item.active').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                }
+            });
+
+            // 点击 level-item 切换 tooltip
+            document.querySelector('.level-item')?.addEventListener('click', function(e) {
+                e.stopPropagation();
+                // 关闭其他 tooltip
+                document.querySelectorAll('.badge-item.active').forEach(el => el.classList.remove('active'));
+                // 切换当前
+                this.classList.toggle('active');
+            });
+
+            // 点击 badge-item 切换 tooltip（使用事件委托，因为 badges 是动态渲染的）
+            document.getElementById('badgesGrid')?.addEventListener('click', function(e) {
+                const badgeItem = e.target.closest('.badge-item');
+                if (badgeItem) {
+                    e.stopPropagation();
+                    // 关闭其他 tooltip
+                    document.querySelectorAll('.badge-item.active, .level-item.active').forEach(el => {
+                        if (el !== badgeItem) el.classList.remove('active');
+                    });
+                    // 切换当前
+                    badgeItem.classList.toggle('active');
+                }
+            });
         }
 
         function loadFromStorage() {

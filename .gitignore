@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# 大型PDF教材文件（已上传到阿里云OSS）
+数学/学习资料/IGCSE 0580.pdf
+综合科学-物理/学习资料/0653 IGCSE Combined Science.pdf
+地理/学习资料/03-IG Geography 2025.pdf
+综合科学-化学/学习资料/化学chapters1-2.pdf
+综合科学-化学/学习资料/化学练习册ch1-2.pdf
+综合科学-生物/学习资料/文件2-生物学习内容.pdf
+经济/学习资料/Susan IG.pdf
+
+# 测试文件
+test.html

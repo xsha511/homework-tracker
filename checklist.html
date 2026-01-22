@@ -313,7 +313,8 @@
             position: relative;
         }
 
-        .badge-item:hover { transform: scale(1.15); }
+        .badge-item:hover { transform: scale(1.15); z-index: 10; }
+        .badge-item.active { z-index: 100; }
         .badge-item.locked { background: #e8e5e0; }
         .badge-item.locked::before {
             content: '';
@@ -961,7 +962,7 @@
 
         @media (max-width: 600px) {
             .badges-grid {
-                grid-template-columns: repeat(4, 40px);
+                grid-template-columns: repeat(6, 40px);
             }
 
             .badge-item {

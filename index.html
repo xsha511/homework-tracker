@@ -149,6 +149,9 @@
             border-bottom: 1px solid var(--border-light);
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
+            position: sticky;
+            top: 76px; /* header height */
+            z-index: 99;
         }
 
         .nav-bar::-webkit-scrollbar {
@@ -310,7 +313,7 @@
 
         .section {
             margin-bottom: 60px;
-            scroll-margin-top: 120px;
+            scroll-margin-top: 140px;
         }
 
         .section-header {
@@ -911,7 +914,7 @@
             }
 
             .section {
-                scroll-margin-top: 80px;
+                scroll-margin-top: 140px;
             }
 
             .card {

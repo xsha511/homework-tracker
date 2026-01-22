@@ -300,6 +300,24 @@
             gap: 10px;
         }
 
+        .reset-btn {
+            margin-top: 20px;
+            padding: 8px 16px;
+            background: transparent;
+            border: 1px solid var(--border-medium);
+            border-radius: var(--radius-sm);
+            color: var(--text-muted);
+            font-family: inherit;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .reset-btn:hover {
+            border-color: var(--accent-coral);
+            color: var(--accent-coral);
+        }
+
         .badge-item {
             width: 44px;
             height: 44px;
@@ -1050,6 +1068,7 @@
                 <div class="badges-title">成就徽章</div>
                 <div class="badges-grid" id="badgesGrid"></div>
             </div>
+            <button class="reset-btn" onclick="resetAllData()">重置所有进度</button>
         </div>
     </section>
 
@@ -1436,6 +1455,21 @@
         function saveToStorage() {
             localStorage.setItem('hd_homework_progress', JSON.stringify([...completedTasks]));
             localStorage.setItem('hd_homework_stats', JSON.stringify(userStats));
+        }
+
+        function resetAllData() {
+            if (!confirm('确定要重置所有进度吗？此操作无法撤销。')) return;
+
+            localStorage.removeItem('hd_homework_progress');
+            localStorage.removeItem('hd_homework_stats');
+
+            completedTasks = new Set();
+            userStats = { level: 1, streak_days: 0, last_active: null, badges: {}, total_completed: 0 };
+
+            renderDayView();
+            renderSubjectView();
+            renderBadges();
+            updateProgress();
         }
 
         // ========== 日视图 ==========

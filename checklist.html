@@ -235,6 +235,68 @@
         .badge-item.silver { background: linear-gradient(135deg, #e8e8e8 0%, #b8b8b8 100%); }
         .badge-item.gold { background: linear-gradient(135deg, #ffd700 0%, #daa520 100%); box-shadow: 0 0 16px rgba(255, 215, 0, 0.4); }
 
+        /* 勋章 Tooltip */
+        .badge-tooltip {
+            position: absolute;
+            bottom: calc(100% + 12px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--text-primary);
+            color: white;
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            z-index: 100;
+            text-align: center;
+            min-width: 160px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .badge-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 8px solid transparent;
+            border-top-color: var(--text-primary);
+        }
+
+        .badge-item:hover .badge-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .badge-tooltip-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        .badge-tooltip-level {
+            color: var(--accent-gold);
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        .badge-tooltip-desc {
+            color: rgba(255,255,255,0.8);
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .badge-tooltip-progress {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 11px;
+            color: var(--accent-sage);
+        }
+
         /* Main Content */
         .main-content {
             max-width: 1200px;
@@ -1401,10 +1463,43 @@
         // ========== 徽章 ==========
         function renderBadges() {
             const container = document.getElementById('badgesGrid');
+            const levelNames = ['未解锁', '铜牌', '银牌', '金牌'];
+
             container.innerHTML = badges.map(badge => {
                 const level = userStats.badges[badge.id] || 0;
                 const levelClass = level === 0 ? 'locked' : ['', 'bronze', 'silver', 'gold'][level];
-                return `<div class="badge-item ${levelClass}" title="${badge.name}: ${level > 0 ? badge.desc[level-1] : '未解锁'}">${badge.icon}</div>`;
+
+                // 获取当前进度信息
+                let progressText = '';
+                if (level < 3) {
+                    const nextLevel = level + 1;
+                    progressText = `下一级: ${badge.desc[nextLevel - 1]}`;
+                } else {
+                    progressText = '🎉 已满级！';
+                }
+
+                // 获取所有等级的说明
+                const allLevels = badge.levels.map((req, i) => {
+                    const achieved = level > i;
+                    const current = level === i + 1;
+                    return `<div style="color: ${achieved ? '#81b29a' : current ? '#f2cc8f' : 'rgba(255,255,255,0.5)'}">
+                        ${achieved ? '✓' : current ? '★' : '○'} ${['铜', '银', '金'][i]}: ${badge.desc[i]}
+                    </div>`;
+                }).join('');
+
+                return `
+                    <div class="badge-item ${levelClass}">
+                        ${badge.icon}
+                        <div class="badge-tooltip">
+                            <div class="badge-tooltip-name">${badge.name}</div>
+                            <div class="badge-tooltip-level">${levelNames[level]}</div>
+                            <div class="badge-tooltip-desc" style="white-space: normal; text-align: left;">
+                                ${allLevels}
+                            </div>
+                            ${level < 3 ? `<div class="badge-tooltip-progress">${progressText}</div>` : ''}
+                        </div>
+                    </div>
+                `;
             }).join('');
         }
 

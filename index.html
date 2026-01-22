@@ -729,33 +729,7 @@
             transition: width 0.1s ease;
         }
 
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .nav { width: 240px; }
-            .main { margin-left: 240px; }
-            .progress-bar { left: 240px; }
-            .hero, .content, .footer {
-                padding-left: 50px;
-                padding-right: 50px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease;
-            }
-            .nav.open { transform: translateX(0); }
-            .main { margin-left: 0; }
-            .progress-bar { left: 0; }
-            .hero, .content, .footer {
-                padding-left: 25px;
-                padding-right: 25px;
-            }
-            .hero-meta { flex-wrap: wrap; gap: 25px; }
-            .mobile-toggle { display: flex; }
-        }
-
+        /* Mobile Toggle Button - 必须在媒体查询之前定义 */
         .mobile-toggle {
             display: none;
             position: fixed;
@@ -770,6 +744,40 @@
             z-index: 1002;
             cursor: pointer;
             border: none;
+            box-shadow: 0 4px 15px rgba(26, 42, 74, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .nav { width: 240px; }
+            .main { margin-left: 240px; }
+            .progress-bar { left: 240px; }
+            .hero, .content, .footer {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle { display: flex !important; }
+            .nav {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                width: 280px;
+            }
+            .nav.open { transform: translateX(0); }
+            .main { margin-left: 0; }
+            .progress-bar { left: 0; }
+            .hero, .content, .footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .hero { padding-top: 80px; }
+            .hero-meta { flex-wrap: wrap; gap: 25px; }
+            .section-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .book-grid { grid-template-columns: repeat(2, 1fr); }
+            .video-grid { grid-template-columns: 1fr; }
         }
 
         @media print {
@@ -1238,7 +1246,7 @@
                         </ul>
                     </div>
 
-                    <a href="数学/学习资料/IGCSE 0580.pdf" target="_blank" class="pdf-link">查看数学电子教材</a>
+                    <a href="#" onclick="alert('电子教材较大(245MB)，请从百度网盘下载：https://pan.baidu.com/s/1R2FUqGvWzkbTYeEkFDk9QQ 提取码: 382w'); return false;" class="pdf-link" style="background: linear-gradient(135deg, #868e96, #495057);">数学教材(网盘下载)</a>
                     <a href="数学/学习资料/0580 25-27年度考试大纲.pdf" target="_blank" class="pdf-link" style="margin-left: 10px;">查看考试大纲</a>
                 </div>
 

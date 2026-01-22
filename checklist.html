@@ -1365,6 +1365,7 @@
         // ========== 初始化 ==========
         function init() {
             loadFromStorage();
+            checkStreakReset(); // 检查连续打卡是否需要重置
             renderDayView();
             renderSubjectView();
             renderBadges();
@@ -1566,12 +1567,58 @@
                 completedTasks.delete(taskId);
             } else {
                 completedTasks.add(taskId);
+                updateStreak(); // 更新连续打卡
                 checkAchievements();
             }
             saveToStorage();
             updateStats();
             renderDayView();
             renderSubjectView();
+        }
+
+        // 连续打卡逻辑
+        function updateStreak() {
+            const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+            const lastActive = userStats.last_active;
+
+            if (!lastActive) {
+                // 第一次打卡
+                userStats.streak_days = 1;
+                userStats.last_active = today;
+            } else if (lastActive === today) {
+                // 今天已经打卡过，不做任何操作
+            } else {
+                // 计算日期差
+                const lastDate = new Date(lastActive);
+                const todayDate = new Date(today);
+                const diffDays = Math.floor((todayDate - lastDate) / (1000 * 60 * 60 * 24));
+
+                if (diffDays === 1) {
+                    // 连续打卡
+                    userStats.streak_days++;
+                    userStats.last_active = today;
+                } else {
+                    // 断签，重新开始
+                    userStats.streak_days = 1;
+                    userStats.last_active = today;
+                }
+            }
+        }
+
+        // 检查是否需要重置连续打卡（页面加载时调用）
+        function checkStreakReset() {
+            if (!userStats.last_active) return;
+
+            const today = new Date().toISOString().split('T')[0];
+            const lastDate = new Date(userStats.last_active);
+            const todayDate = new Date(today);
+            const diffDays = Math.floor((todayDate - lastDate) / (1000 * 60 * 60 * 24));
+
+            // 如果超过1天没打卡，重置连续天数
+            if (diffDays > 1) {
+                userStats.streak_days = 0;
+                saveToStorage();
+            }
         }
 
         function showDetail(taskId) {

@@ -1007,10 +1007,15 @@
                         <div class="level-tooltip-title">📈 升级体系</div>
                         <div class="level-list">
                             <div class="level-row"><span class="level-num">Lv.1</span> 学习新手 <span class="level-req">起始</span></div>
-                            <div class="level-row"><span class="level-num">Lv.2</span> 勤奋学徒 <span class="level-req">15项</span></div>
-                            <div class="level-row"><span class="level-num">Lv.3</span> 知识探索者 <span class="level-req">35项</span></div>
-                            <div class="level-row"><span class="level-num">Lv.4</span> 学霸候选人 <span class="level-req">60项</span></div>
-                            <div class="level-row"><span class="level-num">Lv.5</span> 赫贤之星 <span class="level-req">全部</span></div>
+                            <div class="level-row"><span class="level-num">Lv.2</span> 初露锋芒 <span class="level-req">9项</span></div>
+                            <div class="level-row"><span class="level-num">Lv.3</span> 勤奋学徒 <span class="level-req">18项</span></div>
+                            <div class="level-row"><span class="level-num">Lv.4</span> 稳步前进 <span class="level-req">27项</span></div>
+                            <div class="level-row"><span class="level-num">Lv.5</span> 知识猎手 <span class="level-req">36项</span></div>
+                            <div class="level-row"><span class="level-num">Lv.6</span> 学霸候选 <span class="level-req">45项</span></div>
+                            <div class="level-row"><span class="level-num">Lv.7</span> 精进达人 <span class="level-req">55项</span></div>
+                            <div class="level-row"><span class="level-num">Lv.8</span> 学业精英 <span class="level-req">65项</span></div>
+                            <div class="level-row"><span class="level-num">Lv.9</span> 卓越学者 <span class="level-req">78项</span></div>
+                            <div class="level-row"><span class="level-num">Lv.10</span> 赫贤之星 <span class="level-req">全部</span></div>
                         </div>
                     </div>
                 </div>
@@ -1299,20 +1304,38 @@
 
         // 徽章配置
         const badges = [
+            // 通用成就
             { id: 'early_bird', icon: '🌅', name: '早起鸟', levels: [1, 10, 30], desc: ['完成首个任务', '完成10个任务', '完成30个任务'] },
             { id: 'all_rounder', icon: '📚', name: '全科战士', levels: [3, 6, 8], desc: ['3科各完成1项', '6科各完成1项', '8科各完成1项'] },
             { id: 'fire', icon: '🔥', name: '坚持之火', levels: [3, 7, 14], desc: ['连续打卡3天', '连续打卡7天', '连续打卡14天'] },
             { id: 'master', icon: '🎯', name: '学科大师', levels: [1, 3, 6], desc: ['1科100%完成', '3科100%完成', '6科100%完成'] },
             { id: 'halfway', icon: '🌟', name: '征程过半', levels: [25, 50, 75], desc: ['进度25%', '进度50%', '进度75%'] },
-            { id: 'king', icon: '👑', name: '寒假王者', levels: [1, 2, 3], desc: ['必做全完成', '必做+50%选做', '100%全完成'] }
+            { id: 'king', icon: '👑', name: '寒假王者', levels: [1, 2, 3], desc: ['必做全完成', '必做+50%选做', '100%全完成'] },
+            // 学科专属
+            { id: 'english', icon: '🇬🇧', name: '英语达人', levels: [3, 6, 10], desc: ['英语完成3项', '英语完成6项', '英语全完成'] },
+            { id: 'chinese', icon: '📖', name: '中文才子', levels: [2, 4, 7], desc: ['中文完成2项', '中文完成4项', '中文全完成'] },
+            { id: 'math', icon: '🧮', name: '数学天才', levels: [2, 4, 6], desc: ['数学完成2项', '数学完成4项', '数学全完成'] },
+            { id: 'physics', icon: '⚛️', name: '物理新星', levels: [2, 4, 6], desc: ['物理完成2项', '物理完成4项', '物理全完成'] },
+            { id: 'chemistry', icon: '🧪', name: '化学大师', levels: [3, 6, 10], desc: ['化学完成3项', '化学完成6项', '化学全完成'] },
+            { id: 'biology', icon: '🧬', name: '生物专家', levels: [3, 6, 10], desc: ['生物完成3项', '生物完成6项', '生物全完成'] },
+            { id: 'economics', icon: '💹', name: '经济学家', levels: [3, 6, 10], desc: ['经济完成3项', '经济完成6项', '经济全完成'] },
+            { id: 'geography', icon: '🗺️', name: '地理探险家', levels: [3, 6, 10], desc: ['地理完成3项', '地理完成6项', '地理全完成'] },
+            // 特殊成就
+            { id: 'required', icon: '✅', name: '必做先锋', levels: [10, 30, 50], desc: ['必做完成10项', '必做完成30项', '必做全完成'] },
+            { id: 'weekend', icon: '📅', name: '周末战士', levels: [5, 10, 20], desc: ['周末完成5项', '周末完成10项', '周末完成20项'] }
         ];
 
         const levels = [
             { level: 1, name: '学习新手', required: 0 },
-            { level: 2, name: '勤奋学徒', required: 15 },
-            { level: 3, name: '知识探索者', required: 35 },
-            { level: 4, name: '学霸候选人', required: 60 },
-            { level: 5, name: '赫贤之星', required: tasks.length }
+            { level: 2, name: '初露锋芒', required: 9 },
+            { level: 3, name: '勤奋学徒', required: 18 },
+            { level: 4, name: '稳步前进', required: 27 },
+            { level: 5, name: '知识猎手', required: 36 },
+            { level: 6, name: '学霸候选', required: 45 },
+            { level: 7, name: '精进达人', required: 55 },
+            { level: 8, name: '学业精英', required: 65 },
+            { level: 9, name: '卓越学者', required: 78 },
+            { level: 10, name: '赫贤之星', required: tasks.length }
         ];
 
         // ========== 状态管理 ==========
@@ -1658,38 +1681,120 @@
             const subjectsWithCompletions = Object.values(subjectCompletions).filter(s => s.completed > 0).length;
             const subjectsWith100 = Object.values(subjectCompletions).filter(s => s.percent === 100).length;
 
+            // 计算周末完成的任务数
+            const weekendCompleted = tasks.filter(t => {
+                if (!completedTasks.has(t.id)) return false;
+                const date = new Date(t.date);
+                const day = date.getDay();
+                return day === 0 || day === 6; // 周日或周六
+            }).length;
+
             const oldBadges = { ...userStats.badges };
 
-            // 检查各徽章
+            // ===== 通用成就 =====
+            // 早起鸟 - 完成任务数量
             if (totalCompleted >= 30) userStats.badges.early_bird = 3;
             else if (totalCompleted >= 10) userStats.badges.early_bird = 2;
             else if (totalCompleted >= 1) userStats.badges.early_bird = 1;
 
+            // 全科战士 - 多科完成
             if (subjectsWithCompletions >= 8) userStats.badges.all_rounder = 3;
             else if (subjectsWithCompletions >= 6) userStats.badges.all_rounder = 2;
             else if (subjectsWithCompletions >= 3) userStats.badges.all_rounder = 1;
 
+            // 坚持之火 - 连续打卡
             if (userStats.streak_days >= 14) userStats.badges.fire = 3;
             else if (userStats.streak_days >= 7) userStats.badges.fire = 2;
             else if (userStats.streak_days >= 3) userStats.badges.fire = 1;
 
+            // 学科大师 - 单科100%
             if (subjectsWith100 >= 6) userStats.badges.master = 3;
             else if (subjectsWith100 >= 3) userStats.badges.master = 2;
             else if (subjectsWith100 >= 1) userStats.badges.master = 1;
 
+            // 征程过半 - 整体进度
             if (percent >= 75) userStats.badges.halfway = 3;
             else if (percent >= 50) userStats.badges.halfway = 2;
             else if (percent >= 25) userStats.badges.halfway = 1;
 
+            // 寒假王者 - 全部完成
             if (totalCompleted === tasks.length) userStats.badges.king = 3;
             else if (completedRequired === totalRequired && completedOptional >= tasks.filter(t => !t.required).length / 2) userStats.badges.king = 2;
             else if (completedRequired === totalRequired) userStats.badges.king = 1;
+
+            // ===== 学科专属 =====
+            // 英语达人
+            const englishTotal = subjectCompletions['英语']?.total || 0;
+            const englishDone = subjectCompletions['英语']?.completed || 0;
+            if (englishDone >= englishTotal && englishTotal > 0) userStats.badges.english = 3;
+            else if (englishDone >= 6) userStats.badges.english = 2;
+            else if (englishDone >= 3) userStats.badges.english = 1;
+
+            // 中文才子
+            const chineseTotal = subjectCompletions['中文']?.total || 0;
+            const chineseDone = subjectCompletions['中文']?.completed || 0;
+            if (chineseDone >= chineseTotal && chineseTotal > 0) userStats.badges.chinese = 3;
+            else if (chineseDone >= 4) userStats.badges.chinese = 2;
+            else if (chineseDone >= 2) userStats.badges.chinese = 1;
+
+            // 数学天才
+            const mathTotal = subjectCompletions['数学']?.total || 0;
+            const mathDone = subjectCompletions['数学']?.completed || 0;
+            if (mathDone >= mathTotal && mathTotal > 0) userStats.badges.math = 3;
+            else if (mathDone >= 4) userStats.badges.math = 2;
+            else if (mathDone >= 2) userStats.badges.math = 1;
+
+            // 物理新星
+            const physicsTotal = subjectCompletions['综合科学-物理']?.total || 0;
+            const physicsDone = subjectCompletions['综合科学-物理']?.completed || 0;
+            if (physicsDone >= physicsTotal && physicsTotal > 0) userStats.badges.physics = 3;
+            else if (physicsDone >= 4) userStats.badges.physics = 2;
+            else if (physicsDone >= 2) userStats.badges.physics = 1;
+
+            // 化学大师
+            const chemTotal = subjectCompletions['综合科学-化学']?.total || 0;
+            const chemDone = subjectCompletions['综合科学-化学']?.completed || 0;
+            if (chemDone >= chemTotal && chemTotal > 0) userStats.badges.chemistry = 3;
+            else if (chemDone >= 6) userStats.badges.chemistry = 2;
+            else if (chemDone >= 3) userStats.badges.chemistry = 1;
+
+            // 生物专家
+            const bioTotal = subjectCompletions['综合科学-生物']?.total || 0;
+            const bioDone = subjectCompletions['综合科学-生物']?.completed || 0;
+            if (bioDone >= bioTotal && bioTotal > 0) userStats.badges.biology = 3;
+            else if (bioDone >= 6) userStats.badges.biology = 2;
+            else if (bioDone >= 3) userStats.badges.biology = 1;
+
+            // 经济学家
+            const econTotal = subjectCompletions['经济']?.total || 0;
+            const econDone = subjectCompletions['经济']?.completed || 0;
+            if (econDone >= econTotal && econTotal > 0) userStats.badges.economics = 3;
+            else if (econDone >= 6) userStats.badges.economics = 2;
+            else if (econDone >= 3) userStats.badges.economics = 1;
+
+            // 地理探险家
+            const geoTotal = subjectCompletions['地理']?.total || 0;
+            const geoDone = subjectCompletions['地理']?.completed || 0;
+            if (geoDone >= geoTotal && geoTotal > 0) userStats.badges.geography = 3;
+            else if (geoDone >= 6) userStats.badges.geography = 2;
+            else if (geoDone >= 3) userStats.badges.geography = 1;
+
+            // ===== 特殊成就 =====
+            // 必做先锋
+            if (completedRequired >= totalRequired) userStats.badges.required = 3;
+            else if (completedRequired >= 30) userStats.badges.required = 2;
+            else if (completedRequired >= 10) userStats.badges.required = 1;
+
+            // 周末战士
+            if (weekendCompleted >= 20) userStats.badges.weekend = 3;
+            else if (weekendCompleted >= 10) userStats.badges.weekend = 2;
+            else if (weekendCompleted >= 5) userStats.badges.weekend = 1;
 
             // 显示新徽章
             for (const [badgeId, level] of Object.entries(userStats.badges)) {
                 if (!oldBadges[badgeId] || oldBadges[badgeId] < level) {
                     const badge = badges.find(b => b.id === badgeId);
-                    showAchievement(badge, level);
+                    if (badge) showAchievement(badge, level);
                     break;
                 }
             }

@@ -12,3 +12,6 @@
 
 # 测试文件
 test.html
+
+# 预处理PDF文件夹
+pdf-linearized/

@@ -3,187 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>寒假作业任务清单 · 上海赫贤学校</title>
+    <title>寒假学习计划 · 上海赫贤学校</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-gold: #d4a441;
-            --color-gold-light: #f5e6c4;
-            --color-gold-dark: #b8860b;
-            --color-navy: #1a2a4a;
-            --color-navy-light: #2d4263;
-            --color-cream: #faf8f3;
-            --color-cream-dark: #f0ebe0;
-            --color-text: #2c3e50;
-            --color-text-light: #5a6c7d;
-            --color-border: #e8e4db;
-            --color-success: #27ae60;
-            --color-bronze: #cd7f32;
-            --color-silver: #c0c0c0;
-            --color-gold-medal: #ffd700;
-            --font-display: 'Cormorant Garamond', 'Noto Serif SC', serif;
-            --font-body: 'Source Sans 3', -apple-system, 'PingFang SC', sans-serif;
-            --font-chinese: 'Noto Serif SC', 'Songti SC', serif;
+            --bg-warm: #faf6f0;
+            --bg-paper: #fffef9;
+            --bg-accent: #f5f0e6;
+            --text-primary: #2d2a26;
+            --text-secondary: #6b6560;
+            --text-muted: #9a9590;
+            --border-light: #e8e4dc;
+            --border-medium: #d4cfc5;
+            --accent-coral: #e07a5f;
+            --accent-sage: #81b29a;
+            --accent-gold: #f2cc8f;
+            --accent-navy: #3d405b;
+            --accent-blue: #5c7cad;
+            --accent-purple: #8e7cc3;
+            --accent-teal: #4a9b8c;
+            --accent-rose: #c97b84;
+            --shadow-soft: 0 2px 8px rgba(45, 42, 38, 0.06);
+            --shadow-medium: 0 4px 20px rgba(45, 42, 38, 0.08);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
 
         body {
-            font-family: var(--font-body);
-            background: var(--color-cream);
-            color: var(--color-text);
-            line-height: 1.6;
+            font-family: 'Noto Serif SC', 'Crimson Pro', Georgia, serif;
+            background: var(--bg-warm);
+            color: var(--text-primary);
+            line-height: 1.7;
             min-height: 100vh;
         }
 
         /* Header */
         .header {
-            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
-            padding: 20px 30px;
+            background: var(--bg-paper);
+            border-bottom: 1px solid var(--border-light);
+            padding: 24px 32px;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
-        .header-content {
-            max-width: 1400px;
+        .header-inner {
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            gap: 24px;
         }
 
-        .header-left {
+        .logo-section {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 16px;
         }
 
         .back-link {
-            color: var(--color-gold-light);
+            color: var(--text-secondary);
             text-decoration: none;
             font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover { color: var(--accent-coral); }
+
+        .site-title {
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .view-switcher {
             display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: color 0.3s;
-        }
-
-        .back-link:hover { color: var(--color-gold); }
-
-        .header-title {
-            font-family: var(--font-chinese);
-            color: white;
-            font-size: 22px;
-            font-weight: 600;
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .sync-status {
-            font-size: 12px;
-            color: var(--color-gold-light);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .sync-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--color-success);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .view-toggle {
-            display: flex;
-            background: rgba(255,255,255,0.1);
-            border-radius: 8px;
-            overflow: hidden;
+            gap: 4px;
+            background: var(--bg-accent);
+            padding: 4px;
+            border-radius: var(--radius-md);
         }
 
         .view-btn {
-            padding: 8px 16px;
+            padding: 10px 20px;
             border: none;
             background: transparent;
-            color: rgba(255,255,255,0.7);
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 14px;
             cursor: pointer;
-            font-size: 13px;
-            transition: all 0.3s;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s;
         }
 
         .view-btn.active {
-            background: var(--color-gold);
-            color: var(--color-navy);
-            font-weight: 600;
+            background: var(--bg-paper);
+            color: var(--text-primary);
+            box-shadow: var(--shadow-soft);
         }
 
-        /* Stats Bar */
-        .stats-bar {
-            background: white;
-            border-bottom: 1px solid var(--color-border);
-            padding: 25px 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        /* Progress Section */
+        .progress-section {
+            background: var(--bg-paper);
+            padding: 32px;
+            margin: 24px auto;
+            max-width: 1200px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
         }
 
-        .stats-content {
-            max-width: 1400px;
-            margin: 0 auto;
+        .progress-grid {
             display: grid;
-            grid-template-columns: 200px 1fr 280px;
-            gap: 40px;
+            grid-template-columns: 180px 1fr auto;
+            gap: 48px;
             align-items: center;
         }
 
-        /* Progress Ring */
-        .progress-ring-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .progress-ring {
+        .progress-circle {
             position: relative;
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
         }
 
-        .progress-ring svg {
+        .progress-circle svg {
             transform: rotate(-90deg);
         }
 
-        .progress-ring-bg {
+        .progress-circle-bg {
             fill: none;
-            stroke: var(--color-cream-dark);
-            stroke-width: 10;
+            stroke: var(--bg-accent);
+            stroke-width: 12;
         }
 
-        .progress-ring-fill {
+        .progress-circle-fill {
             fill: none;
-            stroke: var(--color-gold);
-            stroke-width: 10;
+            stroke: var(--accent-sage);
+            stroke-width: 12;
             stroke-linecap: round;
-            transition: stroke-dashoffset 0.5s ease;
+            transition: stroke-dashoffset 0.6s ease;
         }
 
-        .progress-ring-text {
+        .progress-text {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -192,247 +158,249 @@
         }
 
         .progress-percent {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--color-navy);
-            font-family: var(--font-display);
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-family: 'Crimson Pro', serif;
         }
 
         .progress-label {
-            font-size: 11px;
-            color: var(--color-text-light);
-            text-transform: uppercase;
+            font-size: 12px;
+            color: var(--text-muted);
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        /* Level & Streak */
-        .level-streak {
+        .stats-row {
             display: flex;
-            gap: 30px;
+            gap: 32px;
         }
 
-        .stat-card {
-            background: linear-gradient(135deg, var(--color-cream) 0%, white 100%);
-            border: 1px solid var(--color-border);
-            border-radius: 12px;
-            padding: 15px 25px;
+        .stat-item {
             text-align: center;
-            min-width: 120px;
+            padding: 16px 24px;
+            background: var(--bg-accent);
+            border-radius: var(--radius-md);
+            min-width: 100px;
         }
 
         .stat-value {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--color-navy);
-            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--accent-navy);
+            font-family: 'Crimson Pro', serif;
         }
 
         .stat-label {
             font-size: 12px;
-            color: var(--color-text-light);
-            margin-top: 2px;
+            color: var(--text-secondary);
+            margin-top: 4px;
         }
 
-        .level-title {
-            font-size: 13px;
-            color: var(--color-gold-dark);
-            font-weight: 600;
-            margin-top: 5px;
-        }
-
-        /* Badges Preview */
-        .badges-preview {
+        .badges-section {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            align-items: flex-end;
+            gap: 12px;
         }
 
         .badges-title {
             font-size: 12px;
-            color: var(--color-text-light);
+            color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        .badges-row {
+        .badges-grid {
             display: flex;
             gap: 8px;
-            flex-wrap: wrap;
         }
 
-        .badge-mini {
-            width: 40px;
-            height: 40px;
+        .badge-item {
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
-            position: relative;
-            transition: transform 0.3s;
+            font-size: 20px;
             cursor: pointer;
+            transition: transform 0.2s;
+            position: relative;
         }
 
-        .badge-mini:hover {
-            transform: scale(1.2);
-        }
-
-        .badge-mini.locked {
-            background: var(--color-cream-dark);
-            filter: grayscale(100%);
-            opacity: 0.5;
-        }
-
-        .badge-mini.bronze { background: linear-gradient(135deg, #cd7f32 0%, #b8860b 100%); }
-        .badge-mini.silver { background: linear-gradient(135deg, #e8e8e8 0%, #c0c0c0 100%); }
-        .badge-mini.gold {
-            background: linear-gradient(135deg, #ffd700 0%, #ffb300 100%);
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-        }
-
-        .badge-stars {
-            position: absolute;
-            bottom: -2px;
-            right: -2px;
-            font-size: 10px;
-        }
+        .badge-item:hover { transform: scale(1.15); }
+        .badge-item.locked { background: var(--bg-accent); filter: grayscale(1); opacity: 0.4; }
+        .badge-item.bronze { background: linear-gradient(135deg, #cd9b6a 0%, #b87333 100%); }
+        .badge-item.silver { background: linear-gradient(135deg, #e8e8e8 0%, #b8b8b8 100%); }
+        .badge-item.gold { background: linear-gradient(135deg, #ffd700 0%, #daa520 100%); box-shadow: 0 0 16px rgba(255, 215, 0, 0.4); }
 
         /* Main Content */
         .main-content {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 30px;
+            padding: 0 24px 48px;
         }
 
-        /* Subject View */
-        .subject-view {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            gap: 25px;
-        }
+        /* Day View */
+        .day-view { display: none; }
+        .day-view.active { display: block; }
+        .subject-view { display: none; }
+        .subject-view.active { display: block; }
 
-        .subject-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .subject-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-        }
-
-        .subject-header {
-            padding: 20px 25px;
+        .day-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid var(--color-border);
+            margin-bottom: 24px;
+            padding: 16px 24px;
+            background: var(--bg-paper);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-soft);
         }
 
-        .subject-info {
+        .week-nav {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 16px;
         }
 
-        .subject-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
+        .nav-btn {
+            padding: 10px 20px;
+            border: 1px solid var(--border-medium);
+            background: var(--bg-paper);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s;
         }
 
-        .subject-icon.english { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); }
-        .subject-icon.chinese { background: linear-gradient(135deg, #e67e22 0%, #d35400 100%); }
-        .subject-icon.math { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); }
-        .subject-icon.physics { background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); }
-        .subject-icon.chemistry { background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%); }
-        .subject-icon.biology { background: linear-gradient(135deg, #27ae60 0%, #229954 100%); }
-        .subject-icon.economics { background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); }
-        .subject-icon.geography { background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); }
+        .nav-btn:hover {
+            background: var(--accent-navy);
+            color: white;
+            border-color: var(--accent-navy);
+        }
 
-        .subject-name {
-            font-family: var(--font-chinese);
+        .week-title {
             font-size: 18px;
-            font-weight: 600;
-            color: var(--color-navy);
+            font-weight: 500;
         }
 
-        .subject-progress {
-            text-align: right;
+        .week-dates {
+            font-size: 14px;
+            color: var(--text-secondary);
         }
 
-        .subject-progress-bar {
-            width: 100px;
-            height: 6px;
-            background: var(--color-cream-dark);
-            border-radius: 3px;
+        /* Day Cards - Vertical Layout */
+        .days-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .day-card {
+            background: var(--bg-paper);
+            border-radius: var(--radius-md);
             overflow: hidden;
-            margin-bottom: 5px;
+            box-shadow: var(--shadow-soft);
+            transition: box-shadow 0.2s;
         }
 
-        .subject-progress-fill {
-            height: 100%;
-            background: var(--color-gold);
-            border-radius: 3px;
-            transition: width 0.5s ease;
+        .day-card:hover {
+            box-shadow: var(--shadow-medium);
         }
 
-        .subject-progress-text {
-            font-size: 12px;
-            color: var(--color-text-light);
+        .day-card.today {
+            border: 2px solid var(--accent-gold);
         }
 
-        /* Task List */
-        .task-list {
-            padding: 15px 25px 25px;
+        .day-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            background: var(--bg-accent);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .day-info {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .day-date {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--accent-navy);
+            font-family: 'Crimson Pro', serif;
+        }
+
+        .day-weekday {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .day-card.today .day-date {
+            color: var(--accent-coral);
+        }
+
+        .day-summary {
+            display: flex;
+            gap: 16px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .day-tasks-list {
+            padding: 16px 24px;
         }
 
         .task-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--color-cream-dark);
-            transition: background 0.3s;
+            display: grid;
+            grid-template-columns: 32px 1fr auto auto;
+            gap: 16px;
+            align-items: start;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-light);
+            cursor: pointer;
+            transition: background 0.2s;
         }
 
-        .task-item:last-child { border-bottom: none; }
+        .task-item:last-child {
+            border-bottom: none;
+        }
 
         .task-item:hover {
-            background: var(--color-cream);
-            margin: 0 -25px;
-            padding-left: 25px;
-            padding-right: 25px;
+            background: var(--bg-accent);
+            margin: 0 -24px;
+            padding-left: 24px;
+            padding-right: 24px;
         }
 
         .task-checkbox {
-            width: 22px;
-            height: 22px;
-            border: 2px solid var(--color-border);
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--border-medium);
             border-radius: 6px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s;
+            transition: all 0.2s;
             flex-shrink: 0;
             margin-top: 2px;
         }
 
         .task-checkbox:hover {
-            border-color: var(--color-gold);
+            border-color: var(--accent-sage);
         }
 
         .task-checkbox.checked {
-            background: var(--color-success);
-            border-color: var(--color-success);
+            background: var(--accent-sage);
+            border-color: var(--accent-sage);
         }
 
         .task-checkbox.checked::after {
@@ -443,385 +411,299 @@
         }
 
         .task-content {
-            flex: 1;
+            min-width: 0;
         }
 
         .task-title {
-            font-size: 14px;
-            color: var(--color-text);
-            transition: all 0.3s;
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 4px;
         }
 
         .task-item.completed .task-title {
             text-decoration: line-through;
-            color: var(--color-text-light);
+            color: var(--text-muted);
+        }
+
+        .task-detail {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
         }
 
         .task-meta {
             display: flex;
-            gap: 8px;
-            margin-top: 5px;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 4px;
+        }
+
+        .task-time {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .task-tags {
+            display: flex;
+            gap: 6px;
         }
 
         .task-tag {
-            font-size: 10px;
+            font-size: 11px;
             padding: 2px 8px;
             border-radius: 4px;
             font-weight: 500;
         }
 
         .task-tag.required {
-            background: #ffebee;
-            color: #c62828;
+            background: #fce4e4;
+            color: #c0392b;
         }
 
         .task-tag.optional {
-            background: #e8f5e9;
-            color: #2e7d32;
+            background: #e4f5ed;
+            color: #27ae60;
         }
 
-        .task-tag.chapter {
-            background: var(--color-cream-dark);
-            color: var(--color-text-light);
+        .task-tag.subject {
+            color: white;
         }
 
-        /* Day View */
-        .day-view {
-            display: none;
-        }
+        .task-tag.english { background: var(--accent-coral); }
+        .task-tag.chinese { background: var(--accent-rose); }
+        .task-tag.math { background: var(--accent-blue); }
+        .task-tag.physics { background: var(--accent-purple); }
+        .task-tag.chemistry { background: var(--accent-teal); }
+        .task-tag.biology { background: var(--accent-sage); }
+        .task-tag.economics { background: var(--accent-gold); color: var(--text-primary); }
+        .task-tag.geography { background: var(--accent-navy); }
 
-        .day-view.active {
-            display: block;
-        }
-
-        .subject-view.active {
+        /* Subject View */
+        .subjects-grid {
             display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 24px;
         }
 
-        .subject-view:not(.active) {
-            display: none;
+        .subject-card {
+            background: var(--bg-paper);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
         }
 
-        .day-nav {
+        .subject-header {
+            padding: 20px 24px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            margin-bottom: 20px;
-            background: white;
-            padding: 15px 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            align-items: center;
+            border-bottom: 1px solid var(--border-light);
         }
 
-        .day-nav-btn {
-            background: var(--color-navy);
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .day-nav-btn:hover {
-            background: var(--color-navy-light);
-        }
-
-        .day-nav-current {
-            font-family: var(--font-chinese);
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--color-navy);
-        }
-
-        .day-container {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 15px;
-        }
-
-        .day-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            min-height: 200px;
-            transition: all 0.3s;
-        }
-
-        .day-card.drag-over {
-            box-shadow: 0 0 0 3px var(--color-gold);
-            transform: scale(1.02);
-        }
-
-        .day-card.today {
-            box-shadow: 0 0 0 2px var(--color-gold);
-        }
-
-        .day-header {
-            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
-            padding: 10px 15px;
-            color: white;
-            text-align: center;
-        }
-
-        .day-card.today .day-header {
-            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
-            color: var(--color-navy);
-        }
-
-        .day-date {
-            font-size: 22px;
-            font-weight: 700;
-            font-family: var(--font-display);
-        }
-
-        .day-weekday {
-            font-size: 11px;
-            opacity: 0.9;
-        }
-
-        .day-tasks {
-            padding: 10px;
-            min-height: 150px;
-        }
-
-        .day-task {
+        .subject-info {
             display: flex;
             align-items: center;
-            gap: 6px;
-            padding: 8px;
-            margin-bottom: 6px;
-            background: var(--color-cream);
-            border-radius: 6px;
-            font-size: 12px;
-            cursor: grab;
-            transition: all 0.2s;
+            gap: 12px;
         }
 
-        .day-task:hover {
-            background: var(--color-cream-dark);
+        .subject-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: white;
         }
 
-        .day-task.dragging {
-            opacity: 0.5;
-            cursor: grabbing;
+        .subject-icon.english { background: var(--accent-coral); }
+        .subject-icon.chinese { background: var(--accent-rose); }
+        .subject-icon.math { background: var(--accent-blue); }
+        .subject-icon.physics { background: var(--accent-purple); }
+        .subject-icon.chemistry { background: var(--accent-teal); }
+        .subject-icon.biology { background: var(--accent-sage); }
+        .subject-icon.economics { background: var(--accent-gold); }
+        .subject-icon.geography { background: var(--accent-navy); }
+
+        .subject-name {
+            font-size: 17px;
+            font-weight: 500;
         }
 
-        .day-task.completed {
-            text-decoration: line-through;
-            opacity: 0.6;
+        .subject-progress {
+            text-align: right;
         }
 
-        .day-task.selected {
-            background: var(--color-gold-light);
-            box-shadow: 0 0 0 2px var(--color-gold);
-        }
-
-        .day-task.optional-task {
-            border-left: 3px solid var(--color-success);
-        }
-
-        .day-task-subject {
-            font-size: 14px;
-        }
-
-        .day-task-title {
-            flex: 1;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .day-task-tag {
-            font-size: 9px;
-            padding: 1px 5px;
+        .subject-progress-bar {
+            width: 80px;
+            height: 6px;
+            background: var(--bg-accent);
             border-radius: 3px;
-            font-weight: 600;
-            flex-shrink: 0;
+            overflow: hidden;
         }
 
-        .day-task-tag.required {
-            background: #ffebee;
-            color: #c62828;
+        .subject-progress-fill {
+            height: 100%;
+            background: var(--accent-sage);
+            border-radius: 3px;
+            transition: width 0.4s ease;
         }
 
-        .day-task-tag.optional {
-            background: #e8f5e9;
-            color: #2e7d32;
+        .subject-progress-text {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
         }
 
-        .day-card.can-drop {
+        .subject-tasks {
+            padding: 16px 24px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .subject-task-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-light);
             cursor: pointer;
         }
 
-        .day-card.can-drop:hover {
-            box-shadow: 0 0 0 2px var(--color-gold);
+        .subject-task-item:last-child {
+            border-bottom: none;
+        }
+
+        .subject-task-item:hover {
+            background: var(--bg-accent);
+            margin: 0 -24px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .subject-task-content {
+            flex: 1;
+        }
+
+        .subject-task-title {
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .subject-task-item.completed .subject-task-title {
+            text-decoration: line-through;
+            color: var(--text-muted);
+        }
+
+        .subject-task-detail {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .subject-task-meta {
+            display: flex;
+            gap: 8px;
+            align-items: center;
         }
 
         /* Task Detail Panel */
-        .task-detail-panel {
+        .detail-panel {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
-            background: white;
-            padding: 20px 30px;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            background: var(--bg-paper);
+            padding: 24px 32px;
+            box-shadow: 0 -4px 24px rgba(0,0,0,0.12);
             transform: translateY(100%);
             transition: transform 0.3s ease;
             z-index: 200;
             border-radius: 20px 20px 0 0;
         }
 
-        .task-detail-panel.active {
+        .detail-panel.active {
             transform: translateY(0);
         }
 
-        .task-detail-content {
+        .detail-content {
             max-width: 800px;
             margin: 0 auto;
             display: flex;
-            gap: 20px;
+            gap: 24px;
             align-items: flex-start;
         }
 
-        .task-detail-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
+        .detail-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 28px;
+            color: white;
             flex-shrink: 0;
         }
 
-        .task-detail-info {
+        .detail-info {
             flex: 1;
         }
 
-        .task-detail-title {
-            font-family: var(--font-chinese);
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--color-navy);
+        .detail-title {
+            font-size: 20px;
+            font-weight: 500;
             margin-bottom: 8px;
         }
 
-        .task-detail-desc {
-            color: var(--color-text);
+        .detail-desc {
             font-size: 14px;
+            color: var(--text-secondary);
             line-height: 1.6;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
-        .task-detail-tags {
+        .detail-tags {
             display: flex;
             gap: 8px;
         }
 
-        .task-detail-actions {
+        .detail-actions {
             display: flex;
-            gap: 10px;
-            flex-shrink: 0;
+            gap: 12px;
         }
 
         .detail-btn {
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 8px;
-            cursor: pointer;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
             font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
         }
 
-        .detail-btn.complete {
-            background: var(--color-success);
+        .detail-btn.primary {
+            background: var(--accent-sage);
             color: white;
         }
 
-        .detail-btn.complete:hover {
-            background: #229954;
+        .detail-btn.primary:hover {
+            background: #6a9d84;
         }
 
-        .detail-btn.cancel {
-            background: var(--color-cream-dark);
-            color: var(--color-text);
+        .detail-btn.secondary {
+            background: var(--bg-accent);
+            color: var(--text-primary);
         }
 
-        .detail-btn.cancel:hover {
-            background: var(--color-border);
-        }
-
-        .unassigned-panel {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-        }
-
-        .unassigned-title {
-            font-family: var(--font-chinese);
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--color-navy);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .unassigned-count {
-            background: var(--color-gold);
-            color: var(--color-navy);
-            padding: 2px 10px;
-            border-radius: 10px;
-            font-size: 12px;
-        }
-
-        .unassigned-tasks {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            min-height: 50px;
-            padding: 10px;
-            background: var(--color-cream);
-            border-radius: 8px;
-        }
-
-        .unassigned-tasks.drag-over {
-            background: var(--color-gold-light);
-        }
-
-        @media (max-width: 1200px) {
-            .day-container {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        @media (max-width: 800px) {
-            .day-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        }
-
-        .week-task {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 0;
-            border-bottom: 1px solid var(--color-cream-dark);
-            font-size: 13px;
-        }
-
-        .week-task:last-child { border-bottom: none; }
-
-        .week-task-subject {
-            font-size: 16px;
+        .detail-btn.secondary:hover {
+            background: var(--border-light);
         }
 
         /* Achievement Modal */
@@ -831,413 +713,213 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.5);
             display: none;
             align-items: center;
             justify-content: center;
-            z-index: 1000;
+            z-index: 300;
         }
 
         .modal-overlay.active {
             display: flex;
         }
 
-        .achievement-modal {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
+        .modal-content {
+            background: var(--bg-paper);
+            border-radius: var(--radius-lg);
+            padding: 48px;
             text-align: center;
             max-width: 400px;
-            animation: popIn 0.5s ease;
+            animation: modalPop 0.4s ease;
         }
 
-        @keyframes popIn {
-            0% { transform: scale(0.5); opacity: 0; }
-            70% { transform: scale(1.1); }
+        @keyframes modalPop {
+            0% { transform: scale(0.8); opacity: 0; }
             100% { transform: scale(1); opacity: 1; }
         }
 
-        .achievement-icon {
+        .modal-icon {
             width: 100px;
             height: 100px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 50px;
-            margin: 0 auto 20px;
-            animation: shine 2s infinite;
+            font-size: 48px;
+            margin: 0 auto 24px;
+            animation: glow 2s ease-in-out infinite;
         }
 
-        @keyframes shine {
-            0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255,215,0,0.3); }
+            50% { box-shadow: 0 0 40px rgba(255,215,0,0.6); }
         }
 
-        .achievement-title {
-            font-family: var(--font-chinese);
+        .modal-title {
             font-size: 24px;
-            color: var(--color-navy);
-            margin-bottom: 10px;
+            font-weight: 500;
+            margin-bottom: 8px;
         }
 
-        .achievement-desc {
-            color: var(--color-text-light);
-            margin-bottom: 25px;
+        .modal-desc {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
         }
 
-        .achievement-close {
-            background: var(--color-gold);
-            color: var(--color-navy);
+        .modal-btn {
+            padding: 14px 40px;
+            background: var(--accent-gold);
+            color: var(--text-primary);
             border: none;
-            padding: 12px 40px;
             border-radius: 25px;
+            font-family: inherit;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 500;
             cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .achievement-close:hover {
-            transform: scale(1.05);
         }
 
         /* Responsive */
-        @media (max-width: 1200px) {
-            .stats-content {
+        @media (max-width: 900px) {
+            .progress-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
 
-            .level-streak {
+            .progress-circle {
+                margin: 0 auto;
+            }
+
+            .stats-row {
                 justify-content: center;
             }
 
-            .badges-preview {
+            .badges-section {
                 align-items: center;
             }
 
-            .badges-row {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 900px) {
-            .week-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .subject-view {
+            .subjects-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .header-inner {
+                flex-direction: column;
             }
         }
 
         @media (max-width: 600px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
+            .task-item {
+                grid-template-columns: 28px 1fr;
+                gap: 12px;
             }
 
-            .week-container {
-                grid-template-columns: 1fr;
+            .task-meta {
+                grid-column: 2;
+                flex-direction: row;
+                align-items: center;
             }
-
-            .main-content {
-                padding: 15px;
-            }
-        }
-
-        /* Confetti effect */
-        .confetti {
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
-        <div class="header-content">
-            <div class="header-left">
+        <div class="header-inner">
+            <div class="logo-section">
                 <a href="index.html" class="back-link">← 返回大礼包</a>
-                <h1 class="header-title">寒假作业任务清单</h1>
+                <h1 class="site-title">寒假学习计划</h1>
             </div>
-            <div class="header-right">
-                <div class="sync-status">
-                    <span class="sync-dot"></span>
-                    <span id="syncText">实时同步中</span>
-                </div>
-                <div class="view-toggle">
-                    <button class="view-btn active" data-view="subject">按学科</button>
-                    <button class="view-btn" data-view="day">按天计划</button>
-                </div>
+            <div class="view-switcher">
+                <button class="view-btn active" data-view="day">按日计划</button>
+                <button class="view-btn" data-view="subject">按学科</button>
             </div>
         </div>
     </header>
 
-    <!-- Stats Bar -->
-    <div class="stats-bar">
-        <div class="stats-content">
-            <!-- Progress Ring -->
-            <div class="progress-ring-container">
-                <div class="progress-ring">
-                    <svg width="120" height="120">
-                        <circle class="progress-ring-bg" cx="60" cy="60" r="50"/>
-                        <circle class="progress-ring-fill" cx="60" cy="60" r="50"
-                                stroke-dasharray="314" stroke-dashoffset="314" id="progressRing"/>
-                    </svg>
-                    <div class="progress-ring-text">
-                        <div class="progress-percent" id="totalPercent">0%</div>
-                        <div class="progress-label">总进度</div>
-                    </div>
+    <section class="progress-section">
+        <div class="progress-grid">
+            <div class="progress-circle">
+                <svg width="140" height="140">
+                    <circle class="progress-circle-bg" cx="70" cy="70" r="60"/>
+                    <circle class="progress-circle-fill" cx="70" cy="70" r="60"
+                            stroke-dasharray="377" stroke-dashoffset="377" id="progressRing"/>
+                </svg>
+                <div class="progress-text">
+                    <div class="progress-percent" id="totalPercent">0%</div>
+                    <div class="progress-label">总进度</div>
                 </div>
             </div>
 
-            <!-- Level & Streak -->
-            <div class="level-streak">
-                <div class="stat-card">
+            <div class="stats-row">
+                <div class="stat-item">
                     <div class="stat-value" id="levelValue">1</div>
-                    <div class="stat-label">当前等级</div>
-                    <div class="level-title" id="levelTitle">学习新手</div>
+                    <div class="stat-label" id="levelTitle">学习新手</div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-item">
                     <div class="stat-value" id="streakValue">0</div>
                     <div class="stat-label">连续打卡</div>
-                    <div class="level-title">天</div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-item">
                     <div class="stat-value" id="completedValue">0</div>
-                    <div class="stat-label">已完成</div>
-                    <div class="level-title" id="totalTasks">/ 0 项</div>
+                    <div class="stat-label" id="totalLabel">/ 0 项</div>
                 </div>
             </div>
 
-            <!-- Badges Preview -->
-            <div class="badges-preview">
+            <div class="badges-section">
                 <div class="badges-title">成就徽章</div>
-                <div class="badges-row" id="badgesRow">
-                    <!-- Badges will be inserted here -->
-                </div>
+                <div class="badges-grid" id="badgesGrid"></div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Main Content -->
     <main class="main-content">
-        <!-- Subject View -->
-        <div class="subject-view active" id="subjectView">
-            <!-- Subject cards will be inserted here -->
+        <div class="day-view active" id="dayView">
+            <div class="day-header">
+                <div class="week-nav">
+                    <button class="nav-btn" onclick="changeWeek(-1)">← 上一周</button>
+                    <div>
+                        <div class="week-title" id="weekTitle">第 1 周</div>
+                        <div class="week-dates" id="weekDates">1月20日 - 1月26日</div>
+                    </div>
+                    <button class="nav-btn" onclick="changeWeek(1)">下一周 →</button>
+                </div>
+            </div>
+            <div class="days-container" id="daysContainer"></div>
         </div>
 
-        <!-- Day View -->
-        <div class="day-view" id="dayView">
-            <div class="day-nav">
-                <button class="day-nav-btn" onclick="changeWeek(-1)">← 上一周</button>
-                <span class="day-nav-current" id="currentWeekLabel">第1周</span>
-                <button class="day-nav-btn" onclick="changeWeek(1)">下一周 →</button>
-            </div>
-            <div class="day-container" id="dayContainer">
-                <!-- Day cards will be inserted here -->
-            </div>
-            <div class="unassigned-panel">
-                <div class="unassigned-title">
-                    📋 待分配任务 <span class="unassigned-count" id="unassignedCount">0</span>
-                </div>
-                <div class="unassigned-tasks" id="unassignedTasks">
-                    <!-- Unassigned tasks will be inserted here -->
-                </div>
-            </div>
+        <div class="subject-view" id="subjectView">
+            <div class="subjects-grid" id="subjectsGrid"></div>
         </div>
     </main>
 
-    <!-- Task Detail Panel -->
-    <div class="task-detail-panel" id="taskDetailPanel">
-        <div class="task-detail-content">
-            <div class="task-detail-icon" id="detailIcon">📚</div>
-            <div class="task-detail-info">
-                <div class="task-detail-title" id="detailTitle">任务标题</div>
-                <div class="task-detail-desc" id="detailDesc">任务详细描述</div>
-                <div class="task-detail-tags">
-                    <span class="task-tag" id="detailRequired">必做</span>
-                    <span class="task-tag chapter" id="detailChapter">章节</span>
-                </div>
+    <div class="detail-panel" id="detailPanel">
+        <div class="detail-content">
+            <div class="detail-icon" id="detailIcon">📚</div>
+            <div class="detail-info">
+                <div class="detail-title" id="detailTitle">任务标题</div>
+                <div class="detail-desc" id="detailDesc">任务详细描述</div>
+                <div class="detail-tags" id="detailTags"></div>
             </div>
-            <div class="task-detail-actions">
-                <button class="detail-btn complete" id="detailCompleteBtn" onclick="completeSelectedTask()">✓ 完成任务</button>
-                <button class="detail-btn cancel" onclick="closeTaskDetail()">取消</button>
+            <div class="detail-actions">
+                <button class="detail-btn primary" id="detailCompleteBtn" onclick="completeSelectedTask()">✓ 完成任务</button>
+                <button class="detail-btn secondary" onclick="closeDetail()">取消</button>
             </div>
         </div>
     </div>
 
-    <!-- Achievement Modal -->
     <div class="modal-overlay" id="achievementModal">
-        <div class="achievement-modal">
-            <div class="achievement-icon" id="achievementIcon">🎯</div>
-            <h2 class="achievement-title" id="achievementTitle">成就解锁！</h2>
-            <p class="achievement-desc" id="achievementDesc">恭喜你获得了新成就！</p>
-            <button class="achievement-close" onclick="closeAchievement()">太棒了！</button>
+        <div class="modal-content">
+            <div class="modal-icon" id="modalIcon">🎯</div>
+            <h2 class="modal-title" id="modalTitle">成就解锁！</h2>
+            <p class="modal-desc" id="modalDesc">恭喜获得新成就！</p>
+            <button class="modal-btn" onclick="closeModal()">太棒了！</button>
         </div>
     </div>
 
     <script>
-        // Supabase Configuration
-        const SUPABASE_URL = 'https://kaliqpyebqxjxbxggdyp.supabase.co';
-        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImthbGlxcHllYnF4anhieGdnZHlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkwNTY1NDYsImV4cCI6MjA4NDYzMjU0Nn0.dnLCowhw12oatyMb6CF2YvRyDxw31G2ap89SJLGb9po';
-
-        // 安全创建Supabase客户端（如果SDK加载失败则为null）
-        let supabase = null;
-        try {
-            if (window.supabase && window.supabase.createClient) {
-                supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-            }
-        } catch (e) {
-            console.log('Supabase SDK not available');
-        }
-
-        // Generate or get user ID
-        let userId = localStorage.getItem('homework_user_id');
-        if (!userId) {
-            userId = 'user_' + Math.random().toString(36).substr(2, 9);
-            localStorage.setItem('homework_user_id', userId);
-        }
-
-        // Task Data - All homework tasks from the PDF documents with detailed descriptions
-        const tasks = [
-            // English - 英语
-            { id: 'en_read_book', subject: 'english', title: '阅读《The Secret Garden》', required: true, chapter: '阅读', week: 1,
-              detail: '完整阅读英文原版《秘密花园》，理解故事情节，积累生词' },
-            { id: 'en_vocab_1', subject: 'english', title: '英语词汇 Part 1', required: true, chapter: '词汇', week: 1,
-              detail: '背诵词汇表A-M部分，每天20个单词，做到会读会写会用' },
-            { id: 'en_vocab_2', subject: 'english', title: '英语词汇 Part 2', required: true, chapter: '词汇', week: 2,
-              detail: '背诵词汇表N-Z部分，复习巩固Part 1' },
-            { id: 'en_diary_1', subject: 'english', title: '英文日记 #1', required: true, chapter: '写作', week: 1,
-              detail: '用英文写一篇日记，100-150词，记录寒假生活' },
-            { id: 'en_diary_2', subject: 'english', title: '英文日记 #2', required: true, chapter: '写作', week: 2,
-              detail: '第二篇英文日记，尝试使用新学的词汇' },
-            { id: 'en_diary_3', subject: 'english', title: '英文日记 #3', required: true, chapter: '写作', week: 3,
-              detail: '第三篇英文日记，注意语法和句式多样性' },
-            { id: 'en_poster', subject: 'english', title: '《秘密花园》海报', required: true, chapter: '创作', week: 3,
-              detail: '为《秘密花园》设计一张英文海报，包含书名、主角、推荐语' },
-            { id: 'en_video', subject: 'english', title: '英文自我介绍视频', required: false, chapter: '口语', week: 4,
-              detail: '【选做】录制1-2分钟英文自我介绍视频' },
-
-            // Chinese - 中文
-            { id: 'cn_read_book', subject: 'chinese', title: '阅读《呼兰河传》', required: true, chapter: '阅读', week: 1,
-              detail: '完整阅读萧红的《呼兰河传》，体会作者对故乡的情感' },
-            { id: 'cn_letter', subject: 'chinese', title: '给萧红写信', required: true, chapter: '写作', week: 3,
-              detail: '读完《呼兰河传》后，给萧红写一封信，800字以上，表达你的感受' },
-            { id: 'cn_calligraphy_1', subject: 'chinese', title: '书法练习 第1周', required: true, chapter: '书法', week: 1,
-              detail: '每天练习硬笔书法15-20分钟，临摹字帖' },
-            { id: 'cn_calligraphy_2', subject: 'chinese', title: '书法练习 第2周', required: true, chapter: '书法', week: 2,
-              detail: '继续书法练习，注意笔画顺序和结构' },
-            { id: 'cn_calligraphy_3', subject: 'chinese', title: '书法练习 第3周', required: true, chapter: '书法', week: 3,
-              detail: '书法练习，尝试提高书写速度保持工整' },
-            { id: 'cn_calligraphy_4', subject: 'chinese', title: '书法练习 第4周', required: true, chapter: '书法', week: 4,
-              detail: '完成书法作品一幅，拍照保存' },
-            { id: 'cn_extra_read', subject: 'chinese', title: '中文拓展阅读', required: false, chapter: '拓展', week: 4,
-              detail: '【选做】再读一本中文文学作品' },
-
-            // Math - 数学
-            { id: 'math_calculator', subject: 'math', title: '准备科学计算器', required: true, chapter: '准备', week: 1,
-              detail: '购买IGCSE认可的科学计算器，学会基本操作：分数、根号、幂运算' },
-            { id: 'math_unit1_1', subject: 'math', title: 'Unit 1 预习 1.1-1.3', required: true, chapter: 'Unit 1', week: 1,
-              detail: '预习数学教材1.1-1.3节，做课后例题，标注不懂的地方' },
-            { id: 'math_unit1_2', subject: 'math', title: 'Unit 1 预习 1.4-1.6', required: true, chapter: 'Unit 1', week: 2,
-              detail: '预习1.4-1.6节，重点理解概念和公式推导' },
-            { id: 'math_unit1_3', subject: 'math', title: 'Unit 1 预习 1.7-1.9', required: true, chapter: 'Unit 1', week: 2,
-              detail: '完成Unit 1预习，尝试做章节总结' },
-            { id: 'math_vocab', subject: 'math', title: '数学英文词汇', required: true, chapter: '词汇', week: 3,
-              detail: '背诵数学专业英文词汇表，包括运算符号、图形名称等' },
-            { id: 'math_exercise_1', subject: 'math', title: 'Unit 1 练习 Set A', required: true, chapter: '练习', week: 3,
-              detail: '完成Unit 1练习题Set A，错题整理到错题本' },
-            { id: 'math_exercise_2', subject: 'math', title: 'Unit 1 练习 Set B', required: true, chapter: '练习', week: 4,
-              detail: '完成Unit 1练习题Set B，对照答案自我批改' },
-            { id: 'math_extra', subject: 'math', title: '数学课外读物', required: false, chapter: '拓展', week: 4,
-              detail: '【选做】阅读推荐的数学课外读物' },
-
-            // Physics - 物理
-            { id: 'phy_syllabus', subject: 'physics', title: '了解物理大纲', required: true, chapter: '大纲', week: 1,
-              detail: '阅读IGCSE Combined Science物理部分大纲，了解学习内容和考试要求' },
-            { id: 'phy_vocab_1', subject: 'physics', title: '物理词汇 Part 1', required: true, chapter: '词汇', week: 2,
-              detail: '背诵物理英文词汇第一部分，包括力学基本术语' },
-            { id: 'phy_vocab_2', subject: 'physics', title: '物理词汇 Part 2', required: true, chapter: '词汇', week: 3,
-              detail: '背诵物理英文词汇第二部分，包括电学、热学术语' },
-            { id: 'phy_preview', subject: 'physics', title: '预习物理第1章', required: true, chapter: '预习', week: 2,
-              detail: '预习物理教材第1章，理解基本物理量和单位' },
-            { id: 'phy_video', subject: 'physics', title: '物理科普视频', required: false, chapter: '拓展', week: 4,
-              detail: '【选做】观看推荐的物理科普视频' },
-
-            // Chemistry - 化学
-            { id: 'chem_syllabus', subject: 'chemistry', title: '了解化学大纲', required: true, chapter: '大纲', week: 1,
-              detail: '阅读IGCSE化学大纲，了解Chapter 1-2的学习目标' },
-            { id: 'chem_vocab', subject: 'chemistry', title: '化学英文词汇', required: true, chapter: '词汇', week: 2,
-              detail: '背诵Chapter 1-2的化学词汇和定义' },
-            { id: 'chem_ch1', subject: 'chemistry', title: 'Ch1 物质的状态', required: true, chapter: 'Ch1', week: 2,
-              detail: '预习Chapter 1：固液气三态、粒子理论、状态变化' },
-            { id: 'chem_ch2', subject: 'chemistry', title: 'Ch2 原子结构', required: true, chapter: 'Ch2', week: 3,
-              detail: '预习Chapter 2：原子结构、质子中子电子、元素周期表' },
-            { id: 'chem_exercise_1', subject: 'chemistry', title: 'Ch1 练习题', required: true, chapter: '练习', week: 3,
-              detail: '完成Chapter 1配套练习册，检验预习效果' },
-            { id: 'chem_exercise_2', subject: 'chemistry', title: 'Ch2 练习题', required: true, chapter: '练习', week: 4,
-              detail: '完成Chapter 2配套练习册' },
-            { id: 'chem_video', subject: 'chemistry', title: '化学实验视频', required: false, chapter: '拓展', week: 4,
-              detail: '【选做】观看化学实验演示视频' },
-
-            // Biology - 生物
-            { id: 'bio_b1', subject: 'biology', title: 'B1 生物的特征', required: true, chapter: 'B1', week: 1,
-              detail: '预习B1：生命的七大特征MRS GREN，理解每个特征的含义' },
-            { id: 'bio_b2', subject: 'biology', title: 'B2 细胞结构', required: true, chapter: 'B2', week: 2,
-              detail: '预习B2：动植物细胞结构、细胞器功能、显微镜使用' },
-            { id: 'bio_b3', subject: 'biology', title: 'B3 生物分子', required: true, chapter: 'B3', week: 2,
-              detail: '预习B3：碳水化合物、蛋白质、脂肪、水的功能' },
-            { id: 'bio_b4', subject: 'biology', title: 'B4 酶', required: true, chapter: 'B4', week: 3,
-              detail: '预习B4：酶的特性、影响酶活性的因素' },
-            { id: 'bio_b5', subject: 'biology', title: 'B5 植物营养', required: true, chapter: 'B5', week: 3,
-              detail: '预习B5：光合作用过程、叶片结构' },
-            { id: 'bio_vocab', subject: 'biology', title: '生物英文词汇', required: true, chapter: '词汇', week: 2,
-              detail: '背诵生物关键词汇Key Words表' },
-            { id: 'bio_exercise', subject: 'biology', title: 'B1-B5 练习题', required: true, chapter: '练习', week: 4,
-              detail: '完成生物练习册B1-B5综合练习' },
-            { id: 'bio_bbc', subject: 'biology', title: 'BBC生物纪录片', required: false, chapter: '拓展', week: 4,
-              detail: '【选做】观看BBC生物纪录片，如《地球脉动》' },
-
-            // Economics - 经济
-            { id: 'econ_syllabus', subject: 'economics', title: '了解经济大纲', required: true, chapter: '大纲', week: 1,
-              detail: '阅读IGCSE经济学大纲，了解Section 1的学习目标' },
-            { id: 'econ_vocab', subject: 'economics', title: '经济学术语', required: true, chapter: '词汇', week: 2,
-              detail: '背诵Section 1的关键术语：scarcity, opportunity cost, factors of production等' },
-            { id: 'econ_s1_1', subject: 'economics', title: 'S1.1 经济学基本问题', required: true, chapter: 'S1', week: 2,
-              detail: '阅读Susan Grant教材Section 1.1，理解经济学研究的基本问题' },
-            { id: 'econ_s1_2', subject: 'economics', title: 'S1.2 稀缺性与选择', required: true, chapter: 'S1', week: 3,
-              detail: '阅读Section 1.2，理解稀缺性、机会成本概念' },
-            { id: 'econ_mindmap', subject: 'economics', title: 'Section 1 思维导图', required: true, chapter: '思维导图', week: 3,
-              detail: '绘制Section 1的思维导图，梳理知识框架' },
-            { id: 'econ_worksheet', subject: 'economics', title: '经济学工作表', required: true, chapter: '练习', week: 4,
-              detail: '完成经济学配套工作表练习' },
-            { id: 'econ_case', subject: 'economics', title: '经济学案例', required: false, chapter: '拓展', week: 4,
-              detail: '【选做】阅读经济学案例研究材料' },
-
-            // Geography - 地理
-            { id: 'geo_syllabus', subject: 'geography', title: '了解地理大纲', required: true, chapter: '大纲', week: 1,
-              detail: '阅读IGCSE地理大纲2027-2029版，了解考试结构' },
-            { id: 'geo_vocab', subject: 'geography', title: '地理英文词汇', required: true, chapter: '词汇', week: 2,
-              detail: '背诵地理专业词汇表，包括地形、气候等术语' },
-            { id: 'geo_preview', subject: 'geography', title: '预习地理1-2章', required: true, chapter: '预习', week: 2,
-              detail: '预习地理教材第1-2章基础内容' },
-            { id: 'geo_case_1', subject: 'geography', title: '案例：河流地貌', required: true, chapter: '案例', week: 3,
-              detail: '学习河流地貌案例，理解侵蚀和沉积作用' },
-            { id: 'geo_case_2', subject: 'geography', title: '案例：城市化', required: true, chapter: '案例', week: 3,
-              detail: '学习城市化案例，了解城市发展与问题' },
-            { id: 'geo_questionnaire', subject: 'geography', title: '地理调查问卷', required: false, chapter: '拓展', week: 4,
-              detail: '【选做】完成地理调查问卷' },
-        ];
-
-        // Subject Configuration
+        // ========== 数据配置 ==========
         const subjects = {
             english: { name: '英语', icon: '🇬🇧', color: 'english' },
             chinese: { name: '中文', icon: '🇨🇳', color: 'chinese' },
-            math: { name: '数学', icon: '🔢', color: 'math' },
+            math: { name: '数学', icon: '📐', color: 'math' },
             physics: { name: '物理', icon: '⚡', color: 'physics' },
             chemistry: { name: '化学', icon: '🧪', color: 'chemistry' },
             biology: { name: '生物', icon: '🧬', color: 'biology' },
@@ -1245,374 +927,357 @@
             geography: { name: '地理', icon: '🌍', color: 'geography' }
         };
 
-        // Badge Configuration
-        const badges = [
-            { id: 'early_bird', icon: '🌅', name: '早起鸟', levels: [1, 10, 30], desc: ['完成首个任务', '累计完成10个', '累计完成30个'] },
-            { id: 'all_rounder', icon: '📚', name: '全科战士', levels: [3, 6, 8], desc: ['3科各完成1项', '6科各完成1项', '8科各完成1项'] },
-            { id: 'fire', icon: '🔥', name: '坚持之火', levels: [3, 7, 14], desc: ['连续打卡3天', '连续打卡7天', '连续打卡14天'] },
-            { id: 'efficient', icon: '⚡', name: '效率达人', levels: [3, 5, 8], desc: ['单日完成3项', '单日完成5项', '单日完成8项'] },
-            { id: 'master', icon: '🎯', name: '学科大师', levels: [1, 3, 6], desc: ['1科100%完成', '3科100%完成', '6科100%完成'] },
-            { id: 'halfway', icon: '🌟', name: '征程过半', levels: [25, 50, 75], desc: ['总进度25%', '总进度50%', '总进度75%'] },
-            { id: 'king', icon: '👑', name: '寒假王者', levels: [1, 2, 3], desc: ['必做全完成', '必做+50%选做', '100%全完成'] },
-            { id: 'explorer', icon: '🎨', name: '探索先锋', levels: [3, 6, 10], desc: ['完成3个选做', '完成6个选做', '完成全部选做'] }
+        // 详细的每日任务数据（基于各科作业要求精细拆分）
+        const tasks = [
+            // ===== 英语 =====
+            // 阅读《The Secret Garden》- 约27章，分14天读完
+            { id: 'en_read_1', subject: 'english', title: '阅读《秘密花园》Ch.1-2', required: true, date: '2026-01-20', time: 40,
+              detail: '阅读Chapter 1-2，约20页。边读边摘录3-4个生词，记下词性和中文意思。' },
+            { id: 'en_read_2', subject: 'english', title: '阅读《秘密花园》Ch.3-4', required: true, date: '2026-01-21', time: 40,
+              detail: '阅读Chapter 3-4，继续摘录生词，注意Mary的性格变化。' },
+            { id: 'en_read_3', subject: 'english', title: '阅读《秘密花园》Ch.5-6', required: true, date: '2026-01-22', time: 40,
+              detail: '阅读Chapter 5-6，摘录生词，注意描写花园的词汇。' },
+            { id: 'en_read_4', subject: 'english', title: '阅读《秘密花园》Ch.7-8', required: true, date: '2026-01-23', time: 40,
+              detail: '阅读Chapter 7-8，摘录生词，Dickon出场。' },
+            { id: 'en_read_5', subject: 'english', title: '阅读《秘密花园》Ch.9-10', required: true, date: '2026-01-24', time: 40,
+              detail: '阅读Chapter 9-10，摘录生词。' },
+            { id: 'en_read_6', subject: 'english', title: '阅读《秘密花园》Ch.11-12', required: true, date: '2026-01-25', time: 40,
+              detail: '阅读Chapter 11-12，Colin出场，摘录生词。' },
+            { id: 'en_read_7', subject: 'english', title: '阅读《秘密花园》Ch.13-14', required: true, date: '2026-01-27', time: 40,
+              detail: '阅读Chapter 13-14，摘录生词。' },
+            { id: 'en_read_8', subject: 'english', title: '阅读《秘密花园》Ch.15-16', required: true, date: '2026-01-28', time: 40,
+              detail: '阅读Chapter 15-16，摘录生词。' },
+            { id: 'en_read_9', subject: 'english', title: '阅读《秘密花园》Ch.17-18', required: true, date: '2026-01-29', time: 40,
+              detail: '阅读Chapter 17-18，摘录生词。' },
+            { id: 'en_read_10', subject: 'english', title: '阅读《秘密花园》Ch.19-20', required: true, date: '2026-01-30', time: 40,
+              detail: '阅读Chapter 19-20，摘录生词。' },
+            { id: 'en_read_11', subject: 'english', title: '阅读《秘密花园》Ch.21-22', required: true, date: '2026-01-31', time: 40,
+              detail: '阅读Chapter 21-22，摘录生词。' },
+            { id: 'en_read_12', subject: 'english', title: '阅读《秘密花园》Ch.23-24', required: true, date: '2026-02-01', time: 40,
+              detail: '阅读Chapter 23-24，摘录生词。' },
+            { id: 'en_read_13', subject: 'english', title: '阅读《秘密花园》Ch.25-27', required: true, date: '2026-02-02', time: 50,
+              detail: '完成全书阅读，确保60个生词全部摘录完成。' },
+
+            // 词汇整理 - 60词抄4遍+造句
+            { id: 'en_vocab_1', subject: 'english', title: '整理生词1-20：抄写', required: true, date: '2026-02-03', time: 45,
+              detail: '整理前20个生词，每词抄写4遍，写清词性和中文意思。' },
+            { id: 'en_vocab_2', subject: 'english', title: '整理生词21-40：抄写', required: true, date: '2026-02-04', time: 45,
+              detail: '整理21-40号生词，每词抄写4遍。' },
+            { id: 'en_vocab_3', subject: 'english', title: '整理生词41-60：抄写', required: true, date: '2026-02-05', time: 45,
+              detail: '整理41-60号生词，每词抄写4遍。' },
+            { id: 'en_sentence_1', subject: 'english', title: '生词1-20造句', required: true, date: '2026-02-06', time: 60,
+              detail: '用前20个生词各造一个句子，注意语法正确。' },
+            { id: 'en_sentence_2', subject: 'english', title: '生词21-40造句', required: true, date: '2026-02-07', time: 60,
+              detail: '用21-40号生词各造一个句子。' },
+            { id: 'en_sentence_3', subject: 'english', title: '生词41-60造句', required: true, date: '2026-02-08', time: 60,
+              detail: '用41-60号生词各造一个句子。' },
+
+            // 英文日记 - 每周2篇，共12篇
+            { id: 'en_diary_1', subject: 'english', title: '英文日记 #1', required: true, date: '2026-01-22', time: 30,
+              detail: '写第1篇英文日记，记录寒假开始的心情或活动，至少一段，注明日期天气。' },
+            { id: 'en_diary_2', subject: 'english', title: '英文日记 #2', required: true, date: '2026-01-26', time: 30,
+              detail: '写第2篇英文日记，记录本周有趣/印象深刻的事。' },
+            { id: 'en_diary_3', subject: 'english', title: '英文日记 #3', required: true, date: '2026-01-29', time: 30,
+              detail: '写第3篇英文日记。' },
+            { id: 'en_diary_4', subject: 'english', title: '英文日记 #4', required: true, date: '2026-02-02', time: 30,
+              detail: '写第4篇英文日记。' },
+            { id: 'en_diary_5', subject: 'english', title: '英文日记 #5', required: true, date: '2026-02-05', time: 30,
+              detail: '写第5篇英文日记。' },
+            { id: 'en_diary_6', subject: 'english', title: '英文日记 #6', required: true, date: '2026-02-09', time: 30,
+              detail: '写第6篇英文日记。' },
+            { id: 'en_diary_7', subject: 'english', title: '英文日记 #7', required: true, date: '2026-02-10', time: 30,
+              detail: '写第7篇英文日记。' },
+            { id: 'en_diary_8', subject: 'english', title: '英文日记 #8', required: true, date: '2026-02-11', time: 30,
+              detail: '写第8篇英文日记。' },
+            { id: 'en_diary_9', subject: 'english', title: '英文日记 #9', required: true, date: '2026-02-12', time: 30,
+              detail: '写第9篇英文日记。' },
+            { id: 'en_diary_10', subject: 'english', title: '英文日记 #10', required: true, date: '2026-02-13', time: 30,
+              detail: '写第10篇英文日记。' },
+            { id: 'en_diary_11', subject: 'english', title: '英文日记 #11', required: true, date: '2026-02-14', time: 30,
+              detail: '写第11篇英文日记。' },
+            { id: 'en_diary_12', subject: 'english', title: '英文日记 #12', required: true, date: '2026-02-15', time: 30,
+              detail: '写第12篇英文日记，可以总结整个寒假。' },
+
+            // 书评
+            { id: 'en_review', subject: 'english', title: '写《秘密花园》书评', required: true, date: '2026-02-09', time: 60,
+              detail: '写一篇Book Review：故事摘要、喜欢/不喜欢的角色及原因、是否推荐这本书。' },
+
+            // 海报
+            { id: 'en_poster', subject: 'english', title: '制作《秘密花园》海报', required: true, date: '2026-02-13', time: 90,
+              detail: '制作A4/A3彩色海报，包含书名、作者、关键词，发挥创意！' },
+
+            // 视频（选做）
+            { id: 'en_video', subject: 'english', title: '录制英文视频', required: false, date: '2026-02-14', time: 60,
+              detail: '【选做】录制3-5分钟英文视频：可以是采访、旅行介绍、活动记录或厨艺展示。' },
+
+            // ===== 中文 =====
+            // 阅读《呼兰河传》- 约7章
+            { id: 'cn_read_1', subject: 'chinese', title: '阅读《呼兰河传》第1章', required: true, date: '2026-01-20', time: 30,
+              detail: '阅读第1章，了解呼兰河小城的整体风貌，开始画小城简图。' },
+            { id: 'cn_read_2', subject: 'chinese', title: '阅读《呼兰河传》第2章', required: true, date: '2026-01-22', time: 30,
+              detail: '阅读第2章，注意作者对风俗的描写。' },
+            { id: 'cn_read_3', subject: 'chinese', title: '阅读《呼兰河传》第3章', required: true, date: '2026-01-24', time: 35,
+              detail: '阅读第3章，祖父登场，注意祖孙互动的细节。' },
+            { id: 'cn_read_4', subject: 'chinese', title: '阅读《呼兰河传》第4章', required: true, date: '2026-01-27', time: 35,
+              detail: '阅读第4章，继续完善小城简图。' },
+            { id: 'cn_read_5', subject: 'chinese', title: '阅读《呼兰河传》第5章', required: true, date: '2026-01-30', time: 35,
+              detail: '阅读第5章，小团圆媳妇的故事。' },
+            { id: 'cn_read_6', subject: 'chinese', title: '阅读《呼兰河传》第6章', required: true, date: '2026-02-02', time: 35,
+              detail: '阅读第6章，有二伯的故事。' },
+            { id: 'cn_read_7', subject: 'chinese', title: '完成《呼兰河传》阅读', required: true, date: '2026-02-05', time: 40,
+              detail: '完成第7章及尾声，完成小城简图定稿。' },
+
+            // 写信
+            { id: 'cn_letter', subject: 'chinese', title: '给祖父写信', required: true, date: '2026-02-08', time: 60,
+              detail: '给书中的"祖父"写一封信，谈谈你对他的印象和感受，500-600字。' },
+
+            // 书法 - 每天练习
+            { id: 'cn_calligraphy_1', subject: 'chinese', title: '书法练习', required: true, date: '2026-01-21', time: 15,
+              detail: '硬笔书法练习15分钟，临摹字帖。' },
+            { id: 'cn_calligraphy_2', subject: 'chinese', title: '书法练习', required: true, date: '2026-01-23', time: 15,
+              detail: '硬笔书法练习，注意笔画顺序。' },
+            { id: 'cn_calligraphy_3', subject: 'chinese', title: '书法练习', required: true, date: '2026-01-25', time: 15,
+              detail: '硬笔书法练习。' },
+            { id: 'cn_calligraphy_4', subject: 'chinese', title: '书法练习', required: true, date: '2026-01-28', time: 15,
+              detail: '硬笔书法练习。' },
+            { id: 'cn_calligraphy_5', subject: 'chinese', title: '书法练习', required: true, date: '2026-01-31', time: 15,
+              detail: '硬笔书法练习。' },
+            { id: 'cn_calligraphy_6', subject: 'chinese', title: '书法练习', required: true, date: '2026-02-03', time: 15,
+              detail: '硬笔书法练习。' },
+            { id: 'cn_calligraphy_7', subject: 'chinese', title: '书法练习', required: true, date: '2026-02-06', time: 15,
+              detail: '硬笔书法练习。' },
+            { id: 'cn_poem', subject: 'chinese', title: '书法作品：摘抄诗歌', required: true, date: '2026-02-10', time: 30,
+              detail: '选一首喜欢的诗歌，用硬笔书法工整抄写，作为最终作品交给老师。' },
+
+            // ===== 数学 =====
+            { id: 'math_calculator', subject: 'math', title: '准备科学计算器', required: true, date: '2026-01-20', time: 20,
+              detail: '购买或准备CASIO fx-999CN计算器，学会开机和基本操作。' },
+            { id: 'math_1_1', subject: 'math', title: '预习1.1 数的类型', required: true, date: '2026-01-21', time: 45,
+              detail: '预习1.1 Different types of numbers (p.3-5)，做课后例题，摘录英文词汇。' },
+            { id: 'math_1_2', subject: 'math', title: '预习1.2 倍数与因数', required: true, date: '2026-01-23', time: 45,
+              detail: '预习1.2 Multiples and factors (p.6-8)，理解LCM和HCF。' },
+            { id: 'math_1_3', subject: 'math', title: '预习1.3 质数', required: true, date: '2026-01-25', time: 45,
+              detail: '预习1.3 Prime numbers (p.9-13)，理解质因数分解。' },
+            { id: 'math_1_4', subject: 'math', title: '预习1.4 有向数', required: true, date: '2026-01-28', time: 50,
+              detail: '预习1.4 Working with directed numbers (p.14-16)，正负数运算。' },
+            { id: 'math_1_5', subject: 'math', title: '预习1.5 幂与根', required: true, date: '2026-01-31', time: 55,
+              detail: '预习1.5 Powers, roots and laws of indices (p.17-25)，重点！指数法则。' },
+            { id: 'math_1_6', subject: 'math', title: '预习1.6 运算顺序', required: true, date: '2026-02-03', time: 40,
+              detail: '预习1.6 Order of operations (p.26-30)，BODMAS法则。' },
+            { id: 'math_1_7', subject: 'math', title: '预习1.7 舍入与估算', required: true, date: '2026-02-06', time: 45,
+              detail: '预习1.7 Rounding and estimating (p.31-36)，significant figures。' },
+            { id: 'math_vocab', subject: 'math', title: '整理数学英文词汇', required: true, date: '2026-02-09', time: 40,
+              detail: '整理Unit 1所有数学专有词汇，英文+中文，方便开学后查阅。' },
+            { id: 'math_extra', subject: 'math', title: '阅读数学课外书', required: false, date: '2026-02-12', time: 60,
+              detail: '【选做】阅读《烧掉数学书》《学好数学并不难》等推荐书籍。' },
+
+            // ===== 物理 =====
+            { id: 'phy_syllabus', subject: 'physics', title: '了解物理大纲', required: true, date: '2026-01-22', time: 30,
+              detail: '阅读0653考试大纲物理部分(p.44-59)，了解P1-P5五个单元的内容。' },
+            { id: 'phy_vocab_1', subject: 'physics', title: '物理词汇 Part 1', required: true, date: '2026-01-26', time: 35,
+              detail: '背诵物理词汇表前半部分，包括motion, force, energy相关词汇。' },
+            { id: 'phy_vocab_2', subject: 'physics', title: '物理词汇 Part 2', required: true, date: '2026-02-01', time: 35,
+              detail: '背诵物理词汇表后半部分，包括waves, electricity相关词汇。' },
+            { id: 'phy_review', subject: 'physics', title: '复习物理词汇', required: true, date: '2026-02-07', time: 30,
+              detail: '复习全部物理词汇，自测掌握情况。' },
+
+            // ===== 化学 =====
+            { id: 'chem_vocab_1', subject: 'chemistry', title: 'Ch1词汇背诵', required: true, date: '2026-01-24', time: 30,
+              detail: '背诵Chapter 1 States of matter词汇和定义，做到会读会写。' },
+            { id: 'chem_ch1_read', subject: 'chemistry', title: 'Ch1课本阅读', required: true, date: '2026-01-27', time: 45,
+              detail: '阅读化学课本Chapter 1，理解固液气三态、粒子理论，口头回答课后问题。' },
+            { id: 'chem_ch1_ex', subject: 'chemistry', title: 'Ch1练习题', required: true, date: '2026-01-30', time: 40,
+              detail: '完成化学练习册Chapter 1习题。' },
+            { id: 'chem_vocab_2', subject: 'chemistry', title: 'Ch2词汇背诵', required: true, date: '2026-02-02', time: 30,
+              detail: '背诵Chapter 2 Atomic structure词汇和定义。' },
+            { id: 'chem_ch2_read', subject: 'chemistry', title: 'Ch2课本阅读', required: true, date: '2026-02-05', time: 50,
+              detail: '阅读化学课本Chapter 2，理解原子结构、质子中子电子、元素周期表。' },
+            { id: 'chem_ch2_ex', subject: 'chemistry', title: 'Ch2练习题', required: true, date: '2026-02-08', time: 45,
+              detail: '完成化学练习册Chapter 2习题。' },
+            { id: 'chem_syllabus', subject: 'chemistry', title: '了解化学考试大纲', required: true, date: '2026-02-11', time: 25,
+              detail: '阅读化学考试大纲Ch1-2，了解考试重难点。' },
+
+            // ===== 生物 =====
+            { id: 'bio_b1', subject: 'biology', title: 'B1 生命的特征', required: true, date: '2026-01-23', time: 40,
+              detail: '预习B1章节，理解生命的七大特征MRS GREN，记录key words。' },
+            { id: 'bio_b2', subject: 'biology', title: 'B2 细胞结构', required: true, date: '2026-01-29', time: 50,
+              detail: '预习B2章节，学习动植物细胞结构、细胞器功能。' },
+            { id: 'bio_b3', subject: 'biology', title: 'B3 生物分子', required: true, date: '2026-02-01', time: 45,
+              detail: '预习B3章节，了解碳水化合物、蛋白质、脂肪的功能。' },
+            { id: 'bio_b4', subject: 'biology', title: 'B4 酶', required: true, date: '2026-02-04', time: 45,
+              detail: '预习B4章节，理解酶的特性和影响因素。' },
+            { id: 'bio_b5', subject: 'biology', title: 'B5 植物营养', required: true, date: '2026-02-07', time: 45,
+              detail: '预习B5章节，学习光合作用过程。' },
+            { id: 'bio_keywords', subject: 'biology', title: '背诵生物key words', required: true, date: '2026-02-10', time: 35,
+              detail: '复习并背诵文件4中的生物关键词汇。' },
+            { id: 'bio_exercise', subject: 'biology', title: 'B1-B5练习题', required: true, date: '2026-02-12', time: 60,
+              detail: '完成文件3中B1-B5的练习题。' },
+            { id: 'bio_bbc', subject: 'biology', title: '观看BBC纪录片', required: false, date: '2026-02-15', time: 50,
+              detail: '【选做】观看《七个世界一个星球》或《绿色星球》纪录片。' },
+
+            // ===== 经济 =====
+            { id: 'econ_ch1', subject: 'economics', title: 'Ch1 经济问题的本质', required: true, date: '2026-01-25', time: 40,
+              detail: '阅读Susan Grant教材Section 1 Chapter 1，摘录key terms到笔记本。' },
+            { id: 'econ_ch2', subject: 'economics', title: 'Ch2 生产要素', required: true, date: '2026-01-29', time: 45,
+              detail: '阅读Chapter 2 The factors of production，摘录key terms。' },
+            { id: 'econ_mindmap1', subject: 'economics', title: '思维导图：生产要素', required: true, date: '2026-02-01', time: 40,
+              detail: '绘制Chapter 2生产要素的思维导图。' },
+            { id: 'econ_ch3', subject: 'economics', title: 'Ch3 机会成本', required: true, date: '2026-02-04', time: 40,
+              detail: '阅读Chapter 3 Opportunity cost，理解机会成本概念。' },
+            { id: 'econ_ch4', subject: 'economics', title: 'Ch4 生产可能性曲线', required: true, date: '2026-02-07', time: 45,
+              detail: '阅读Chapter 4 Production possibility curve。' },
+            { id: 'econ_mindmap2', subject: 'economics', title: '思维导图：PPC曲线', required: true, date: '2026-02-10', time: 40,
+              detail: '绘制Chapter 4 PPC曲线的思维导图。' },
+            { id: 'econ_worksheet', subject: 'economics', title: '完成经济学工作表', required: true, date: '2026-02-13', time: 50,
+              detail: '完成Worksheet 1.1练习题，开学需要上交。' },
+            { id: 'econ_extra', subject: 'economics', title: '经济学课外阅读/视频', required: false, date: '2026-02-16', time: 60,
+              detail: '【选做】阅读《牛奶可乐经济学》或观看经济学纪录片。' },
+
+            // ===== 地理 =====
+            { id: 'geo_vocab_1', subject: 'geography', title: '地理词汇 Part 1', required: true, date: '2026-01-26', time: 30,
+              detail: '背诵地理词汇表前半部分。' },
+            { id: 'geo_vocab_2', subject: 'geography', title: '地理词汇 Part 2', required: true, date: '2026-02-03', time: 30,
+              detail: '背诵地理词汇表后半部分。' },
+            { id: 'geo_syllabus', subject: 'geography', title: '了解地理大纲', required: true, date: '2026-02-06', time: 35,
+              detail: '阅读IG Geography Syllabus 2027-2029，了解各单元知识点。' },
+            { id: 'geo_questionnaire', subject: 'geography', title: '完成Being Organised问卷', required: true, date: '2026-02-09', time: 20,
+              detail: '完成"Being Organised"调查问卷，开学上交。' },
+            { id: 'geo_case', subject: 'geography', title: 'Case Study练习', required: false, date: '2026-02-14', time: 45,
+              detail: '【选做】选择一个案例(River Flooding/Earthquake等)，完成Case Study模板。' },
         ];
 
-        // Level Configuration
+        // 徽章配置
+        const badges = [
+            { id: 'early_bird', icon: '🌅', name: '早起鸟', levels: [1, 10, 30], desc: ['完成首个任务', '完成10个任务', '完成30个任务'] },
+            { id: 'all_rounder', icon: '📚', name: '全科战士', levels: [3, 6, 8], desc: ['3科各完成1项', '6科各完成1项', '8科各完成1项'] },
+            { id: 'fire', icon: '🔥', name: '坚持之火', levels: [3, 7, 14], desc: ['连续打卡3天', '连续打卡7天', '连续打卡14天'] },
+            { id: 'master', icon: '🎯', name: '学科大师', levels: [1, 3, 6], desc: ['1科100%完成', '3科100%完成', '6科100%完成'] },
+            { id: 'halfway', icon: '🌟', name: '征程过半', levels: [25, 50, 75], desc: ['进度25%', '进度50%', '进度75%'] },
+            { id: 'king', icon: '👑', name: '寒假王者', levels: [1, 2, 3], desc: ['必做全完成', '必做+50%选做', '100%全完成'] }
+        ];
+
         const levels = [
             { level: 1, name: '学习新手', required: 0 },
-            { level: 2, name: '勤奋学徒', required: 10 },
-            { level: 3, name: '知识探索者', required: 25 },
-            { level: 4, name: '学霸候选人', required: 45 },
+            { level: 2, name: '勤奋学徒', required: 15 },
+            { level: 3, name: '知识探索者', required: 35 },
+            { level: 4, name: '学霸候选人', required: 60 },
             { level: 5, name: '赫贤之星', required: tasks.length }
         ];
 
-        // State
+        // ========== 状态管理 ==========
         let completedTasks = new Set();
-        let userStats = {
-            level: 1,
-            streak_days: 0,
-            last_active: null,
-            badges: {},
-            total_completed: 0
-        };
-        let todayCompleted = 0;
+        let userStats = { level: 1, streak_days: 0, last_active: null, badges: {}, total_completed: 0 };
+        let currentWeekOffset = 0;
+        let selectedTaskId = null;
+        const startDate = new Date('2026-01-20');
 
-        // Initialize
-        async function init() {
-            // 先渲染UI，让用户立即看到内容
+        // ========== 初始化 ==========
+        function init() {
+            loadFromStorage();
+            renderDayView();
             renderSubjectView();
-            renderWeekView();
             renderBadges();
             updateStats();
             setupViewToggle();
+        }
 
-            // 再异步加载云端数据
-            try {
-                await loadProgress();
-                // 加载完云端数据后更新UI
-                renderSubjectView();
-                renderWeekView();
-                renderBadges();
-                updateStats();
-                setupRealtimeSync();
-            } catch (e) {
-                console.log('Cloud sync not available, using local mode');
+        function loadFromStorage() {
+            const savedProgress = localStorage.getItem('hd_homework_progress');
+            if (savedProgress) {
+                try { completedTasks = new Set(JSON.parse(savedProgress)); } catch(e) {}
+            }
+            const savedStats = localStorage.getItem('hd_homework_stats');
+            if (savedStats) {
+                try { userStats = JSON.parse(savedStats); } catch(e) {}
             }
         }
 
-        // Load progress from Supabase
-        async function loadProgress() {
-            // 如果Supabase不可用，直接从localStorage加载
-            if (!supabase) {
-                const saved = localStorage.getItem('homework_progress');
-                if (saved) completedTasks = new Set(JSON.parse(saved));
-                return;
-            }
-
-            try {
-                // Load task progress
-                const { data: progressData, error: progressError } = await supabase
-                    .from('progress')
-                    .select('*')
-                    .eq('user_id', userId);
-
-                if (progressData) {
-                    progressData.forEach(p => {
-                        if (p.completed) completedTasks.add(p.task_id);
-                    });
-                }
-
-                // Load user stats
-                const { data: statsData, error: statsError } = await supabase
-                    .from('user_stats')
-                    .select('*')
-                    .eq('user_id', userId)
-                    .single();
-
-                if (statsData) {
-                    userStats = statsData;
-                    // Check streak
-                    checkStreak();
-                } else {
-                    // Create new user stats
-                    await supabase.from('user_stats').insert({
-                        user_id: userId,
-                        level: 1,
-                        streak_days: 0,
-                        badges: {},
-                        total_completed: 0
-                    });
-                }
-            } catch (e) {
-                console.log('Loading from localStorage fallback');
-                const saved = localStorage.getItem('homework_progress');
-                if (saved) completedTasks = new Set(JSON.parse(saved));
-            }
+        function saveToStorage() {
+            localStorage.setItem('hd_homework_progress', JSON.stringify([...completedTasks]));
+            localStorage.setItem('hd_homework_stats', JSON.stringify(userStats));
         }
 
-        // Check and update streak
-        function checkStreak() {
+        // ========== 日视图 ==========
+        function changeWeek(delta) {
+            currentWeekOffset += delta;
+            if (currentWeekOffset < 0) currentWeekOffset = 0;
+            if (currentWeekOffset > 3) currentWeekOffset = 3;
+            renderDayView();
+        }
+
+        function renderDayView() {
+            const container = document.getElementById('daysContainer');
+            container.innerHTML = '';
+
+            const weekStart = new Date(startDate);
+            weekStart.setDate(weekStart.getDate() + currentWeekOffset * 7);
+            const weekEnd = new Date(weekStart);
+            weekEnd.setDate(weekEnd.getDate() + 6);
+
+            document.getElementById('weekTitle').textContent = `第 ${currentWeekOffset + 1} 周`;
+            document.getElementById('weekDates').textContent =
+                `${weekStart.getMonth() + 1}月${weekStart.getDate()}日 - ${weekEnd.getMonth() + 1}月${weekEnd.getDate()}日`;
+
             const today = new Date().toISOString().split('T')[0];
-            const lastActive = userStats.last_active;
+            const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
 
-            if (lastActive) {
-                const lastDate = new Date(lastActive);
-                const todayDate = new Date(today);
-                const diffDays = Math.floor((todayDate - lastDate) / (1000 * 60 * 60 * 24));
+            for (let i = 0; i < 7; i++) {
+                const date = new Date(weekStart);
+                date.setDate(date.getDate() + i);
+                const dateStr = date.toISOString().split('T')[0];
+                const isToday = dateStr === today;
 
-                if (diffDays > 1) {
-                    userStats.streak_days = 0;
-                }
-            }
-        }
+                const dayTasks = tasks.filter(t => t.date === dateStr);
+                const completedCount = dayTasks.filter(t => completedTasks.has(t.id)).length;
+                const totalTime = dayTasks.reduce((sum, t) => sum + t.time, 0);
 
-        // Setup realtime sync
-        function setupRealtimeSync() {
-            if (!supabase) return;
+                if (dayTasks.length === 0) continue;
 
-            supabase
-                .channel('progress_changes')
-                .on('postgres_changes', {
-                    event: '*',
-                    schema: 'public',
-                    table: 'progress',
-                    filter: `user_id=eq.${userId}`
-                }, (payload) => {
-                    if (payload.new && payload.new.completed) {
-                        completedTasks.add(payload.new.task_id);
-                    } else if (payload.new && !payload.new.completed) {
-                        completedTasks.delete(payload.new.task_id);
-                    }
-                    updateUI();
-                })
-                .subscribe();
-        }
-
-        // Toggle task completion
-        async function toggleTask(taskId) {
-            const isCompleted = completedTasks.has(taskId);
-
-            if (isCompleted) {
-                completedTasks.delete(taskId);
-            } else {
-                completedTasks.add(taskId);
-                todayCompleted++;
-            }
-
-            // Update UI immediately
-            updateUI();
-
-            // 保存到localStorage（总是保存）
-            localStorage.setItem('homework_progress', JSON.stringify([...completedTasks]));
-
-            // 同步到Supabase（如果可用）
-            if (supabase) {
-                try {
-                    await supabase
-                        .from('progress')
-                        .upsert({
-                            user_id: userId,
-                            task_id: taskId,
-                            completed: !isCompleted,
-                            completed_at: !isCompleted ? new Date().toISOString() : null
-                        }, { onConflict: 'user_id,task_id' });
-
-                    if (!isCompleted) {
-                        await updateUserStats();
-                    }
-                } catch (e) {
-                    console.log('Cloud sync failed, saved locally');
-                }
-            }
-
-            // 检查成就
-            if (!isCompleted) {
-                checkAchievements();
-            }
-        }
-
-        // Update user stats
-        async function updateUserStats() {
-            const today = new Date().toISOString().split('T')[0];
-            const totalCompleted = completedTasks.size;
-
-            // Calculate level
-            let newLevel = 1;
-            for (const l of levels) {
-                if (totalCompleted >= l.required) newLevel = l.level;
-            }
-
-            // Update streak
-            let newStreak = userStats.streak_days;
-            if (userStats.last_active !== today) {
-                const lastDate = userStats.last_active ? new Date(userStats.last_active) : null;
-                const todayDate = new Date(today);
-                if (lastDate) {
-                    const diffDays = Math.floor((todayDate - lastDate) / (1000 * 60 * 60 * 24));
-                    newStreak = diffDays === 1 ? userStats.streak_days + 1 : 1;
-                } else {
-                    newStreak = 1;
-                }
-            }
-
-            userStats.level = newLevel;
-            userStats.streak_days = newStreak;
-            userStats.last_active = today;
-            userStats.total_completed = totalCompleted;
-
-            // 保存到localStorage
-            localStorage.setItem('homework_stats', JSON.stringify(userStats));
-
-            // 同步到Supabase（如果可用）
-            if (!supabase) return;
-
-            try {
-                await supabase.from('user_stats').upsert({
-                    user_id: userId,
-                    ...userStats,
-                    updated_at: new Date().toISOString()
-                }, { onConflict: 'user_id' });
-            } catch (e) {
-                localStorage.setItem('homework_stats', JSON.stringify(userStats));
-            }
-        }
-
-        // Check achievements
-        function checkAchievements() {
-            const totalCompleted = completedTasks.size;
-            const totalRequired = tasks.filter(t => t.required).length;
-            const totalOptional = tasks.filter(t => !t.required).length;
-            const completedRequired = tasks.filter(t => t.required && completedTasks.has(t.id)).length;
-            const completedOptional = tasks.filter(t => !t.required && completedTasks.has(t.id)).length;
-
-            // Count subjects with completions
-            const subjectCompletions = {};
-            Object.keys(subjects).forEach(s => {
-                const subjectTasks = tasks.filter(t => t.subject === s);
-                const completed = subjectTasks.filter(t => completedTasks.has(t.id)).length;
-                subjectCompletions[s] = {
-                    completed,
-                    total: subjectTasks.length,
-                    percent: Math.round((completed / subjectTasks.length) * 100)
-                };
-            });
-
-            const subjectsWithCompletions = Object.values(subjectCompletions).filter(s => s.completed > 0).length;
-            const subjectsWith100 = Object.values(subjectCompletions).filter(s => s.percent === 100).length;
-            const totalPercent = Math.round((totalCompleted / tasks.length) * 100);
-
-            // Check each badge
-            const oldBadges = { ...userStats.badges };
-
-            // Early bird
-            if (totalCompleted >= 30) userStats.badges.early_bird = 3;
-            else if (totalCompleted >= 10) userStats.badges.early_bird = 2;
-            else if (totalCompleted >= 1) userStats.badges.early_bird = 1;
-
-            // All rounder
-            if (subjectsWithCompletions >= 8) userStats.badges.all_rounder = 3;
-            else if (subjectsWithCompletions >= 6) userStats.badges.all_rounder = 2;
-            else if (subjectsWithCompletions >= 3) userStats.badges.all_rounder = 1;
-
-            // Fire (streak)
-            if (userStats.streak_days >= 14) userStats.badges.fire = 3;
-            else if (userStats.streak_days >= 7) userStats.badges.fire = 2;
-            else if (userStats.streak_days >= 3) userStats.badges.fire = 1;
-
-            // Efficient
-            if (todayCompleted >= 8) userStats.badges.efficient = 3;
-            else if (todayCompleted >= 5) userStats.badges.efficient = 2;
-            else if (todayCompleted >= 3) userStats.badges.efficient = 1;
-
-            // Master
-            if (subjectsWith100 >= 6) userStats.badges.master = 3;
-            else if (subjectsWith100 >= 3) userStats.badges.master = 2;
-            else if (subjectsWith100 >= 1) userStats.badges.master = 1;
-
-            // Halfway
-            if (totalPercent >= 75) userStats.badges.halfway = 3;
-            else if (totalPercent >= 50) userStats.badges.halfway = 2;
-            else if (totalPercent >= 25) userStats.badges.halfway = 1;
-
-            // King
-            if (totalCompleted === tasks.length) userStats.badges.king = 3;
-            else if (completedRequired === totalRequired && completedOptional >= totalOptional / 2) userStats.badges.king = 2;
-            else if (completedRequired === totalRequired) userStats.badges.king = 1;
-
-            // Explorer
-            if (completedOptional >= totalOptional) userStats.badges.explorer = 3;
-            else if (completedOptional >= 6) userStats.badges.explorer = 2;
-            else if (completedOptional >= 3) userStats.badges.explorer = 1;
-
-            // Show achievement popup for new badges
-            for (const [badgeId, level] of Object.entries(userStats.badges)) {
-                if (!oldBadges[badgeId] || oldBadges[badgeId] < level) {
-                    const badge = badges.find(b => b.id === badgeId);
-                    showAchievement(badge, level);
-                    break; // Only show one at a time
-                }
-            }
-
-            renderBadges();
-        }
-
-        // Show achievement popup
-        function showAchievement(badge, level) {
-            const levelNames = ['', '铜牌', '银牌', '金牌'];
-            const levelClasses = ['', 'bronze', 'silver', 'gold'];
-
-            document.getElementById('achievementIcon').textContent = badge.icon;
-            document.getElementById('achievementIcon').className = `achievement-icon ${levelClasses[level]}`;
-            document.getElementById('achievementTitle').textContent = `${badge.name} · ${levelNames[level]}`;
-            document.getElementById('achievementDesc').textContent = badge.desc[level - 1];
-            document.getElementById('achievementModal').classList.add('active');
-
-            // Confetti effect
-            createConfetti();
-        }
-
-        function closeAchievement() {
-            document.getElementById('achievementModal').classList.remove('active');
-        }
-
-        // Create confetti effect
-        function createConfetti() {
-            const colors = ['#d4a441', '#ffd700', '#ff6b6b', '#4ecdc4', '#45b7d1'];
-            for (let i = 0; i < 50; i++) {
-                const confetti = document.createElement('div');
-                confetti.className = 'confetti';
-                confetti.style.cssText = `
-                    left: ${Math.random() * 100}vw;
-                    top: -10px;
-                    width: ${Math.random() * 10 + 5}px;
-                    height: ${Math.random() * 10 + 5}px;
-                    background: ${colors[Math.floor(Math.random() * colors.length)]};
-                    border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
-                    animation: fall ${Math.random() * 3 + 2}s linear forwards;
+                const card = document.createElement('div');
+                card.className = `day-card ${isToday ? 'today' : ''}`;
+                card.innerHTML = `
+                    <div class="day-card-header">
+                        <div class="day-info">
+                            <span class="day-date">${date.getDate()}日</span>
+                            <span class="day-weekday">${weekdays[date.getDay()]} · ${date.getMonth() + 1}月</span>
+                        </div>
+                        <div class="day-summary">
+                            <span>📋 ${completedCount}/${dayTasks.length} 完成</span>
+                            <span>⏱️ 约${totalTime}分钟</span>
+                        </div>
+                    </div>
+                    <div class="day-tasks-list">
+                        ${dayTasks.map(task => renderTaskItem(task)).join('')}
+                    </div>
                 `;
-                document.body.appendChild(confetti);
-                setTimeout(() => confetti.remove(), 5000);
-            }
-
-            // Add fall animation if not exists
-            if (!document.getElementById('confetti-style')) {
-                const style = document.createElement('style');
-                style.id = 'confetti-style';
-                style.textContent = `
-                    @keyframes fall {
-                        to {
-                            transform: translateY(100vh) rotate(720deg);
-                            opacity: 0;
-                        }
-                    }
-                `;
-                document.head.appendChild(style);
+                container.appendChild(card);
             }
         }
 
-        // Render subject view
+        function renderTaskItem(task) {
+            const isCompleted = completedTasks.has(task.id);
+            const subject = subjects[task.subject];
+            return `
+                <div class="task-item ${isCompleted ? 'completed' : ''}" onclick="showDetail('${task.id}')">
+                    <div class="task-checkbox ${isCompleted ? 'checked' : ''}" onclick="event.stopPropagation(); toggleTask('${task.id}')"></div>
+                    <div class="task-content">
+                        <div class="task-title">${task.title}</div>
+                        <div class="task-detail">${task.detail}</div>
+                    </div>
+                    <div class="task-meta">
+                        <div class="task-time">⏱️ ${task.time}分钟</div>
+                        <div class="task-tags">
+                            <span class="task-tag ${task.required ? 'required' : 'optional'}">${task.required ? '必做' : '选做'}</span>
+                            <span class="task-tag subject ${subject.color}">${subject.name}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // ========== 学科视图 ==========
         function renderSubjectView() {
-            const container = document.getElementById('subjectView');
+            const container = document.getElementById('subjectsGrid');
             container.innerHTML = '';
 
             Object.entries(subjects).forEach(([key, subject]) => {
@@ -1632,19 +1297,19 @@
                             <div class="subject-progress-bar">
                                 <div class="subject-progress-fill" style="width: ${percent}%"></div>
                             </div>
-                            <div class="subject-progress-text">${completed}/${subjectTasks.length} 完成</div>
+                            <div class="subject-progress-text">${completed}/${subjectTasks.length}</div>
                         </div>
                     </div>
-                    <div class="task-list">
+                    <div class="subject-tasks">
                         ${subjectTasks.map(task => `
-                            <div class="task-item ${completedTasks.has(task.id) ? 'completed' : ''}" data-id="${task.id}">
-                                <div class="task-checkbox ${completedTasks.has(task.id) ? 'checked' : ''}" onclick="toggleTask('${task.id}')"></div>
-                                <div class="task-content">
-                                    <div class="task-title">${task.title}</div>
-                                    <div class="task-meta">
-                                        <span class="task-tag ${task.required ? 'required' : 'optional'}">${task.required ? '必做' : '选做'}</span>
-                                        <span class="task-tag chapter">${task.chapter}</span>
-                                    </div>
+                            <div class="subject-task-item ${completedTasks.has(task.id) ? 'completed' : ''}" onclick="showDetail('${task.id}')">
+                                <div class="task-checkbox ${completedTasks.has(task.id) ? 'checked' : ''}" onclick="event.stopPropagation(); toggleTask('${task.id}')"></div>
+                                <div class="subject-task-content">
+                                    <div class="subject-task-title">${task.title}</div>
+                                    <div class="subject-task-detail">${task.detail}</div>
+                                </div>
+                                <div class="subject-task-meta">
+                                    <span class="task-tag ${task.required ? 'required' : 'optional'}">${task.required ? '必做' : '选做'}</span>
                                 </div>
                             </div>
                         `).join('')}
@@ -1654,357 +1319,70 @@
             });
         }
 
-        // 日视图相关
-        const startDate = new Date('2026-01-20'); // 寒假开始日期
-        const endDate = new Date('2026-02-16');   // 寒假结束日期
-        let currentWeekOffset = 0;
-        let taskAssignments = {}; // { taskId: 'YYYY-MM-DD' }
-        const weekdays = ['日', '一', '二', '三', '四', '五', '六'];
-        let selectedTaskId = null; // 当前选中的任务
-
-        // 预设的每日计划（基于学习规律合理分配）
-        const defaultAssignments = {
-            // 第1周 (1/20-1/26): 启动周 - 熟悉大纲、开始阅读、词汇起步
-            'en_read_book': '2026-01-20',      // 阅读是持续任务，从第一天开始
-            'cn_read_book': '2026-01-20',      // 中文阅读同步开始
-            'phy_syllabus': '2026-01-20',      // 了解物理大纲
-            'chem_syllabus': '2026-01-21',     // 了解化学大纲
-            'econ_syllabus': '2026-01-21',     // 了解经济大纲
-            'geo_syllabus': '2026-01-22',      // 了解地理大纲
-            'math_calculator': '2026-01-22',   // 准备计算器
-            'bio_b1': '2026-01-23',            // 生物B1预习
-            'math_unit1_1': '2026-01-23',      // 数学1.1-1.3
-            'en_vocab_1': '2026-01-24',        // 英语词汇Part1
-            'cn_calligraphy_1': '2026-01-24',  // 书法第1周
-            'en_diary_1': '2026-01-25',        // 英语日记1
-
-            // 第2周 (1/27-2/2): 深入周 - 各科预习、词汇加强
-            'math_unit1_2': '2026-01-27',      // 数学1.4-1.6
-            'chem_vocab': '2026-01-27',        // 化学词汇
-            'phy_vocab_1': '2026-01-28',       // 物理词汇1
-            'chem_ch1': '2026-01-28',          // 化学Ch1预习
-            'bio_b2': '2026-01-29',            // 生物B2
-            'bio_vocab': '2026-01-29',         // 生物词汇
-            'econ_vocab': '2026-01-30',        // 经济词汇
-            'econ_s1_1': '2026-01-30',         // 经济S1.1
-            'geo_vocab': '2026-01-31',         // 地理词汇
-            'geo_preview': '2026-01-31',       // 地理预习
-            'math_unit1_3': '2026-02-01',      // 数学1.7-1.9
-            'phy_preview': '2026-02-01',       // 物理预习
-            'en_vocab_2': '2026-02-02',        // 英语词汇Part2
-            'cn_calligraphy_2': '2026-02-02',  // 书法第2周
-            'bio_b3': '2026-02-02',            // 生物B3
-            'en_diary_2': '2026-02-02',        // 英语日记2
-
-            // 第3周 (2/3-2/9): 强化周 - 练习题、深度学习
-            'chem_ch2': '2026-02-03',          // 化学Ch2
-            'bio_b4': '2026-02-03',            // 生物B4
-            'econ_s1_2': '2026-02-04',         // 经济S1.2
-            'phy_vocab_2': '2026-02-04',       // 物理词汇2
-            'bio_b5': '2026-02-05',            // 生物B5
-            'math_vocab': '2026-02-05',        // 数学词汇
-            'geo_case_1': '2026-02-06',        // 地理案例1
-            'chem_exercise_1': '2026-02-06',   // 化学练习1
-            'geo_case_2': '2026-02-07',        // 地理案例2
-            'econ_mindmap': '2026-02-07',      // 经济思维导图
-            'math_exercise_1': '2026-02-08',   // 数学练习A
-            'en_poster': '2026-02-08',         // 秘密花园海报
-            'cn_letter': '2026-02-08',         // 给萧红写信
-            'cn_calligraphy_3': '2026-02-09',  // 书法第3周
-            'en_diary_3': '2026-02-09',        // 英语日记3
-
-            // 第4周 (2/10-2/16): 收尾周 - 练习题、选做任务
-            'math_exercise_2': '2026-02-10',   // 数学练习B
-            'chem_exercise_2': '2026-02-10',   // 化学练习2
-            'bio_exercise': '2026-02-11',      // 生物综合练习
-            'econ_worksheet': '2026-02-11',    // 经济工作表
-            'cn_calligraphy_4': '2026-02-12',  // 书法第4周
-            // 选做任务放在最后几天
-            'en_video': '2026-02-13',          // 选做：英语视频
-            'math_extra': '2026-02-13',        // 选做：数学课外读
-            'phy_video': '2026-02-14',         // 选做：物理视频
-            'chem_video': '2026-02-14',        // 选做：化学视频
-            'bio_bbc': '2026-02-15',           // 选做：BBC纪录片
-            'econ_case': '2026-02-15',         // 选做：经济案例
-            'cn_extra_read': '2026-02-16',     // 选做：中文拓展
-            'geo_questionnaire': '2026-02-16', // 选做：地理问卷
-        };
-
-        // 加载任务分配（优先用户保存的，否则用预设）
-        const savedAssignments = localStorage.getItem('homework_assignments');
-        if (savedAssignments) {
-            try {
-                taskAssignments = JSON.parse(savedAssignments);
-            } catch(e) {
-                taskAssignments = { ...defaultAssignments };
-            }
-        } else {
-            // 首次使用，加载预设计划
-            taskAssignments = { ...defaultAssignments };
-            localStorage.setItem('homework_assignments', JSON.stringify(taskAssignments));
-        }
-
-        function formatDate(date) {
-            return date.toISOString().split('T')[0];
-        }
-
-        function changeWeek(delta) {
-            currentWeekOffset += delta;
-            if (currentWeekOffset < 0) currentWeekOffset = 0;
-            if (currentWeekOffset > 3) currentWeekOffset = 3;
-            renderDayView();
-        }
-
-        function renderDayView() {
-            const container = document.getElementById('dayContainer');
-            container.innerHTML = '';
-
-            // 更新周标签
-            document.getElementById('currentWeekLabel').textContent = `第 ${currentWeekOffset + 1} 周`;
-
-            // 计算当前周的日期范围
-            const weekStart = new Date(startDate);
-            weekStart.setDate(weekStart.getDate() + currentWeekOffset * 7);
-
-            const today = formatDate(new Date());
-
-            // 渲染7天
-            for (let i = 0; i < 7; i++) {
-                const date = new Date(weekStart);
-                date.setDate(date.getDate() + i);
-                const dateStr = formatDate(date);
-                const isToday = dateStr === today;
-
-                const dayTasks = tasks.filter(t => taskAssignments[t.id] === dateStr);
-
-                const card = document.createElement('div');
-                card.className = `day-card ${isToday ? 'today' : ''} ${selectedTaskId ? 'can-drop' : ''}`;
-                card.dataset.date = dateStr;
-                // 点击日期卡片可以分配选中的任务
-                card.onclick = function(e) {
-                    // 如果点击的是任务本身，不触发
-                    if (e.target.closest('.day-task')) return;
-                    handleDayClick(dateStr);
-                };
-
-                card.innerHTML = `
-                    <div class="day-header">
-                        <div class="day-date">${date.getDate()}</div>
-                        <div class="day-weekday">周${weekdays[date.getDay()]} · ${date.getMonth() + 1}月</div>
-                    </div>
-                    <div class="day-tasks" data-date="${dateStr}">
-                        ${dayTasks.map(task => createDayTaskHTML(task)).join('')}
-                    </div>
-                `;
-
-                container.appendChild(card);
-            }
-
-            // 渲染待分配任务
-            renderUnassignedTasks();
-
-            // 设置拖拽
-            setupDragAndDrop();
-        }
-
-        function createDayTaskHTML(task, showDetail = false) {
-            const isCompleted = completedTasks.has(task.id);
-            const isSelected = selectedTaskId === task.id;
-            return `
-                <div class="day-task ${isCompleted ? 'completed' : ''} ${isSelected ? 'selected' : ''} ${task.required ? '' : 'optional-task'}"
-                     draggable="true"
-                     data-task-id="${task.id}"
-                     onclick="handleTaskClick(event, '${task.id}')"
-                     title="${task.detail || ''}">
-                    <span class="day-task-subject">${subjects[task.subject].icon}</span>
-                    <span class="day-task-title">${task.title}</span>
-                    <span class="day-task-tag ${task.required ? 'required' : 'optional'}">${task.required ? '必做' : '选做'}</span>
-                </div>
-            `;
-        }
-
-        // 点击任务：第一次点击选中，第二次点击完成
-        function handleTaskClick(event, taskId) {
-            event.stopPropagation();
-            if (selectedTaskId === taskId) {
-                // 第二次点击，切换完成状态
-                toggleTask(taskId);
-                selectedTaskId = null;
+        // ========== 任务操作 ==========
+        function toggleTask(taskId) {
+            const isCompleted = completedTasks.has(taskId);
+            if (isCompleted) {
+                completedTasks.delete(taskId);
             } else {
-                // 第一次点击，选中任务
-                selectedTaskId = taskId;
-                showTaskDetail(taskId);
+                completedTasks.add(taskId);
+                checkAchievements();
             }
+            saveToStorage();
+            updateStats();
             renderDayView();
+            renderSubjectView();
         }
 
-        // 显示任务详情面板
-        function showTaskDetail(taskId) {
+        function showDetail(taskId) {
+            selectedTaskId = taskId;
             const task = tasks.find(t => t.id === taskId);
             if (!task) return;
 
             const subject = subjects[task.subject];
-            const isCompleted = completedTasks.has(task.id);
+            const isCompleted = completedTasks.has(taskId);
 
             document.getElementById('detailIcon').textContent = subject.icon;
-            document.getElementById('detailIcon').className = `task-detail-icon subject-icon ${subject.color}`;
+            document.getElementById('detailIcon').className = `detail-icon subject-icon ${subject.color}`;
             document.getElementById('detailTitle').textContent = task.title;
-            document.getElementById('detailDesc').textContent = task.detail || '无详细描述';
-            document.getElementById('detailRequired').textContent = task.required ? '必做' : '选做';
-            document.getElementById('detailRequired').className = `task-tag ${task.required ? 'required' : 'optional'}`;
-            document.getElementById('detailChapter').textContent = task.chapter;
+            document.getElementById('detailDesc').textContent = task.detail;
+            document.getElementById('detailTags').innerHTML = `
+                <span class="task-tag ${task.required ? 'required' : 'optional'}">${task.required ? '必做' : '选做'}</span>
+                <span class="task-tag subject ${subject.color}">${subject.name}</span>
+                <span class="task-time">⏱️ ${task.time}分钟</span>
+            `;
 
-            const completeBtn = document.getElementById('detailCompleteBtn');
-            if (isCompleted) {
-                completeBtn.textContent = '✗ 取消完成';
-                completeBtn.className = 'detail-btn cancel';
-            } else {
-                completeBtn.textContent = '✓ 完成任务';
-                completeBtn.className = 'detail-btn complete';
-            }
+            const btn = document.getElementById('detailCompleteBtn');
+            btn.textContent = isCompleted ? '✗ 取消完成' : '✓ 完成任务';
+            btn.className = `detail-btn ${isCompleted ? 'secondary' : 'primary'}`;
 
-            document.getElementById('taskDetailPanel').classList.add('active');
+            document.getElementById('detailPanel').classList.add('active');
         }
 
-        // 关闭任务详情面板
-        function closeTaskDetail() {
-            document.getElementById('taskDetailPanel').classList.remove('active');
+        function closeDetail() {
+            document.getElementById('detailPanel').classList.remove('active');
             selectedTaskId = null;
-            renderDayView();
         }
 
-        // 完成选中的任务
         function completeSelectedTask() {
             if (selectedTaskId) {
                 toggleTask(selectedTaskId);
-                closeTaskDetail();
+                closeDetail();
             }
         }
 
-        // 点击日期卡片分配选中的任务
-        function handleDayClick(dateStr) {
-            if (selectedTaskId) {
-                taskAssignments[selectedTaskId] = dateStr;
-                saveAssignments();
-                selectedTaskId = null;
-                renderDayView();
-            }
-        }
-
-        function renderUnassignedTasks() {
-            const container = document.getElementById('unassignedTasks');
-            const unassigned = tasks.filter(t => !taskAssignments[t.id]);
-
-            document.getElementById('unassignedCount').textContent = unassigned.length;
-
-            container.innerHTML = unassigned.map(task => createDayTaskHTML(task)).join('');
-        }
-
-        function setupDragAndDrop() {
-            // 设置可拖动的任务
-            document.querySelectorAll('.day-task').forEach(el => {
-                el.addEventListener('dragstart', handleDragStart);
-                el.addEventListener('dragend', handleDragEnd);
-            });
-
-            // 设置放置区域
-            document.querySelectorAll('.day-tasks').forEach(el => {
-                el.addEventListener('dragover', handleDragOver);
-                el.addEventListener('dragleave', handleDragLeave);
-                el.addEventListener('drop', handleDrop);
-            });
-
-            // 待分配区域也可以接收
-            const unassigned = document.getElementById('unassignedTasks');
-            unassigned.addEventListener('dragover', handleDragOver);
-            unassigned.addEventListener('dragleave', handleDragLeave);
-            unassigned.addEventListener('drop', handleDropUnassigned);
-        }
-
-        let draggedTaskId = null;
-
-        function handleDragStart(e) {
-            draggedTaskId = e.target.dataset.taskId;
-            e.target.classList.add('dragging');
-            e.dataTransfer.effectAllowed = 'move';
-        }
-
-        function handleDragEnd(e) {
-            e.target.classList.remove('dragging');
-            document.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
-        }
-
-        function handleDragOver(e) {
-            e.preventDefault();
-            e.currentTarget.classList.add('drag-over');
-        }
-
-        function handleDragLeave(e) {
-            e.currentTarget.classList.remove('drag-over');
-        }
-
-        function handleDrop(e) {
-            e.preventDefault();
-            e.currentTarget.classList.remove('drag-over');
-
-            const date = e.currentTarget.dataset.date;
-            if (draggedTaskId && date) {
-                taskAssignments[draggedTaskId] = date;
-                saveAssignments();
-                renderDayView();
-            }
-        }
-
-        function handleDropUnassigned(e) {
-            e.preventDefault();
-            e.currentTarget.classList.remove('drag-over');
-
-            if (draggedTaskId) {
-                delete taskAssignments[draggedTaskId];
-                saveAssignments();
-                renderDayView();
-            }
-        }
-
-        function saveAssignments() {
-            localStorage.setItem('homework_assignments', JSON.stringify(taskAssignments));
-        }
-
-        // 保留原函数名兼容
-        function renderWeekView() {
-            renderDayView();
-        }
-
-        // Render badges
-        function renderBadges() {
-            const container = document.getElementById('badgesRow');
-            container.innerHTML = '';
-
-            badges.forEach(badge => {
-                const level = userStats.badges[badge.id] || 0;
-                const levelClass = level === 0 ? 'locked' : ['', 'bronze', 'silver', 'gold'][level];
-                const stars = level > 0 ? '⭐'.repeat(level) : '';
-
-                const el = document.createElement('div');
-                el.className = `badge-mini ${levelClass}`;
-                el.innerHTML = `${badge.icon}<span class="badge-stars">${stars}</span>`;
-                el.title = `${badge.name}: ${level > 0 ? badge.desc[level - 1] : '未解锁'}`;
-                container.appendChild(el);
-            });
-        }
-
-        // Update stats display
+        // ========== 统计更新 ==========
         function updateStats() {
             const totalCompleted = completedTasks.size;
             const percent = Math.round((totalCompleted / tasks.length) * 100);
 
-            // Update progress ring
+            // 进度环
             const ring = document.getElementById('progressRing');
-            const offset = 314 - (314 * percent / 100);
+            const offset = 377 - (377 * percent / 100);
             ring.style.strokeDashoffset = offset;
             document.getElementById('totalPercent').textContent = percent + '%';
 
-            // Update level
+            // 等级
             let currentLevel = levels[0];
             for (const l of levels) {
                 if (totalCompleted >= l.required) currentLevel = l;
@@ -2012,81 +1390,110 @@
             document.getElementById('levelValue').textContent = currentLevel.level;
             document.getElementById('levelTitle').textContent = currentLevel.name;
 
-            // Update streak
+            // 连续打卡
             document.getElementById('streakValue').textContent = userStats.streak_days;
 
-            // Update completed count
+            // 完成数
             document.getElementById('completedValue').textContent = totalCompleted;
-            document.getElementById('totalTasks').textContent = `/ ${tasks.length} 项`;
+            document.getElementById('totalLabel').textContent = `/ ${tasks.length} 项`;
         }
 
-        // Update all UI
-        function updateUI() {
-            renderSubjectView();
-            renderWeekView();
+        // ========== 徽章 ==========
+        function renderBadges() {
+            const container = document.getElementById('badgesGrid');
+            container.innerHTML = badges.map(badge => {
+                const level = userStats.badges[badge.id] || 0;
+                const levelClass = level === 0 ? 'locked' : ['', 'bronze', 'silver', 'gold'][level];
+                return `<div class="badge-item ${levelClass}" title="${badge.name}: ${level > 0 ? badge.desc[level-1] : '未解锁'}">${badge.icon}</div>`;
+            }).join('');
+        }
+
+        function checkAchievements() {
+            const totalCompleted = completedTasks.size;
+            const totalRequired = tasks.filter(t => t.required).length;
+            const completedRequired = tasks.filter(t => t.required && completedTasks.has(t.id)).length;
+            const completedOptional = tasks.filter(t => !t.required && completedTasks.has(t.id)).length;
+            const percent = Math.round((totalCompleted / tasks.length) * 100);
+
+            const subjectCompletions = {};
+            Object.keys(subjects).forEach(s => {
+                const subjectTasks = tasks.filter(t => t.subject === s);
+                const completed = subjectTasks.filter(t => completedTasks.has(t.id)).length;
+                subjectCompletions[s] = { completed, total: subjectTasks.length, percent: Math.round((completed / subjectTasks.length) * 100) };
+            });
+
+            const subjectsWithCompletions = Object.values(subjectCompletions).filter(s => s.completed > 0).length;
+            const subjectsWith100 = Object.values(subjectCompletions).filter(s => s.percent === 100).length;
+
+            const oldBadges = { ...userStats.badges };
+
+            // 检查各徽章
+            if (totalCompleted >= 30) userStats.badges.early_bird = 3;
+            else if (totalCompleted >= 10) userStats.badges.early_bird = 2;
+            else if (totalCompleted >= 1) userStats.badges.early_bird = 1;
+
+            if (subjectsWithCompletions >= 8) userStats.badges.all_rounder = 3;
+            else if (subjectsWithCompletions >= 6) userStats.badges.all_rounder = 2;
+            else if (subjectsWithCompletions >= 3) userStats.badges.all_rounder = 1;
+
+            if (userStats.streak_days >= 14) userStats.badges.fire = 3;
+            else if (userStats.streak_days >= 7) userStats.badges.fire = 2;
+            else if (userStats.streak_days >= 3) userStats.badges.fire = 1;
+
+            if (subjectsWith100 >= 6) userStats.badges.master = 3;
+            else if (subjectsWith100 >= 3) userStats.badges.master = 2;
+            else if (subjectsWith100 >= 1) userStats.badges.master = 1;
+
+            if (percent >= 75) userStats.badges.halfway = 3;
+            else if (percent >= 50) userStats.badges.halfway = 2;
+            else if (percent >= 25) userStats.badges.halfway = 1;
+
+            if (totalCompleted === tasks.length) userStats.badges.king = 3;
+            else if (completedRequired === totalRequired && completedOptional >= tasks.filter(t => !t.required).length / 2) userStats.badges.king = 2;
+            else if (completedRequired === totalRequired) userStats.badges.king = 1;
+
+            // 显示新徽章
+            for (const [badgeId, level] of Object.entries(userStats.badges)) {
+                if (!oldBadges[badgeId] || oldBadges[badgeId] < level) {
+                    const badge = badges.find(b => b.id === badgeId);
+                    showAchievement(badge, level);
+                    break;
+                }
+            }
+
+            saveToStorage();
             renderBadges();
-            updateStats();
         }
 
-        // Setup view toggle
+        function showAchievement(badge, level) {
+            const levelNames = ['', '铜牌', '银牌', '金牌'];
+            const levelClasses = ['', 'bronze', 'silver', 'gold'];
+            document.getElementById('modalIcon').textContent = badge.icon;
+            document.getElementById('modalIcon').className = `modal-icon badge-item ${levelClasses[level]}`;
+            document.getElementById('modalTitle').textContent = `${badge.name} · ${levelNames[level]}`;
+            document.getElementById('modalDesc').textContent = badge.desc[level - 1];
+            document.getElementById('achievementModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('achievementModal').classList.remove('active');
+        }
+
+        // ========== 视图切换 ==========
         function setupViewToggle() {
             document.querySelectorAll('.view-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
                     document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
-
                     const view = btn.dataset.view;
-                    document.getElementById('subjectView').classList.toggle('active', view === 'subject');
                     document.getElementById('dayView').classList.toggle('active', view === 'day');
-                    if (view === 'day') renderDayView();
+                    document.getElementById('subjectView').classList.toggle('active', view === 'subject');
                 });
             });
         }
 
-        // Start - 立即渲染页面
-        renderSubjectView();
-        renderWeekView();
-        renderBadges();
-        updateStats();
-        setupViewToggle();
-
-        // 从localStorage加载已保存的进度
-        const savedProgress = localStorage.getItem('homework_progress');
-        if (savedProgress) {
-            try {
-                completedTasks = new Set(JSON.parse(savedProgress));
-                updateUI();
-            } catch(e) {}
-        }
-
-        const savedStats = localStorage.getItem('homework_stats');
-        if (savedStats) {
-            try {
-                userStats = JSON.parse(savedStats);
-                updateStats();
-                renderBadges();
-            } catch(e) {}
-        }
-
-        // 异步加载Supabase（不阻塞页面）
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
-        script.onload = function() {
-            try {
-                supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-                loadProgress().then(() => {
-                    updateUI();
-                    setupRealtimeSync();
-                });
-                document.getElementById('syncText').textContent = '实时同步中';
-            } catch(e) {
-                document.getElementById('syncText').textContent = '本地模式';
-            }
-        };
-        script.onerror = function() {
-            document.getElementById('syncText').textContent = '本地模式';
-        };
-        document.body.appendChild(script);
+        // 启动
+        init();
     </script>
 </body>
 </html>

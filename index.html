@@ -3,162 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>上海赫贤学校 · 2026春季4.5年制新生寒假学习大礼包</title>
+    <title>寒假学习大礼包 · 上海赫贤学校</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-gold: #d4a441;
-            --color-gold-light: #f5e6c4;
-            --color-gold-dark: #b8860b;
-            --color-navy: #1a2a4a;
-            --color-navy-light: #2d4263;
-            --color-cream: #faf8f3;
-            --color-cream-dark: #f0ebe0;
-            --color-text: #2c3e50;
-            --color-text-light: #5a6c7d;
-            --color-border: #e8e4db;
-            --font-display: 'Cormorant Garamond', 'Noto Serif SC', serif;
-            --font-body: 'Source Sans 3', -apple-system, 'PingFang SC', sans-serif;
-            --font-chinese: 'Noto Serif SC', 'Songti SC', serif;
+            --bg-warm: #faf6f0;
+            --bg-paper: #fffef9;
+            --bg-accent: #f5f0e6;
+            --text-primary: #2d2a26;
+            --text-secondary: #6b6560;
+            --text-muted: #9a9590;
+            --border-light: #e8e4dc;
+            --border-medium: #d4cfc5;
+            --accent-coral: #e07a5f;
+            --accent-sage: #81b29a;
+            --accent-gold: #f2cc8f;
+            --accent-navy: #3d405b;
+            --accent-blue: #5c7cad;
+            --accent-purple: #8e7cc3;
+            --accent-teal: #4a9b8c;
+            --accent-rose: #c97b84;
+            --shadow-soft: 0 2px 8px rgba(45, 42, 38, 0.06);
+            --shadow-medium: 0 4px 20px rgba(45, 42, 38, 0.08);
+            --shadow-strong: 0 8px 30px rgba(45, 42, 38, 0.12);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
+
         body {
-            font-family: var(--font-body);
-            background: var(--color-cream);
-            color: var(--color-text);
+            font-family: 'Noto Serif SC', 'Crimson Pro', Georgia, serif;
+            background: var(--bg-warm);
+            color: var(--text-primary);
             line-height: 1.7;
-            font-size: 16px;
+            min-height: 100vh;
         }
 
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            opacity: 0.03;
-            pointer-events: none;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            z-index: 9999;
+        /* ===== Header / Navigation ===== */
+        .header {
+            background: var(--bg-paper);
+            border-bottom: 1px solid var(--border-light);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        .nav {
-            position: fixed;
-            top: 0; left: 0;
-            width: 280px;
-            height: 100vh;
-            background: linear-gradient(180deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
-            padding: 40px 0;
-            overflow-y: auto;
-            z-index: 1000;
-            box-shadow: 4px 0 30px rgba(26, 42, 74, 0.15);
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
         }
 
-        .nav-header {
-            padding: 0 30px 40px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            margin-bottom: 30px;
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .nav-logo {
-            width: 60px; height: 60px;
-            background: var(--color-gold);
-            border-radius: 12px;
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--accent-coral), #d4644a);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            font-family: var(--font-display);
-            font-size: 28px;
-            color: var(--color-navy);
-            font-weight: 700;
-        }
-
-        .nav-title {
-            font-family: var(--font-chinese);
-            font-size: 18px;
+            font-size: 20px;
             color: white;
-            font-weight: 600;
-            line-height: 1.5;
+            font-weight: 700;
+            font-family: 'Noto Serif SC', serif;
         }
 
-        .nav-subtitle {
+        .site-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.5px;
+        }
+
+        .site-subtitle {
             font-size: 12px;
-            color: var(--color-gold-light);
-            margin-top: 8px;
-            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-top: 2px;
         }
 
-        .nav-section {
-            padding: 0 20px;
-            margin-bottom: 25px;
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .nav-section-title {
+        .checklist-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, var(--accent-sage), #6a9b84);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(129, 178, 154, 0.3);
+        }
+
+        .checklist-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(129, 178, 154, 0.4);
+        }
+
+        .checklist-btn .badge {
+            background: rgba(255,255,255,0.25);
+            padding: 2px 8px;
+            border-radius: 8px;
             font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--color-gold);
-            padding: 0 10px;
-            margin-bottom: 12px;
-            font-weight: 600;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            background: var(--bg-accent);
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            background: var(--bg-paper);
+            border-bottom: 1px solid var(--border-light);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-bar::-webkit-scrollbar {
+            height: 0;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            gap: 4px;
         }
 
         .nav-link {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 12px 15px;
-            color: rgba(255,255,255,0.75);
+            gap: 8px;
+            padding: 14px 16px;
+            color: var(--text-secondary);
             text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 14px;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
         }
 
         .nav-link:hover {
-            background: rgba(255,255,255,0.08);
-            color: white;
+            color: var(--text-primary);
+            background: var(--bg-accent);
         }
 
         .nav-link.active {
-            background: rgba(212, 164, 65, 0.15);
-            color: var(--color-gold-light);
+            color: var(--accent-coral);
+            border-bottom-color: var(--accent-coral);
         }
 
         .nav-icon {
-            width: 32px; height: 32px;
+            width: 28px;
+            height: 28px;
             border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 14px;
+            color: white;
             flex-shrink: 0;
         }
 
-        .nav-icon.english { background: linear-gradient(135deg, #667eea, #764ba2); }
-        .nav-icon.chinese { background: linear-gradient(135deg, #f093fb, #f5576c); }
-        .nav-icon.math { background: linear-gradient(135deg, #4facfe, #00f2fe); }
-        .nav-icon.physics { background: linear-gradient(135deg, #43e97b, #38f9d7); }
-        .nav-icon.chemistry { background: linear-gradient(135deg, #fa709a, #fee140); }
-        .nav-icon.biology { background: linear-gradient(135deg, #a8edea, #fed6e3); }
-        .nav-icon.economics { background: linear-gradient(135deg, #ffecd2, #fcb69f); }
-        .nav-icon.geography { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
-        .nav-icon.overview { background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); }
-        .nav-icon.calendar { background: linear-gradient(135deg, #e0c3fc, #8ec5fc); }
-        .nav-icon.contacts { background: linear-gradient(135deg, #d299c2, #fef9d7); }
+        .nav-icon.overview { background: var(--accent-coral); }
+        .nav-icon.calendar { background: var(--accent-purple); }
+        .nav-icon.english { background: var(--accent-coral); }
+        .nav-icon.chinese { background: var(--accent-rose); }
+        .nav-icon.math { background: var(--accent-blue); }
+        .nav-icon.physics { background: var(--accent-purple); }
+        .nav-icon.chemistry { background: var(--accent-teal); }
+        .nav-icon.biology { background: var(--accent-sage); }
+        .nav-icon.economics { background: var(--accent-gold); }
+        .nav-icon.geography { background: var(--accent-navy); }
+        .nav-icon.contacts { background: var(--accent-rose); }
 
-        .main {
-            margin-left: 280px;
-            min-height: 100vh;
-        }
-
+        /* ===== Hero Section ===== */
         .hero {
-            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 50%, #3d5a80 100%);
-            padding: 100px 80px 80px;
+            background: linear-gradient(135deg, var(--accent-navy) 0%, #4a4e69 50%, #5c6078 100%);
+            padding: 60px 24px;
             position: relative;
             overflow: hidden;
         }
@@ -166,36 +221,36 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: -50%; right: -20%;
+            top: -50%; right: -30%;
             width: 80%; height: 200%;
-            background: radial-gradient(ellipse, rgba(212, 164, 65, 0.15) 0%, transparent 70%);
+            background: radial-gradient(ellipse, rgba(242, 204, 143, 0.15) 0%, transparent 60%);
+            pointer-events: none;
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .hero-badge {
             display: inline-block;
-            background: rgba(212, 164, 65, 0.2);
-            border: 1px solid var(--color-gold);
-            color: var(--color-gold-light);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 13px;
-            letter-spacing: 2px;
+            background: rgba(242, 204, 143, 0.2);
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            margin-bottom: 30px;
-            animation: fadeInUp 0.8s ease;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease;
         }
 
         .hero-title {
-            font-family: var(--font-chinese);
-            font-size: clamp(36px, 5vw, 56px);
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(28px, 5vw, 42px);
             color: white;
             font-weight: 700;
             line-height: 1.3;
@@ -203,413 +258,440 @@
             animation: fadeInUp 0.8s ease 0.1s both;
         }
 
-        .hero-title span { color: var(--color-gold); }
+        .hero-title span { color: var(--accent-gold); }
 
         .hero-desc {
-            font-size: 18px;
-            color: rgba(255,255,255,0.7);
+            font-size: 16px;
+            color: rgba(255,255,255,0.8);
             max-width: 600px;
             line-height: 1.8;
-            animation: fadeInUp 0.8s ease 0.2s both;
+            animation: fadeInUp 0.6s ease 0.2s both;
         }
 
         .hero-meta {
             display: flex;
-            gap: 40px;
-            margin-top: 50px;
-            animation: fadeInUp 0.8s ease 0.3s both;
+            gap: 32px;
+            margin-top: 40px;
+            animation: fadeInUp 0.6s ease 0.3s both;
         }
 
-        .hero-meta-item { text-align: center; }
+        .hero-meta-item {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+        }
 
         .hero-meta-value {
-            font-family: var(--font-display);
-            font-size: 42px;
-            color: var(--color-gold);
-            font-weight: 700;
+            font-family: 'Crimson Pro', serif;
+            font-size: 32px;
+            color: var(--accent-gold);
+            font-weight: 600;
             line-height: 1;
         }
 
         .hero-meta-label {
-            font-size: 13px;
-            color: rgba(255,255,255,0.5);
-            margin-top: 8px;
-            letter-spacing: 1px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 6px;
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .content { padding: 60px 80px; }
+        /* ===== Main Content ===== */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+        }
 
         .section {
-            margin-bottom: 80px;
-            scroll-margin-top: 40px;
+            margin-bottom: 60px;
+            scroll-margin-top: 120px;
         }
 
         .section-header {
             display: flex;
             align-items: center;
-            gap: 20px;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--color-border);
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-light);
         }
 
         .section-icon {
-            width: 56px; height: 56px;
-            border-radius: 14px;
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 22px;
             flex-shrink: 0;
+            color: white;
         }
 
+        .section-icon.overview { background: var(--accent-coral); }
+        .section-icon.calendar { background: var(--accent-purple); }
+        .section-icon.english { background: var(--accent-coral); }
+        .section-icon.chinese { background: var(--accent-rose); }
+        .section-icon.math { background: var(--accent-blue); }
+        .section-icon.physics { background: var(--accent-purple); }
+        .section-icon.chemistry { background: var(--accent-teal); }
+        .section-icon.biology { background: var(--accent-sage); }
+        .section-icon.economics { background: var(--accent-gold); }
+        .section-icon.geography { background: var(--accent-navy); }
+        .section-icon.contacts { background: var(--accent-rose); }
+
         .section-title {
-            font-family: var(--font-chinese);
-            font-size: 28px;
-            color: var(--color-navy);
-            font-weight: 700;
+            font-size: 22px;
+            color: var(--text-primary);
+            font-weight: 600;
         }
 
         .section-title-en {
-            font-family: var(--font-display);
-            font-size: 14px;
-            color: var(--color-text-light);
+            font-family: 'Crimson Pro', serif;
+            font-size: 13px;
+            color: var(--text-muted);
             font-weight: 400;
             font-style: italic;
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
+        /* ===== Cards ===== */
         .card {
-            background: white;
-            border-radius: 16px;
-            padding: 35px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
-            border: 1px solid var(--color-border);
-            transition: all 0.3s ease;
+            background: var(--bg-paper);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.2s ease;
         }
 
         .card:hover {
-            box-shadow: 0 8px 40px rgba(0,0,0,0.08);
-            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
         }
 
         .card-title {
-            font-family: var(--font-chinese);
-            font-size: 20px;
-            color: var(--color-navy);
+            font-size: 17px;
+            color: var(--text-primary);
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .card-title::before {
             content: '';
-            width: 4px; height: 20px;
-            background: var(--color-gold);
+            width: 4px;
+            height: 18px;
+            background: var(--accent-coral);
             border-radius: 2px;
         }
 
+        /* ===== Task List ===== */
         .task-list { list-style: none; }
 
         .task-item {
             display: flex;
             align-items: flex-start;
-            gap: 15px;
-            padding: 15px 0;
-            border-bottom: 1px dashed var(--color-border);
+            gap: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border-light);
         }
 
         .task-item:last-child { border-bottom: none; }
 
         .task-number {
-            width: 28px; height: 28px;
-            background: var(--color-cream-dark);
+            width: 26px;
+            height: 26px;
+            background: var(--bg-accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
-            color: var(--color-navy);
+            color: var(--text-secondary);
             flex-shrink: 0;
         }
 
         .task-content { flex: 1; }
 
         .task-main {
-            font-size: 15px;
-            color: var(--color-text);
-            line-height: 1.7;
+            font-size: 14px;
+            color: var(--text-primary);
+            line-height: 1.6;
         }
 
         .task-detail {
             font-size: 13px;
-            color: var(--color-text-light);
+            color: var(--text-secondary);
             margin-top: 8px;
-            padding-left: 15px;
-            border-left: 2px solid var(--color-border);
-            line-height: 1.8;
+            padding-left: 14px;
+            border-left: 2px solid var(--border-light);
+            line-height: 1.7;
         }
 
         .task-tag {
             display: inline-block;
-            padding: 3px 10px;
-            background: var(--color-gold-light);
-            color: var(--color-gold-dark);
+            padding: 2px 8px;
+            background: #fef3e2;
+            color: #b45309;
             border-radius: 4px;
             font-size: 11px;
-            font-weight: 600;
-            margin-left: 10px;
+            font-weight: 500;
+            margin-left: 8px;
         }
 
         .task-tag.important {
-            background: #fee2e2;
-            color: #dc2626;
+            background: #fce4e4;
+            color: #c0392b;
         }
 
+        /* ===== Info Box ===== */
         .info-box {
-            background: linear-gradient(135deg, var(--color-gold-light) 0%, #fff9e6 100%);
-            border: 1px solid var(--color-gold);
-            border-radius: 12px;
-            padding: 25px 30px;
-            margin: 25px 0;
+            background: linear-gradient(135deg, #fef7ed 0%, #fefcf3 100%);
+            border: 1px solid #f5e6d3;
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 20px 0;
         }
 
         .info-box-title {
             font-weight: 600;
-            color: var(--color-gold-dark);
-            margin-bottom: 10px;
+            color: #b45309;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 8px;
+            font-size: 14px;
         }
 
         .info-box-content {
-            font-size: 14px;
-            color: var(--color-text);
-            line-height: 1.8;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
 
-        /* PDF Link Button */
+        /* ===== PDF Link Button ===== */
         .pdf-link {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 20px;
-            background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+            padding: 10px 18px;
+            background: var(--accent-coral);
             color: white;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: var(--radius-sm);
             font-size: 13px;
             font-weight: 500;
-            transition: all 0.3s ease;
-            margin-top: 15px;
+            transition: all 0.2s ease;
+            margin-top: 14px;
         }
 
         .pdf-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(238, 90, 90, 0.4);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(224, 122, 95, 0.35);
         }
 
         .pdf-link::before {
             content: '📄';
         }
 
-        /* Original Content Block */
+        /* ===== Original Content Block ===== */
         .original-content {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 12px;
-            padding: 25px;
-            margin-top: 20px;
-            font-size: 14px;
-            line-height: 1.9;
+            background: var(--bg-accent);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-top: 16px;
+            font-size: 13px;
+            line-height: 1.8;
         }
 
         .original-content-header {
-            font-size: 13px;
-            color: var(--color-text-light);
-            margin-bottom: 15px;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
             padding-bottom: 10px;
-            border-bottom: 1px solid #e9ecef;
+            border-bottom: 1px solid var(--border-light);
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
         .original-content p {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .original-content strong {
-            color: var(--color-navy);
+            color: var(--text-primary);
         }
 
-        /* Chapter Content */
+        /* ===== Chapter Content ===== */
         .chapter-box {
-            background: white;
-            border: 1px solid var(--color-border);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 15px 0;
+            background: var(--bg-paper);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            margin: 12px 0;
         }
 
         .chapter-title {
             font-weight: 600;
-            color: var(--color-navy);
-            margin-bottom: 10px;
-            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            font-size: 14px;
         }
 
         .chapter-list {
             font-size: 13px;
-            color: var(--color-text-light);
-            padding-left: 20px;
-            line-height: 1.8;
+            color: var(--text-secondary);
+            padding-left: 18px;
+            line-height: 1.7;
         }
 
-        /* Book Grid */
+        /* ===== Book Grid ===== */
         .book-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
         }
 
         .book-item {
-            background: var(--color-cream-dark);
-            border-radius: 12px;
-            padding: 20px;
+            background: var(--bg-accent);
+            border-radius: var(--radius-md);
+            padding: 16px;
             text-align: center;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
         }
 
         .book-item:hover {
-            background: white;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            background: var(--bg-paper);
+            box-shadow: var(--shadow-medium);
         }
 
         .book-emoji {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .book-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+
+        .book-author {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* ===== Video Grid ===== */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .video-card {
+            background: linear-gradient(135deg, var(--accent-navy), #4a4e69);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            color: white;
+            transition: all 0.2s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .video-icon {
             font-size: 32px;
             margin-bottom: 12px;
         }
 
-        .book-title {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--color-navy);
-            line-height: 1.5;
-        }
-
-        .book-author {
-            font-size: 12px;
-            color: var(--color-text-light);
-            margin-top: 5px;
-        }
-
-        /* Video Grid */
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .video-card {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            border-radius: 12px;
-            padding: 25px;
-            color: white;
-            transition: all 0.3s ease;
-        }
-
-        .video-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .video-icon {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-
         .video-title {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .video-desc {
-            font-size: 13px;
-            color: rgba(255,255,255,0.6);
-            line-height: 1.6;
+            font-size: 12px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.5;
         }
 
         .video-link {
             display: inline-block;
-            margin-top: 15px;
-            padding: 8px 16px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 6px;
-            color: var(--color-gold-light);
+            margin-top: 12px;
+            padding: 6px 14px;
+            background: rgba(255,255,255,0.15);
+            border-radius: var(--radius-sm);
+            color: var(--accent-gold);
             text-decoration: none;
-            font-size: 13px;
-            transition: all 0.3s ease;
+            font-size: 12px;
+            transition: all 0.2s ease;
         }
 
         .video-link:hover {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.25);
         }
 
-        /* Contact Grid */
+        /* ===== Contact Grid ===== */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
         }
 
         .contact-card {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            border: 1px solid var(--color-border);
+            background: var(--bg-paper);
+            border-radius: var(--radius-md);
+            padding: 20px;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 14px;
+            box-shadow: var(--shadow-soft);
         }
 
         .contact-avatar {
-            width: 48px; height: 48px;
-            border-radius: 12px;
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
+            font-size: 18px;
             flex-shrink: 0;
+            color: white;
         }
 
         .contact-info h4 {
-            font-size: 15px;
-            color: var(--color-navy);
+            font-size: 14px;
+            color: var(--text-primary);
             font-weight: 600;
         }
 
         .contact-info p {
-            font-size: 13px;
-            color: var(--color-text-light);
-            margin-top: 4px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 3px;
         }
 
         .contact-info a {
-            color: var(--color-gold-dark);
+            color: var(--accent-coral);
             text-decoration: none;
         }
 
@@ -617,21 +699,21 @@
             text-decoration: underline;
         }
 
-        /* Calendar */
+        /* ===== Calendar ===== */
         .calendar-highlight {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
         }
 
         .calendar-item {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            border: 1px solid var(--color-border);
+            background: var(--bg-paper);
+            border-radius: var(--radius-md);
+            padding: 20px;
             position: relative;
             overflow: hidden;
+            box-shadow: var(--shadow-soft);
         }
 
         .calendar-item::before {
@@ -639,272 +721,379 @@
             position: absolute;
             top: 0; left: 0;
             width: 4px; height: 100%;
-            background: var(--color-gold);
+            background: var(--accent-coral);
         }
 
         .calendar-date {
-            font-family: var(--font-display);
-            font-size: 32px;
-            color: var(--color-navy);
-            font-weight: 700;
+            font-family: 'Crimson Pro', serif;
+            font-size: 28px;
+            color: var(--accent-navy);
+            font-weight: 600;
             line-height: 1;
         }
 
         .calendar-month {
-            font-size: 14px;
-            color: var(--color-text-light);
-            margin-top: 5px;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
         }
 
         .calendar-event {
-            font-size: 15px;
-            color: var(--color-text);
-            margin-top: 15px;
+            font-size: 14px;
+            color: var(--text-primary);
+            margin-top: 12px;
             font-weight: 500;
         }
 
-        /* Vocab Tags */
+        /* ===== Vocab Tags ===== */
         .vocab-categories {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
+            gap: 8px;
+            margin-top: 12px;
         }
 
         .vocab-tag {
-            padding: 8px 16px;
-            background: var(--color-cream-dark);
-            border-radius: 20px;
-            font-size: 13px;
-            color: var(--color-text);
+            padding: 6px 14px;
+            background: var(--bg-accent);
+            border-radius: 16px;
+            font-size: 12px;
+            color: var(--text-secondary);
         }
 
-        /* Footer */
+        /* ===== Footer ===== */
         .footer {
-            background: var(--color-navy);
-            padding: 50px 80px;
-            color: rgba(255,255,255,0.6);
+            background: var(--accent-navy);
+            padding: 40px 24px;
+            color: rgba(255,255,255,0.7);
+            margin-top: 40px;
         }
 
-        .footer-content {
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 24px;
         }
 
         .footer-brand {
-            font-family: var(--font-chinese);
-            font-size: 18px;
+            font-size: 16px;
             color: white;
             font-weight: 600;
         }
 
         .footer-info {
-            font-size: 13px;
-            line-height: 1.8;
+            font-size: 12px;
+            line-height: 1.7;
         }
 
         .footer-info a {
-            color: var(--color-gold-light);
+            color: var(--accent-gold);
             text-decoration: none;
         }
 
-        /* Progress bar */
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 280px;
-            right: 0;
-            height: 3px;
-            background: var(--color-cream-dark);
-            z-index: 1001;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--color-gold), var(--color-gold-dark));
-            width: 0%;
-            transition: width 0.1s ease;
-        }
-
-        /* Mobile Toggle Button - 必须在媒体查询之前定义 */
-        .mobile-toggle {
+        /* ===== Mobile Nav Drawer ===== */
+        .mobile-nav-overlay {
             display: none;
             position: fixed;
-            top: 20px; left: 20px;
-            width: 50px; height: 50px;
-            background: var(--color-navy);
-            border-radius: 12px;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 20px;
-            z-index: 1002;
-            cursor: pointer;
-            border: none;
-            box-shadow: 0 4px 15px rgba(26, 42, 74, 0.3);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 200;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .nav { width: 240px; }
-            .main { margin-left: 240px; }
-            .progress-bar { left: 240px; }
-            .hero, .content, .footer {
-                padding-left: 50px;
-                padding-right: 50px;
+        .mobile-nav-overlay.active {
+            opacity: 1;
+        }
+
+        .mobile-nav-drawer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: var(--bg-paper);
+            z-index: 201;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .mobile-nav-drawer.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 16px;
+        }
+
+        .mobile-nav-close {
+            width: 36px;
+            height: 36px;
+            background: var(--bg-accent);
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .mobile-nav-links a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            margin-bottom: 4px;
+            transition: all 0.2s;
+        }
+
+        .mobile-nav-links a:hover {
+            background: var(--bg-accent);
+            color: var(--text-primary);
+        }
+
+        /* ===== Responsive Design ===== */
+        @media (max-width: 900px) {
+            .nav-bar { display: none; }
+            .menu-toggle { display: flex; }
+            .mobile-nav-overlay { display: block; pointer-events: none; }
+            .mobile-nav-overlay.active { pointer-events: auto; }
+
+            .header-inner {
+                flex-wrap: wrap;
+            }
+
+            .checklist-btn {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                margin-top: 8px;
             }
         }
 
         @media (max-width: 768px) {
-            .mobile-toggle { display: flex !important; }
-            .nav {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease;
-                width: 280px;
+            .hero {
+                padding: 40px 20px;
             }
-            .nav.open { transform: translateX(0); }
-            .main { margin-left: 0; }
-            .progress-bar { left: 0; }
-            .hero, .content, .footer {
-                padding-left: 20px;
-                padding-right: 20px;
+
+            .hero-meta {
+                flex-wrap: wrap;
+                gap: 12px;
             }
-            .hero { padding-top: 80px; }
-            .hero-meta { flex-wrap: wrap; gap: 25px; }
-            .section-header { flex-direction: column; align-items: flex-start; gap: 15px; }
-            .contact-grid { grid-template-columns: 1fr; }
-            .book-grid { grid-template-columns: repeat(2, 1fr); }
-            .video-grid { grid-template-columns: 1fr; }
+
+            .hero-meta-item {
+                flex: 1;
+                min-width: 100px;
+                padding: 12px 16px;
+            }
+
+            .hero-meta-value {
+                font-size: 24px;
+            }
+
+            .content {
+                padding: 24px 16px 40px;
+            }
+
+            .section {
+                scroll-margin-top: 80px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .book-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .calendar-highlight {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer {
+                padding: 32px 16px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 24px;
+            }
+
+            .calendar-highlight {
+                grid-template-columns: 1fr;
+            }
+
+            .book-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .book-item {
+                padding: 12px;
+            }
         }
 
         @media print {
-            .nav, .mobile-toggle, .progress-bar { display: none; }
-            .main { margin-left: 0; }
+            .header, .nav-bar, .footer { display: none; }
         }
+
     </style>
 </head>
 <body>
-    <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
-    </div>
-
-    <button class="mobile-toggle" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
-
-    <nav class="nav">
-        <div class="nav-header">
-            <div class="nav-logo">赫</div>
-            <div class="nav-title">上海赫贤学校<br>高中部</div>
-            <div class="nav-subtitle">HD SHANGHAI</div>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo-section">
+                <button class="menu-toggle" onclick="toggleMobileNav()">☰</button>
+                <div class="logo-icon">赫</div>
+                <div>
+                    <div class="site-title">上海赫贤学校</div>
+                    <div class="site-subtitle">2026春季4.5年制新生</div>
+                </div>
+            </div>
+            <div class="header-actions">
+                <a href="checklist.html" class="checklist-btn">
+                    ✅ 任务清单
+                    <span class="badge">打卡</span>
+                </a>
+            </div>
         </div>
+    </header>
 
-        <!-- 任务清单入口 -->
-        <div style="padding: 0 20px 25px;">
-            <a href="checklist.html" style="
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-                padding: 14px 20px;
-                background: linear-gradient(135deg, #d4a441 0%, #b8860b 100%);
-                color: #1a2a4a;
-                text-decoration: none;
-                border-radius: 10px;
-                font-weight: 600;
-                font-size: 15px;
-                box-shadow: 0 4px 15px rgba(212, 164, 65, 0.4);
-                transition: all 0.3s ease;
-            " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(212, 164, 65, 0.5)';"
-               onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 15px rgba(212, 164, 65, 0.4)';">
-                ✅ 任务清单
-                <span style="
-                    background: #1a2a4a;
-                    color: #d4a441;
-                    padding: 2px 8px;
-                    border-radius: 10px;
-                    font-size: 11px;
-                ">打卡</span>
-            </a>
-        </div>
-
-        <div class="nav-section">
-            <div class="nav-section-title">概览</div>
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="nav-inner">
             <a href="#overview" class="nav-link active">
                 <span class="nav-icon overview">📋</span>
-                课程介绍
+                概览
             </a>
             <a href="#calendar" class="nav-link">
                 <span class="nav-icon calendar">📅</span>
-                重要日期
+                日期
             </a>
-            <a href="#contacts" class="nav-link">
-                <span class="nav-icon contacts">👥</span>
-                教师联系
-            </a>
-        </div>
-
-        <div class="nav-section">
-            <div class="nav-section-title">学科作业</div>
             <a href="#english" class="nav-link">
                 <span class="nav-icon english">📖</span>
-                英语 English
+                英语
             </a>
             <a href="#chinese" class="nav-link">
                 <span class="nav-icon chinese">📝</span>
-                中文 Chinese
+                中文
             </a>
             <a href="#math" class="nav-link">
                 <span class="nav-icon math">📐</span>
-                数学 Math
+                数学
             </a>
             <a href="#physics" class="nav-link">
                 <span class="nav-icon physics">⚡</span>
-                物理 Physics
+                物理
             </a>
             <a href="#chemistry" class="nav-link">
                 <span class="nav-icon chemistry">🧪</span>
-                化学 Chemistry
+                化学
             </a>
             <a href="#biology" class="nav-link">
                 <span class="nav-icon biology">🌿</span>
-                生物 Biology
+                生物
             </a>
             <a href="#economics" class="nav-link">
                 <span class="nav-icon economics">📊</span>
-                经济 Economics
+                经济
             </a>
             <a href="#geography" class="nav-link">
                 <span class="nav-icon geography">🌍</span>
-                地理 Geography
+                地理
+            </a>
+            <a href="#contacts" class="nav-link">
+                <span class="nav-icon contacts">👥</span>
+                联系
             </a>
         </div>
     </nav>
 
-    <main class="main">
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-overlay" onclick="toggleMobileNav()"></div>
+    <div class="mobile-nav-drawer">
+        <div class="mobile-nav-header">
+            <div class="site-title">寒假学习大礼包</div>
+            <button class="mobile-nav-close" onclick="toggleMobileNav()">✕</button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#overview" onclick="toggleMobileNav()"><span class="nav-icon overview">📋</span> 课程介绍</a>
+            <a href="#calendar" onclick="toggleMobileNav()"><span class="nav-icon calendar">📅</span> 重要日期</a>
+            <a href="#english" onclick="toggleMobileNav()"><span class="nav-icon english">📖</span> 英语</a>
+            <a href="#chinese" onclick="toggleMobileNav()"><span class="nav-icon chinese">📝</span> 中文</a>
+            <a href="#math" onclick="toggleMobileNav()"><span class="nav-icon math">📐</span> 数学</a>
+            <a href="#physics" onclick="toggleMobileNav()"><span class="nav-icon physics">⚡</span> 物理</a>
+            <a href="#chemistry" onclick="toggleMobileNav()"><span class="nav-icon chemistry">🧪</span> 化学</a>
+            <a href="#biology" onclick="toggleMobileNav()"><span class="nav-icon biology">🌿</span> 生物</a>
+            <a href="#economics" onclick="toggleMobileNav()"><span class="nav-icon economics">📊</span> 经济</a>
+            <a href="#geography" onclick="toggleMobileNav()"><span class="nav-icon geography">🌍</span> 地理</a>
+            <a href="#contacts" onclick="toggleMobileNav()"><span class="nav-icon contacts">👥</span> 教师联系</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-badge">2026 Spring Semester</div>
-            <h1 class="hero-title">
-                欢迎加入<span>赫贤</span>大家庭<br>
-                寒假学习大礼包
-            </h1>
-            <p class="hero-desc">
-                为帮助新生家庭感受并体验A Level学院的课程，各学科组精心准备了电子教材与预习作业。
-                愿同学们心中有梦，勇于追梦，与梦同行！
-            </p>
-            <div class="hero-meta">
-                <div class="hero-meta-item">
-                    <div class="hero-meta-value">8</div>
-                    <div class="hero-meta-label">学科任务</div>
-                </div>
-                <div class="hero-meta-item">
-                    <div class="hero-meta-value">4.5</div>
-                    <div class="hero-meta-label">年制课程</div>
-                </div>
-                <div class="hero-meta-item">
-                    <div class="hero-meta-value">2/25</div>
-                    <div class="hero-meta-label">开学日期</div>
+            <div class="hero-inner">
+                <div class="hero-badge">2026 Spring Semester</div>
+                <h1 class="hero-title">
+                    欢迎加入<span>赫贤</span>大家庭<br>
+                    寒假学习大礼包
+                </h1>
+                <p class="hero-desc">
+                    为帮助新生家庭感受并体验A Level学院的课程，各学科组精心准备了电子教材与预习作业。
+                    愿同学们心中有梦，勇于追梦，与梦同行！
+                </p>
+                <div class="hero-meta">
+                    <div class="hero-meta-item">
+                        <div class="hero-meta-value">8</div>
+                        <div class="hero-meta-label">学科任务</div>
+                    </div>
+                    <div class="hero-meta-item">
+                        <div class="hero-meta-value">4.5</div>
+                        <div class="hero-meta-label">年制课程</div>
+                    </div>
+                    <div class="hero-meta-item">
+                        <div class="hero-meta-value">2/25</div>
+                        <div class="hero-meta-label">开学日期</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1014,7 +1203,7 @@
 
                 <div class="card" style="margin-top: 30px;">
                     <h3 class="card-title">完整校历 2025-2026学年</h3>
-                    <p style="font-size: 14px; color: var(--color-text-light);">包含所有考试时间、假期安排、家长会日期等重要信息。</p>
+                    <p style="font-size: 14px; color: var(--text-secondary);">包含所有考试时间、假期安排、家长会日期等重要信息。</p>
                     <a href="pdf-viewer.html?url=附件二：上海赫贤高中部新生高中部校历2025-2026学年.pdf&title=校历2025-2026" class="pdf-link">查看完整校历PDF</a>
                 </div>
             </section>
@@ -1291,7 +1480,7 @@
 
                 <div class="card">
                     <h3 class="card-title">Part 5: 摘抄数学专有词汇并背诵</h3>
-                    <p style="font-size: 14px; color: var(--color-text-light); margin-bottom: 15px;">
+                    <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 15px;">
                         从数学书上摘抄与数学相关的专有词汇，方便开学后更快适应英文题目、课本和讲义。
                     </p>
                     <p style="font-size: 14px; margin-bottom: 10px;"><strong>示例词汇：</strong></p>
@@ -1608,7 +1797,7 @@
                         </div>
                     </div>
 
-                    <h4 style="margin-top: 30px; margin-bottom: 15px; font-size: 15px; color: var(--color-navy);">纪录片推荐</h4>
+                    <h4 style="margin-top: 30px; margin-bottom: 15px; font-size: 15px; color: var(--accent-navy);">纪录片推荐</h4>
                     <div class="video-grid">
                         <div class="video-card">
                             <div class="video-icon">💰</div>
@@ -1639,7 +1828,7 @@
 
                 <div class="card">
                     <h3 class="card-title">一、地理各章节单词背诵<span class="task-tag important">返校默写</span></h3>
-                    <p style="font-size: 14px; color: var(--color-text);">返校后，将对部分章节进行单词默写。</p>
+                    <p style="font-size: 14px; color: var(--text-primary);">返校后，将对部分章节进行单词默写。</p>
                     <a href="pdf-viewer.html?url=地理/学习资料/01-IG Geography Vocab-Update.pdf&title=地理词汇表" target="_blank" class="pdf-link">查看地理词汇表</a>
                 </div>
 
@@ -1680,7 +1869,7 @@
                         <p>如果引用资料，请注明引用的出处（例：BBC news + 网站链接）</p>
                     </div>
 
-                    <h4 style="margin-top: 20px; margin-bottom: 15px; font-size: 15px; color: var(--color-navy);">Case Study 参考资源链接</h4>
+                    <h4 style="margin-top: 20px; margin-bottom: 15px; font-size: 15px; color: var(--accent-navy);">Case Study 参考资源链接</h4>
                     <div class="book-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));">
                         <div class="book-item">
                             <div class="book-emoji">🌊</div>
@@ -1812,33 +2001,32 @@
             </section>
         </div>
 
-        <footer class="footer">
-            <div class="footer-content">
-                <div>
-                    <div class="footer-brand">上海赫贤学校高中部</div>
-                    <div class="footer-info" style="margin-top: 10px;">HD Shanghai High School</div>
-                </div>
-                <div class="footer-info" style="text-align: right;">
-                    上海市松江区茸北路336号<br>
-                    336 Rongbei Rd, Songjiang District, Shanghai<br>
-                    Tel: +86 21 2309 1039 · <a href="https://hdschools.org" target="_blank">hdschools.org</a>
-                </div>
-            </div>
-        </footer>
     </main>
 
-    <script>
-        // Progress bar
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = (scrollTop / docHeight) * 100;
-            document.getElementById('progressFill').style.width = progress + '%';
-        });
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <div class="footer-brand">上海赫贤学校高中部</div>
+                <div class="footer-info" style="margin-top: 8px;">HD Shanghai High School</div>
+            </div>
+            <div class="footer-info">
+                上海市松江区茸北路336号<br>
+                Tel: +86 21 2309 1039 · <a href="https://hdschools.org" target="_blank">hdschools.org</a>
+            </div>
+        </div>
+    </footer>
 
-        // Active nav link
+    <script>
+        // Mobile navigation toggle
+        function toggleMobileNav() {
+            document.querySelector('.mobile-nav-overlay').classList.toggle('active');
+            document.querySelector('.mobile-nav-drawer').classList.toggle('active');
+        }
+
+        // Active nav link on scroll
         const sections = document.querySelectorAll('.section');
-        const navLinks = document.querySelectorAll('.nav-link');
+        const navLinks = document.querySelectorAll('.nav-bar .nav-link');
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1852,21 +2040,23 @@
                     });
                 }
             });
-        }, { rootMargin: '-20% 0px -60% 0px' });
+        }, { rootMargin: '-30% 0px -50% 0px' });
 
         sections.forEach(section => observer.observe(section));
 
-        // Smooth scroll
-        navLinks.forEach(link => {
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = link.getAttribute('href');
-                document.querySelector(targetId)?.scrollIntoView({ behavior: 'smooth' });
-                document.querySelector('.nav').classList.remove('open');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
 
-        // Card animations
+        // Card fade-in animations
         const cards = document.querySelectorAll('.card');
         const cardObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1879,8 +2069,8 @@
 
         cards.forEach(card => {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            card.style.transform = 'translateY(15px)';
+            card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
             cardObserver.observe(card);
         });
     </script>

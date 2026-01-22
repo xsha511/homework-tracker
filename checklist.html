@@ -197,6 +197,77 @@
             margin-top: 4px;
         }
 
+        /* Level Tooltip */
+        .level-item {
+            position: relative;
+            cursor: help;
+        }
+
+        .level-tooltip {
+            position: absolute;
+            top: calc(100% + 12px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--text-primary);
+            color: white;
+            padding: 14px 18px;
+            border-radius: var(--radius-md);
+            font-size: 13px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            z-index: 100;
+            min-width: 200px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        .level-tooltip::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 8px solid transparent;
+            border-bottom-color: var(--text-primary);
+        }
+
+        .level-item:hover .level-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .level-tooltip-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .level-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .level-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+        }
+
+        .level-num {
+            font-weight: 600;
+            color: var(--accent-gold);
+            min-width: 32px;
+        }
+
+        .level-req {
+            margin-left: auto;
+            color: rgba(255,255,255,0.6);
+            font-size: 11px;
+        }
+
         .badges-section {
             display: flex;
             flex-direction: column;
@@ -911,9 +982,19 @@
             </div>
 
             <div class="stats-row">
-                <div class="stat-item">
+                <div class="stat-item level-item">
                     <div class="stat-value" id="levelValue">1</div>
                     <div class="stat-label" id="levelTitle">学习新手</div>
+                    <div class="level-tooltip">
+                        <div class="level-tooltip-title">📈 升级体系</div>
+                        <div class="level-list">
+                            <div class="level-row"><span class="level-num">Lv.1</span> 学习新手 <span class="level-req">起始</span></div>
+                            <div class="level-row"><span class="level-num">Lv.2</span> 勤奋学徒 <span class="level-req">15项</span></div>
+                            <div class="level-row"><span class="level-num">Lv.3</span> 知识探索者 <span class="level-req">35项</span></div>
+                            <div class="level-row"><span class="level-num">Lv.4</span> 学霸候选人 <span class="level-req">60项</span></div>
+                            <div class="level-row"><span class="level-num">Lv.5</span> 赫贤之星 <span class="level-req">全部</span></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-value" id="streakValue">0</div>

@@ -56,6 +56,22 @@ python3 -m http.server 8000
 }
 ```
 
+## 注意事项
+
+### CSS 透明度与子元素
+
+父元素的 `opacity` 会影响所有子元素。例如 `.badge-item.locked` 设置 `opacity: 0.4` 会导致其子元素 tooltip 也变半透明。解决方案：hover 时恢复 `opacity: 1`。
+
+### 移动端测试
+
+修改 CSS 后务必在手机上测试，电脑正常不代表手机正常。常见问题：
+- tooltip 被其他元素遮挡（z-index 或 overflow 问题）
+- 透明度导致内容穿透显示
+
+### 代码提交
+
+每次修改代码后自动提交并推送到 GitHub，无需用户提醒。
+
 ## 部署
 
 静态文件直接部署到任意托管服务。Git 仓库：`github.com/xsha511/homework-tracker`

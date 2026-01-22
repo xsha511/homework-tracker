@@ -397,11 +397,21 @@
         // 加载PDF
         async function loadPDF(url) {
             try {
+                // 先获取文件大小，帮助 PDF.js 使用 Range 请求
+                let fileLength = 0;
+                try {
+                    const headResponse = await fetch(url, { method: 'HEAD' });
+                    fileLength = parseInt(headResponse.headers.get('Content-Length')) || 0;
+                } catch (e) {
+                    console.log('Could not get file length:', e);
+                }
+
                 const loadingTask = pdfjsLib.getDocument({
                     url: url,
                     rangeChunkSize: 65536,
                     disableAutoFetch: true,
-                    disableStream: false
+                    disableStream: false,
+                    length: fileLength || undefined
                 });
 
                 loadingTask.onProgress = function(progress) {

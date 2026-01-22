@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海赫贤学校 · 2026春季4.5年制新生寒假学习大礼包</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+SC:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-gold: #d4a441;
+            --color-gold-light: #f5e6c4;
+            --color-gold-dark: #b8860b;
+            --color-navy: #1a2a4a;
+            --color-navy-light: #2d4263;
+            --color-cream: #faf8f3;
+            --color-cream-dark: #f0ebe0;
+            --color-text: #2c3e50;
+            --color-text-light: #5a6c7d;
+            --color-border: #e8e4db;
+            --font-display: 'Cormorant Garamond', 'Noto Serif SC', serif;
+            --font-body: 'Source Sans 3', -apple-system, 'PingFang SC', sans-serif;
+            --font-chinese: 'Noto Serif SC', 'Songti SC', serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            background: var(--color-cream);
+            color: var(--color-text);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            z-index: 9999;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0; left: 0;
+            width: 280px;
+            height: 100vh;
+            background: linear-gradient(180deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+            padding: 40px 0;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 4px 0 30px rgba(26, 42, 74, 0.15);
+        }
+
+        .nav-header {
+            padding: 0 30px 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 30px;
+        }
+
+        .nav-logo {
+            width: 60px; height: 60px;
+            background: var(--color-gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-family: var(--font-display);
+            font-size: 28px;
+            color: var(--color-navy);
+            font-weight: 700;
+        }
+
+        .nav-title {
+            font-family: var(--font-chinese);
+            font-size: 18px;
+            color: white;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .nav-subtitle {
+            font-size: 12px;
+            color: var(--color-gold-light);
+            margin-top: 8px;
+            letter-spacing: 1px;
+        }
+
+        .nav-section {
+            padding: 0 20px;
+            margin-bottom: 25px;
+        }
+
+        .nav-section-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-gold);
+            padding: 0 10px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            color: rgba(255,255,255,0.75);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .nav-link:hover {
+            background: rgba(255,255,255,0.08);
+            color: white;
+        }
+
+        .nav-link.active {
+            background: rgba(212, 164, 65, 0.15);
+            color: var(--color-gold-light);
+        }
+
+        .nav-icon {
+            width: 32px; height: 32px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .nav-icon.english { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .nav-icon.chinese { background: linear-gradient(135deg, #f093fb, #f5576c); }
+        .nav-icon.math { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+        .nav-icon.physics { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+        .nav-icon.chemistry { background: linear-gradient(135deg, #fa709a, #fee140); }
+        .nav-icon.biology { background: linear-gradient(135deg, #a8edea, #fed6e3); }
+        .nav-icon.economics { background: linear-gradient(135deg, #ffecd2, #fcb69f); }
+        .nav-icon.geography { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+        .nav-icon.overview { background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); }
+        .nav-icon.calendar { background: linear-gradient(135deg, #e0c3fc, #8ec5fc); }
+        .nav-icon.contacts { background: linear-gradient(135deg, #d299c2, #fef9d7); }
+
+        .main {
+            margin-left: 280px;
+            min-height: 100vh;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 50%, #3d5a80 100%);
+            padding: 100px 80px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; right: -20%;
+            width: 80%; height: 200%;
+            background: radial-gradient(ellipse, rgba(212, 164, 65, 0.15) 0%, transparent 70%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(212, 164, 65, 0.2);
+            border: 1px solid var(--color-gold);
+            color: var(--color-gold-light);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-title {
+            font-family: var(--font-chinese);
+            font-size: clamp(36px, 5vw, 56px);
+            color: white;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+
+        .hero-title span { color: var(--color-gold); }
+
+        .hero-desc {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+            max-width: 600px;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 40px;
+            margin-top: 50px;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+
+        .hero-meta-item { text-align: center; }
+
+        .hero-meta-value {
+            font-family: var(--font-display);
+            font-size: 42px;
+            color: var(--color-gold);
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .hero-meta-label {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            margin-top: 8px;
+            letter-spacing: 1px;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .content { padding: 60px 80px; }
+
+        .section {
+            margin-bottom: 80px;
+            scroll-margin-top: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        .section-icon {
+            width: 56px; height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-family: var(--font-chinese);
+            font-size: 28px;
+            color: var(--color-navy);
+            font-weight: 700;
+        }
+
+        .section-title-en {
+            font-family: var(--font-display);
+            font-size: 14px;
+            color: var(--color-text-light);
+            font-weight: 400;
+            font-style: italic;
+            margin-top: 4px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+            border: 1px solid var(--color-border);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+
+        .card-title {
+            font-family: var(--font-chinese);
+            font-size: 20px;
+            color: var(--color-navy);
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-title::before {
+            content: '';
+            width: 4px; height: 20px;
+            background: var(--color-gold);
+            border-radius: 2px;
+        }
+
+        .task-list { list-style: none; }
+
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px dashed var(--color-border);
+        }
+
+        .task-item:last-child { border-bottom: none; }
+
+        .task-number {
+            width: 28px; height: 28px;
+            background: var(--color-cream-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--color-navy);
+            flex-shrink: 0;
+        }
+
+        .task-content { flex: 1; }
+
+        .task-main {
+            font-size: 15px;
+            color: var(--color-text);
+            line-height: 1.7;
+        }
+
+        .task-detail {
+            font-size: 13px;
+            color: var(--color-text-light);
+            margin-top: 8px;
+            padding-left: 15px;
+            border-left: 2px solid var(--color-border);
+            line-height: 1.8;
+        }
+
+        .task-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            background: var(--color-gold-light);
+            color: var(--color-gold-dark);
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .task-tag.important {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, var(--color-gold-light) 0%, #fff9e6 100%);
+            border: 1px solid var(--color-gold);
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin: 25px 0;
+        }
+
+        .info-box-title {
+            font-weight: 600;
+            color: var(--color-gold-dark);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-box-content {
+            font-size: 14px;
+            color: var(--color-text);
+            line-height: 1.8;
+        }
+
+        /* PDF Link Button */
+        .pdf-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .pdf-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(238, 90, 90, 0.4);
+        }
+
+        .pdf-link::before {
+            content: '📄';
+        }
+
+        /* Original Content Block */
+        .original-content {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .original-content-header {
+            font-size: 13px;
+            color: var(--color-text-light);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .original-content p {
+            margin-bottom: 12px;
+        }
+
+        .original-content strong {
+            color: var(--color-navy);
+        }
+
+        /* Chapter Content */
+        .chapter-box {
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .chapter-title {
+            font-weight: 600;
+            color: var(--color-navy);
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .chapter-list {
+            font-size: 13px;
+            color: var(--color-text-light);
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        /* Book Grid */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .book-item {
+            background: var(--color-cream-dark);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .book-item:hover {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .book-emoji {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .book-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-navy);
+            line-height: 1.5;
+        }
+
+        .book-author {
+            font-size: 12px;
+            color: var(--color-text-light);
+            margin-top: 5px;
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .video-card {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border-radius: 12px;
+            padding: 25px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .video-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .video-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .video-desc {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.6;
+        }
+
+        .video-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+            color: var(--color-gold-light);
+            text-decoration: none;
+            font-size: 13px;
+            transition: all 0.3s ease;
+        }
+
+        .video-link:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-avatar {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-info h4 {
+            font-size: 15px;
+            color: var(--color-navy);
+            font-weight: 600;
+        }
+
+        .contact-info p {
+            font-size: 13px;
+            color: var(--color-text-light);
+            margin-top: 4px;
+        }
+
+        .contact-info a {
+            color: var(--color-gold-dark);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Calendar */
+        .calendar-highlight {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .calendar-item {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid var(--color-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calendar-item::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px; height: 100%;
+            background: var(--color-gold);
+        }
+
+        .calendar-date {
+            font-family: var(--font-display);
+            font-size: 32px;
+            color: var(--color-navy);
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .calendar-month {
+            font-size: 14px;
+            color: var(--color-text-light);
+            margin-top: 5px;
+        }
+
+        .calendar-event {
+            font-size: 15px;
+            color: var(--color-text);
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        /* Vocab Tags */
+        .vocab-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .vocab-tag {
+            padding: 8px 16px;
+            background: var(--color-cream-dark);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--color-text);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-navy);
+            padding: 50px 80px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-brand {
+            font-family: var(--font-chinese);
+            font-size: 18px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .footer-info {
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .footer-info a {
+            color: var(--color-gold-light);
+            text-decoration: none;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 280px;
+            right: 0;
+            height: 3px;
+            background: var(--color-cream-dark);
+            z-index: 1001;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--color-gold), var(--color-gold-dark));
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .nav { width: 240px; }
+            .main { margin-left: 240px; }
+            .progress-bar { left: 240px; }
+            .hero, .content, .footer {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            .nav.open { transform: translateX(0); }
+            .main { margin-left: 0; }
+            .progress-bar { left: 0; }
+            .hero, .content, .footer {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+            .hero-meta { flex-wrap: wrap; gap: 25px; }
+            .mobile-toggle { display: flex; }
+        }
+
+        .mobile-toggle {
+            display: none;
+            position: fixed;
+            top: 20px; left: 20px;
+            width: 50px; height: 50px;
+            background: var(--color-navy);
+            border-radius: 12px;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            z-index: 1002;
+            cursor: pointer;
+            border: none;
+        }
+
+        @media print {
+            .nav, .mobile-toggle, .progress-bar { display: none; }
+            .main { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <button class="mobile-toggle" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+
+    <nav class="nav">
+        <div class="nav-header">
+            <div class="nav-logo">赫</div>
+            <div class="nav-title">上海赫贤学校<br>高中部</div>
+            <div class="nav-subtitle">HD SHANGHAI</div>
+        </div>
+
+        <!-- 任务清单入口 -->
+        <div style="padding: 0 20px 25px;">
+            <a href="checklist.html" style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 14px 20px;
+                background: linear-gradient(135deg, #d4a441 0%, #b8860b 100%);
+                color: #1a2a4a;
+                text-decoration: none;
+                border-radius: 10px;
+                font-weight: 600;
+                font-size: 15px;
+                box-shadow: 0 4px 15px rgba(212, 164, 65, 0.4);
+                transition: all 0.3s ease;
+            " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(212, 164, 65, 0.5)';"
+               onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 15px rgba(212, 164, 65, 0.4)';">
+                ✅ 任务清单
+                <span style="
+                    background: #1a2a4a;
+                    color: #d4a441;
+                    padding: 2px 8px;
+                    border-radius: 10px;
+                    font-size: 11px;
+                ">打卡</span>
+            </a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-section-title">概览</div>
+            <a href="#overview" class="nav-link active">
+                <span class="nav-icon overview">📋</span>
+                课程介绍
+            </a>
+            <a href="#calendar" class="nav-link">
+                <span class="nav-icon calendar">📅</span>
+                重要日期
+            </a>
+            <a href="#contacts" class="nav-link">
+                <span class="nav-icon contacts">👥</span>
+                教师联系
+            </a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-section-title">学科作业</div>
+            <a href="#english" class="nav-link">
+                <span class="nav-icon english">📖</span>
+                英语 English
+            </a>
+            <a href="#chinese" class="nav-link">
+                <span class="nav-icon chinese">📝</span>
+                中文 Chinese
+            </a>
+            <a href="#math" class="nav-link">
+                <span class="nav-icon math">📐</span>
+                数学 Math
+            </a>
+            <a href="#physics" class="nav-link">
+                <span class="nav-icon physics">⚡</span>
+                物理 Physics
+            </a>
+            <a href="#chemistry" class="nav-link">
+                <span class="nav-icon chemistry">🧪</span>
+                化学 Chemistry
+            </a>
+            <a href="#biology" class="nav-link">
+                <span class="nav-icon biology">🌿</span>
+                生物 Biology
+            </a>
+            <a href="#economics" class="nav-link">
+                <span class="nav-icon economics">📊</span>
+                经济 Economics
+            </a>
+            <a href="#geography" class="nav-link">
+                <span class="nav-icon geography">🌍</span>
+                地理 Geography
+            </a>
+        </div>
+    </nav>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero-badge">2026 Spring Semester</div>
+            <h1 class="hero-title">
+                欢迎加入<span>赫贤</span>大家庭<br>
+                寒假学习大礼包
+            </h1>
+            <p class="hero-desc">
+                为帮助新生家庭感受并体验A Level学院的课程，各学科组精心准备了电子教材与预习作业。
+                愿同学们心中有梦，勇于追梦，与梦同行！
+            </p>
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <div class="hero-meta-value">8</div>
+                    <div class="hero-meta-label">学科任务</div>
+                </div>
+                <div class="hero-meta-item">
+                    <div class="hero-meta-value">4.5</div>
+                    <div class="hero-meta-label">年制课程</div>
+                </div>
+                <div class="hero-meta-item">
+                    <div class="hero-meta-value">2/25</div>
+                    <div class="hero-meta-label">开学日期</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="content">
+            <!-- Overview Section -->
+            <section id="overview" class="section">
+                <div class="section-header">
+                    <div class="section-icon overview">📋</div>
+                    <div>
+                        <h2 class="section-title">国际课程介绍</h2>
+                        <div class="section-title-en">International Curriculum Overview</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">致新同学的一封信</h3>
+                    <div class="original-content">
+                        <div class="original-content-header">📜 原文内容</div>
+                        <p><strong>亲爱的新同学：</strong></p>
+                        <p>非常欢迎大家即将在新学年成为上海赫贤学校高中部的一员，迎接你们的将是新的同学、新的老师、新的课程、新的学习体验。高中部全体教职员工期待大家的到来，也将助力同学们通往梦想彼岸，寻找自己，实现自我。</p>
+                        <p><strong>愿同学们心中有梦，勇于追梦，与梦同行！</strong></p>
+                    </div>
+                    <a href="附件一：上海赫贤学校高中部2026春季新生学习资源包-4.5年制IG0.pdf" target="_blank" class="pdf-link">查看PDF原文</a>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">国际高中课程基本介绍</h3>
+                    <div class="original-content">
+                        <div class="original-content-header">📜 原文内容</div>
+                        <p>上海赫贤高中部采用<strong>剑桥国际考试委员会（CIE）</strong>所提供的<strong>IGCSE</strong>和<strong>A Level</strong>国际中学课程。</p>
+                        <p>CIE是备受公认的权威考试局，IGCSE/A Level课程在国际上广泛受到全球大学的认可，可申请<strong>英国、美国、加拿大、澳洲、新加坡、中国香港、日本、欧洲</strong>等国家及地区的大学。</p>
+                        <p>拥有外籍身份的同学，还有资格通过A Level课程申请<strong>中国境内的大学</strong>。</p>
+                        <p>从IGCSE到A Level课程，学习难度将逐渐递进，每一阶段的课程学习都为学生们提供了进入下一个教育阶段所需的理解、知识和技能。</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">高中 VS 初中的学习差异</h3>
+
+                    <div class="chapter-box">
+                        <div class="chapter-title">📚 授课内容 / 考评方式</div>
+                        <div class="original-content" style="margin-top: 10px; background: transparent; border: none; padding: 0;">
+                            <p>初升高的<strong>知识跨度变大</strong>、国际课程的<strong>教材语言</strong>及<strong>学习方法的转变</strong>等因素，都将给同学们提出更高的学习要求与挑战。</p>
+                            <p>A Level学院采用剑桥国际课程的<strong>全英文教材</strong>，同学们不仅要适应国际课程学习方法，还需要不断<strong>提升英语能力</strong>从而促进学习。</p>
+                            <p>在每个学年的课程结束后，同学们需要报名参加剑桥考试局组织的<strong>全球统考</strong>，获得全球认可的IGCSE及A Level科目成绩证书。所以，同学们需要持续保持积极的学习节奏，及时查漏补缺，紧跟教学进度。</p>
+                            <p>最终申请大学阶段，同学们都需要提供至少<strong>3-4门A Level成绩证书</strong>。</p>
+                        </div>
+                    </div>
+
+                    <div class="chapter-box">
+                        <div class="chapter-title">🎯 授课方式 / 学习方法</div>
+                        <div class="original-content" style="margin-top: 10px; background: transparent; border: none; padding: 0;">
+                            <p>高中教师上课更注重培养学生<strong>独立分析问题</strong>和<strong>解决问题的能力</strong>。</p>
+                            <p>学习方法要求灵活，且避免<strong>重记忆轻理解</strong>、<strong>重计算轻概念</strong>等不正确的学习方法。</p>
+                        </div>
+                    </div>
+
+                    <a href="附件一：上海赫贤学校高中部2026春季新生学习资源包-4.5年制IG0.pdf" target="_blank" class="pdf-link">查看PDF原文</a>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">寒假作业汇总表</h3>
+                    <div class="info-box">
+                        <div class="info-box-title">📦 百度网盘资源</div>
+                        <div class="info-box-content">
+                            <strong>链接：</strong>https://pan.baidu.com/s/1R2FUqGvWzkbTYeEkFDk9QQ<br>
+                            <strong>提取码：</strong>382w
+                        </div>
+                    </div>
+                    <a href="欢迎4.5年制新生大礼包-寒假作业内容与要求.pdf" target="_blank" class="pdf-link">查看作业总表PDF</a>
+                </div>
+            </section>
+
+            <!-- Calendar Section -->
+            <section id="calendar" class="section">
+                <div class="section-header">
+                    <div class="section-icon calendar">📅</div>
+                    <div>
+                        <h2 class="section-title">重要日期</h2>
+                        <div class="section-title-en">Important Dates</div>
+                    </div>
+                </div>
+
+                <div class="calendar-highlight">
+                    <div class="calendar-item">
+                        <div class="calendar-date">2-23</div>
+                        <div class="calendar-month">2026年2月</div>
+                        <div class="calendar-event">春节假期</div>
+                    </div>
+                    <div class="calendar-item">
+                        <div class="calendar-date">24</div>
+                        <div class="calendar-month">2026年2月</div>
+                        <div class="calendar-event">学生返校 / 新生注册</div>
+                    </div>
+                    <div class="calendar-item">
+                        <div class="calendar-date">25</div>
+                        <div class="calendar-month">2026年2月</div>
+                        <div class="calendar-event">第二学期开学第一天</div>
+                    </div>
+                    <div class="calendar-item">
+                        <div class="calendar-date">5</div>
+                        <div class="calendar-month">2026年9月</div>
+                        <div class="calendar-event">新生换课截止日</div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 30px;">
+                    <h3 class="card-title">完整校历 2025-2026学年</h3>
+                    <p style="font-size: 14px; color: var(--color-text-light);">包含所有考试时间、假期安排、家长会日期等重要信息。</p>
+                    <a href="附件二：上海赫贤高中部新生高中部校历2025-2026学年.pdf" target="_blank" class="pdf-link">查看完整校历PDF</a>
+                </div>
+            </section>
+
+            <!-- English Section -->
+            <section id="english" class="section">
+                <div class="section-header">
+                    <div class="section-icon english">📖</div>
+                    <div>
+                        <h2 class="section-title">英语</h2>
+                        <div class="section-title-en">English</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">1. 阅读任务 Reading</h3>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <span class="task-number">a</span>
+                            <div class="task-content">
+                                <div class="task-main">阅读《The Secret Garden》<span class="task-tag important">必读</span></div>
+                                <div class="task-detail">秘密花园 - Frances Hodgson Burnett 著</div>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">b</span>
+                            <div class="task-content">
+                                <div class="task-main">摘录至少 <strong>60个生词</strong>，每个单词抄写4遍</div>
+                                <div class="task-detail">
+                                    需标注：<br>
+                                    • <strong>part of speech</strong>（词性）<br>
+                                    • <strong>Chinese meaning</strong>（中文释义）1遍
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">c</span>
+                            <div class="task-content">
+                                <div class="task-main">用每个生词造句 <strong>Make one sentence for each word</strong></div>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">d</span>
+                            <div class="task-content">
+                                <div class="task-main">撰写 <strong>Book Review 书评</strong></div>
+                                <div class="task-detail">
+                                    书评需包含：<br>
+                                    • A short summary of the story（故事摘要）<br>
+                                    • The character that you like/dislike and why（喜欢/不喜欢的角色及原因）<br>
+                                    • How do you like/dislike the book?（对这本书的评价）<br>
+                                    • Do you want to recommend the book to people and why?（是否推荐及理由）
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">2. 写作任务 Writing</h3>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <span class="task-number">a</span>
+                            <div class="task-content">
+                                <div class="task-main">Keep a diary 写日记 - 每周 <strong>2篇</strong>，持续 <strong>6周</strong>（共12篇）</div>
+                                <div class="task-detail">
+                                    要求：<br>
+                                    • Please indicate the <strong>date, weather</strong>（标注日期和天气）<br>
+                                    • 每篇 <strong>at least one paragraph</strong>（至少一段）<br>
+                                    • 内容建议：something interesting / impressive / horrible / unexpected / unusual<br>
+                                    （有趣的/印象深刻的/可怕的/意外的/不寻常的事情）
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">3. 制作海报 Making a Poster</h3>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <span class="task-number">a</span>
+                            <div class="task-content">
+                                <div class="task-main">为《The Secret Garden》制作 <strong>A4/A3 尺寸海报</strong></div>
+                                <div class="task-detail">
+                                    要求：<br>
+                                    • Should be <strong>coloured</strong>（彩色）<br>
+                                    • Contains <strong>name of the book, author and key words</strong> from the story<br>
+                                    （包含书名、作者和故事关键词）<br>
+                                    • <strong>Try to be creative!</strong>（发挥创意！）
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">4. 录制视频 Making a Video</h3>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <span class="task-number">a</span>
+                            <div class="task-content">
+                                <div class="task-main">录制 <strong>3-5分钟</strong> 英语视频（含音频 with your audio record）</div>
+                                <div class="task-detail">
+                                    可选主题（任选其一）：<br>
+                                    • An English <strong>interview</strong> for the people you know well（英语采访）<br>
+                                    • A <strong>presentation</strong> for the place you visit（旅行地点介绍）<br>
+                                    • Some <strong>events and activities</strong> you take part in（活动展示）<br>
+                                    • A presentation of a <strong>new dish</strong> you learn to cook（学做新菜展示）<br><br>
+                                    <strong>Transfer the video to a USB</strong>（存入U盘）<br>
+                                    <strong>Try to be informative!</strong>（内容要有信息量！）
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-box-title">✅ 作业检查清单 Checklist</div>
+                    <div class="info-box-content">
+                        完成后请自行打勾：<br>
+                        ☐ Reading（阅读 + 生词 + 造句 + 书评）<br>
+                        ☐ Writing（12篇日记）<br>
+                        ☐ Poster（海报）<br>
+                        ☐ Video（视频 + U盘）
+                    </div>
+                </div>
+
+                <a href="英语/春季班英语寒假作业.pdf" target="_blank" class="pdf-link">查看英语作业PDF原文</a>
+            </section>
+
+            <!-- Chinese Section -->
+            <section id="chinese" class="section">
+                <div class="section-header">
+                    <div class="section-icon chinese">📝</div>
+                    <div>
+                        <h2 class="section-title">中文</h2>
+                        <div class="section-title-en">Chinese</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">1. 阅读与写作</h3>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <span class="task-number">1</span>
+                            <div class="task-content">
+                                <div class="task-main">阅读《呼兰河传》（不限版本）<span class="task-tag important">必读</span></div>
+                                <div class="task-detail">萧红 著</div>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">2</span>
+                            <div class="task-content">
+                                <div class="task-main">画出呼兰河小城的简图</div>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">3</span>
+                            <div class="task-content">
+                                <div class="task-main">给"祖父"写一封信（<strong>500-600字</strong>）</div>
+                                <div class="task-detail">
+                                    文中的"祖父"给你留下了怎样的印象？请给他写一封信，谈谈你的感受。
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">2. 硬笔书法</h3>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <span class="task-number">1</span>
+                            <div class="task-content">
+                                <div class="task-main">摘抄一首你喜欢的诗歌</div>
+                                <div class="task-detail">注：开学后交给语文老师</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="中文/中文寒假作业.pdf" target="_blank" class="pdf-link">查看中文作业PDF原文</a>
+            </section>
+
+            <!-- Math Section -->
+            <section id="math" class="section">
+                <div class="section-header">
+                    <div class="section-icon math">📐</div>
+                    <div>
+                        <h2 class="section-title">数学</h2>
+                        <div class="section-title-en">Mathematics · IGCSE 0580</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">Part 1: 准备计算器</h3>
+                    <div class="info-box">
+                        <div class="info-box-title">🔢 数学课需要用到计算器，请同学们提前准备</div>
+                        <div class="info-box-content">
+                            <strong>推荐型号：CASIO fx-999CN</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">Part 2: IG0 预习内容 - Unit 1 前两章</h3>
+
+                    <div class="chapter-box">
+                        <div class="chapter-title">Chapter 1: Review of number concepts 数的概念复习</div>
+                        <ul class="chapter-list">
+                            <li>1.1 Different types of numbers 数的类型</li>
+                            <li>1.2 Multiples and factors 倍数与因数</li>
+                            <li>1.3 Prime numbers 质数</li>
+                            <li>1.4 Working with directed numbers 有向数运算</li>
+                            <li>1.5 Powers, roots and laws of indices 幂、根与指数法则</li>
+                            <li>1.6 Order of operations 运算顺序</li>
+                            <li>1.7 Rounding and estimating 四舍五入与估算</li>
+                        </ul>
+                    </div>
+
+                    <div class="chapter-box">
+                        <div class="chapter-title">Chapter 2: Making sense of algebra 代数入门</div>
+                        <ul class="chapter-list">
+                            <li>2.1 Using letters to represent unknown values 用字母表示未知数</li>
+                            <li>2.2 Substitution 代入</li>
+                            <li>2.3 Simplifying expressions 化简表达式</li>
+                            <li>2.4 Working with brackets 括号运算</li>
+                            <li>2.5 Indices 指数</li>
+                        </ul>
+                    </div>
+
+                    <a href="数学/学习资料/IGCSE 0580.pdf" target="_blank" class="pdf-link">查看数学电子教材</a>
+                    <a href="数学/学习资料/0580 25-27年度考试大纲.pdf" target="_blank" class="pdf-link" style="margin-left: 10px;">查看考试大纲</a>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">Part 3: 阅读数学课外书（推荐）</h3>
+                    <div class="book-grid">
+                        <div class="book-item">
+                            <div class="book-emoji">🔥</div>
+                            <div class="book-title">《烧掉数学书》</div>
+                            <div class="book-author">用年轻人易于接受的语言阐释高深的数学知识和概念</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-emoji">📚</div>
+                            <div class="book-title">《学好数学并不难》</div>
+                            <div class="book-author">数学"白痴"法布尔成功逆袭的故事，证明数学是每个人都可以掌握的能力</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-emoji">🎲</div>
+                            <div class="book-title">《生活中的博弈》</div>
+                            <div class="book-author">身边事事皆博弈，学会博弈让生活更加精彩</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-emoji">☂️</div>
+                            <div class="book-title">《数学雨伞下》</div>
+                            <div class="book-author">从代数、几何到相对论，从温度计到黑洞</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">Part 4: 袋鼠数学竞赛 MK（开学后可参加）</h3>
+                    <div class="original-content">
+                        <div class="original-content-header">📜 竞赛介绍</div>
+                        <p>袋鼠竞赛按年级划分为<strong>6个等级</strong>：</p>
+                        <p>• Level 1-2：对应1-4年级，共24题，总分120分</p>
+                        <p>• Level 3-6：对应5-12年级，共30题，总分150分</p>
+                        <p>所有题目均为<strong>选择题</strong>，采用阶梯计分制。考试时长统一为<strong>75分钟</strong>，提供中英双语试卷。</p>
+                        <p style="margin-top: 15px;"><strong style="color: #dc2626;">PS：IG0新生建议参加等级C的考试</strong>（5-6年级难度）</p>
+                        <p>Level C考点：勾股定理应用、圆与多边形面积、多面体体积、线性方程组、概率统计、行程问题等</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">Part 5: 摘抄数学专有词汇并背诵</h3>
+                    <p style="font-size: 14px; color: var(--color-text-light); margin-bottom: 15px;">
+                        从数学书上摘抄与数学相关的专有词汇，方便开学后更快适应英文题目、课本和讲义。
+                    </p>
+                    <p style="font-size: 14px; margin-bottom: 10px;"><strong>示例词汇：</strong></p>
+                    <div class="vocab-categories">
+                        <span class="vocab-tag">powers 幂</span>
+                        <span class="vocab-tag">first term 首项</span>
+                        <span class="vocab-tag">successive term 后继项</span>
+                        <span class="vocab-tag">total index 总指数</span>
+                        <span class="vocab-tag">coefficients 系数</span>
+                        <span class="vocab-tag">pattern 规律</span>
+                        <span class="vocab-tag">Pascal's triangle 帕斯卡三角</span>
+                    </div>
+                </div>
+
+                <a href="数学/上海赫贤高中IG 0580数学作业指南.pdf" target="_blank" class="pdf-link">查看数学作业指南PDF原文</a>
+            </section>
+
+            <!-- Physics Section -->
+            <section id="physics" class="section">
+                <div class="section-header">
+                    <div class="section-icon physics">⚡</div>
+                    <div>
+                        <h2 class="section-title">物理</h2>
+                        <div class="section-title-en">Physics · Combined Science 0653</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">课程说明</h3>
+                    <div class="original-content">
+                        <div class="original-content-header">📜 原文内容</div>
+                        <p><strong>0653 Combined Science</strong> 包括物理、化学、生物三门学科。</p>
+                        <p>其中物理学科会学习以下内容：</p>
+                    </div>
+
+                    <div class="chapter-box" style="margin-top: 20px;">
+                        <div class="chapter-title">物理学科内容</div>
+                        <ul class="chapter-list">
+                            <li><strong>P1</strong> - Motion, forces and energy 运动、力与能量</li>
+                            <li><strong>P2</strong> - Thermal physics 热学</li>
+                            <li><strong>P3</strong> - Waves 波</li>
+                            <li><strong>P4</strong> - Electricity 电学</li>
+                            <li><strong>P5</strong> - Space physics 天体物理</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-title">💡 提示</div>
+                        <div class="info-box-content">
+                            PPA物理和体制内初中物理学科的很多知识点重合，假期预习可以从以下两方面进行。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">寒假预习任务</h3>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <span class="task-number">1</span>
+                            <div class="task-content">
+                                <div class="task-main">熟悉学科词汇</div>
+                                <div class="task-detail">见附件1：物理词汇表（Excel格式）</div>
+                                <a href="综合科学-物理/学习资料/附件1- 物理词汇.xlsx" target="_blank" class="pdf-link" style="background: linear-gradient(135deg, #51cf66, #40c057);">下载物理词汇表</a>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">2</span>
+                            <div class="task-content">
+                                <div class="task-main">熟悉学科知识框架</div>
+                                <div class="task-detail">见附件2：考试大纲（物理在第44-59页）</div>
+                                <a href="综合科学-物理/学习资料/附件2-0653 考试大纲.pdf" target="_blank" class="pdf-link">查看考试大纲</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="综合科学-物理/0653 物理学科预习说明.pdf" target="_blank" class="pdf-link">查看物理预习说明PDF原文</a>
+                <a href="综合科学-物理/学习资料/0653 IGCSE Combined Science.pdf" target="_blank" class="pdf-link" style="margin-left: 10px;">查看电子教材</a>
+            </section>
+
+            <!-- Chemistry Section -->
+            <section id="chemistry" class="section">
+                <div class="section-header">
+                    <div class="section-icon chemistry">🧪</div>
+                    <div>
+                        <h2 class="section-title">化学</h2>
+                        <div class="section-title-en">Chemistry</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">作业说明</h3>
+                    <div class="original-content">
+                        <div class="original-content-header">📜 原文内容</div>
+                        <p>完成化学<strong>第1章</strong>和<strong>第2章</strong>预习，每个章节建议以下步骤：</p>
+                    </div>
+
+                    <ul class="task-list" style="margin-top: 20px;">
+                        <li class="task-item">
+                            <span class="task-number">1</span>
+                            <div class="task-content">
+                                <div class="task-main">阅读"化学词汇与定义"</div>
+                                <div class="task-detail">做到<strong>会读、会写</strong>单词，<strong>理解并背诵</strong>定义</div>
+                                <a href="综合科学-化学/学习资料/化学词汇及定义ch1-2.pdf" target="_blank" class="pdf-link">查看化学词汇与定义</a>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">2</span>
+                            <div class="task-content">
+                                <div class="task-main">阅读"化学课本"</div>
+                                <div class="task-detail">理解内容，思考课本中的提问，尝试<strong>口头回答</strong>每章节课后问题</div>
+                                <a href="综合科学-化学/学习资料/化学chapters1-2.pdf" target="_blank" class="pdf-link">查看化学课本Ch1-2</a>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">3</span>
+                            <div class="task-content">
+                                <div class="task-main">阅读"化学考试大纲"</div>
+                                <div class="task-detail">掌握考试<strong>重难点</strong>及要求</div>
+                                <a href="综合科学-化学/学习资料/化学考试大纲ch1-2.pdf" target="_blank" class="pdf-link">查看化学考试大纲</a>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">4</span>
+                            <div class="task-content">
+                                <div class="task-main">完成"化学练习册"习题<span class="task-tag important">需上交</span></div>
+                                <a href="综合科学-化学/学习资料/化学练习册ch1-2.pdf" target="_blank" class="pdf-link">查看化学练习册</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="综合科学-化学/化学作业说明.pdf" target="_blank" class="pdf-link">查看化学作业说明PDF原文</a>
+            </section>
+
+            <!-- Biology Section -->
+            <section id="biology" class="section">
+                <div class="section-header">
+                    <div class="section-icon biology">🌿</div>
+                    <div>
+                        <h2 class="section-title">生物</h2>
+                        <div class="section-title-en">Biology · Combined Science</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">寒假作业 - 必看</h3>
+                    <div class="original-content">
+                        <div class="original-content-header">📜 原文内容</div>
+                        <p><strong>亲爱的同学们：欢迎来到上海赫贤学校学习！</strong></p>
+                        <p>你们在新学期会学习Combined-science的Biology，为了新学期更好的学习和适应，你们寒假需要完成下面五条作业：</p>
+                    </div>
+
+                    <ul class="task-list" style="margin-top: 20px;">
+                        <li class="task-item">
+                            <span class="task-number">1</span>
+                            <div class="task-content">
+                                <div class="task-main">预习教材中Combined-science biology的<strong>前五章（B1-B5）</strong>知识</div>
+                                <a href="综合科学-生物/学习资料/文件2-生物学习内容.pdf" target="_blank" class="pdf-link">查看生物电子教材</a>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">2</span>
+                            <div class="task-content">
+                                <div class="task-main">根据教材完成<strong>前五章（B1-B5）</strong>练习题<span class="task-tag important">需上交</span></div>
+                                <a href="综合科学-生物/学习资料/文件3-生物练习册作业.pdf" target="_blank" class="pdf-link">查看生物练习册</a>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">3</span>
+                            <div class="task-content">
+                                <div class="task-main">学习并<strong>记忆</strong>新学期生物关键单词</div>
+                                <a href="综合科学-生物/学习资料/文件4-生物 key words.pdf" target="_blank" class="pdf-link">查看生物Key Words</a>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">4</span>
+                            <div class="task-content">
+                                <div class="task-main">了解考试大纲和考试要求</div>
+                                <a href="综合科学-生物/学习资料/文件5-生物大纲-4.5年.pdf" target="_blank" class="pdf-link">查看生物考试大纲</a>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">5</span>
+                            <div class="task-content">
+                                <div class="task-main">观看BBC的纪录片</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">BBC 纪录片推荐</h3>
+                    <div class="video-grid">
+                        <div class="video-card">
+                            <div class="video-icon">🌍</div>
+                            <div class="video-title">七个世界，一个星球</div>
+                            <div class="video-desc">Seven Worlds, One Planet - 探索地球七大洲的壮丽自然与独特生命</div>
+                            <a href="https://www.bilibili.com/bangumi/play/ss68495" target="_blank" class="video-link">前往B站观看 →</a>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-icon">🌱</div>
+                            <div class="video-title">绿色星球</div>
+                            <div class="video-desc">The Green Planet - 揭示植物王国的隐秘世界</div>
+                            <a href="https://www.bilibili.com/bangumi/play/ss40926" target="_blank" class="video-link">前往B站观看 →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="original-content" style="margin-top: 20px;">
+                    <p style="text-align: center;"><strong>希望你们有一个快乐充实的寒假，新学期见！</strong><br>Wish you have a merry vacation, see you!</p>
+                </div>
+
+                <a href="综合科学-生物/文件1-生物寒假作业-必看.pdf" target="_blank" class="pdf-link">查看生物作业说明PDF原文</a>
+            </section>
+
+            <!-- Economics Section -->
+            <section id="economics" class="section">
+                <div class="section-header">
+                    <div class="section-icon economics">📊</div>
+                    <div>
+                        <h2 class="section-title">经济</h2>
+                        <div class="section-title-en">Economics · IGCSE 0455</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">01) 阅读教材 Section 1</h3>
+                    <div class="original-content">
+                        <div class="original-content-header">📜 教材内容：IGCSE Economics - Susan Grant</div>
+                        <p><strong>Section 1: The basic economic problem 基本经济问题</strong></p>
+                    </div>
+
+                    <div class="chapter-box" style="margin-top: 15px;">
+                        <div class="chapter-title">需要阅读的章节</div>
+                        <ul class="chapter-list">
+                            <li><strong>Chapter 1:</strong> The nature of the economic problem 经济问题的本质</li>
+                            <li><strong>Chapter 2:</strong> The factors of production 生产要素</li>
+                            <li><strong>Chapter 3:</strong> Opportunity cost 机会成本</li>
+                            <li><strong>Chapter 4:</strong> Production possibility curve 生产可能性曲线</li>
+                        </ul>
+                    </div>
+
+                    <a href="经济/学习资料/Susan IG.pdf" target="_blank" class="pdf-link">查看经济学电子教材</a>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">02) 整理、翻译 Key Economics Terms<span class="task-tag important">需上交</span></h3>
+                    <div class="original-content">
+                        <div class="original-content-header">📜 要求</div>
+                        <p>整理、翻译对应章节的key economics terms（Chapter 1-4），并<strong>摘抄在笔记本上</strong>。</p>
+                        <p style="margin-top: 10px;"><strong>示例：</strong></p>
+                        <p><strong>Resources:</strong> factors used to produce goods and services<br>
+                        资源：用来生产商品和服务的要素</p>
+                        <p style="margin-top: 15px; color: #dc2626;"><strong>PS: 摘抄key terms及翻译的笔记本，开学需要交，并作为平时作业成绩的一部分。</strong></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">03) 制作两个思维导图 Mind Maps</h3>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <span class="task-number">1</span>
+                            <div class="task-content">
+                                <div class="task-main">Chapter 2: <strong>The factors of production</strong> 生产要素</div>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-number">2</span>
+                            <div class="task-content">
+                                <div class="task-main">Chapter 4: <strong>Production possibility curve</strong> 生产可能性曲线</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">04) 完成 Worksheet 练习题</h3>
+                    <div class="original-content">
+                        <div class="original-content-header">📜 Worksheet 1.1 The basic economic problem</div>
+                        <p>练习题包含：</p>
+                        <p>1. Match the key terms and economic concepts with their explanations（术语配对）</p>
+                        <p>2. Using examples, explain the difference between a human need and a human want（需求vs欲望）</p>
+                        <p>3. What are factors of production?（生产要素）</p>
+                        <p>4. What is the basic economic problem?（基本经济问题）</p>
+                        <p>5. Explain why the basic economic problem will even affect Bill Gates（案例分析）</p>
+                        <p>6-7. Opportunity cost and production possibility curve questions（机会成本和PPC）</p>
+                    </div>
+                    <a href="经济/上海赫贤高中IG经济作业指南.pdf" target="_blank" class="pdf-link">查看完整Worksheet</a>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">选读一本书或纪录片</h3>
+                    <div class="book-grid">
+                        <div class="book-item">
+                            <div class="book-emoji">🧠</div>
+                            <div class="book-title">Thinking Fast and Slow</div>
+                            <div class="book-author">Daniel Kahneman</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-emoji">🍽️</div>
+                            <div class="book-title">Free Lunch</div>
+                            <div class="book-author">David Smith</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-emoji">📈</div>
+                            <div class="book-title">Freakonomics</div>
+                            <div class="book-author">Steven Levitt</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-emoji">🥛</div>
+                            <div class="book-title">《牛奶可乐经济学》</div>
+                            <div class="book-author">生活中的经济学</div>
+                        </div>
+                    </div>
+
+                    <h4 style="margin-top: 30px; margin-bottom: 15px; font-size: 15px; color: var(--color-navy);">纪录片推荐</h4>
+                    <div class="video-grid">
+                        <div class="video-card">
+                            <div class="video-icon">💰</div>
+                            <div class="video-title">Becoming Warren Buffett</div>
+                            <div class="video-desc">2017 - 了解"股神"巴菲特的投资哲学与人生智慧</div>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-icon">🏦</div>
+                            <div class="video-title">Inside Job</div>
+                            <div class="video-desc">深入剖析2008年金融危机的成因</div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="经济/上海赫贤高中IG经济作业指南.pdf" target="_blank" class="pdf-link">查看经济作业指南PDF原文</a>
+                <a href="经济/学习资料/0455_y27-29_sy.pdf" target="_blank" class="pdf-link" style="margin-left: 10px;">查看考试大纲</a>
+            </section>
+
+            <!-- Geography Section -->
+            <section id="geography" class="section">
+                <div class="section-header">
+                    <div class="section-icon geography">🌍</div>
+                    <div>
+                        <h2 class="section-title">地理</h2>
+                        <div class="section-title-en">Geography · IGCSE 2027-2029</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">一、地理各章节单词背诵<span class="task-tag important">返校默写</span></h3>
+                    <p style="font-size: 14px; color: var(--color-text);">返校后，将对部分章节进行单词默写。</p>
+                    <a href="地理/学习资料/01-IG Geography Vocab-Update.pdf" target="_blank" class="pdf-link">查看地理词汇表</a>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">二、地理 2027-2029 大纲预览</h3>
+                    <div class="original-content">
+                        <div class="original-content-header">📜 要求</div>
+                        <p>请预览考试大纲及各个单元的具体知识点，<strong>全面了解所需掌握的核心内容</strong>，以便做好充分的预习准备。</p>
+                        <p style="margin-top: 10px;">因版权问题，如需查阅电子版地理教材，请查收附件03。</p>
+                    </div>
+                    <a href="地理/学习资料/02-IG Geography Syllabus 2027-2029.pdf" target="_blank" class="pdf-link">查看考试大纲</a>
+                    <a href="地理/学习资料/03-IG Geography 2025.pdf" target="_blank" class="pdf-link" style="margin-left: 10px;">查看电子教材</a>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">三、完成 "Being Organised" 调查问卷<span class="task-tag important">需上交</span></h3>
+                    <div class="original-content">
+                        <div class="original-content-header">📜 问卷内容</div>
+                        <p><strong>Being organised has many benefits</strong> - 组织能力的好处：</p>
+                        <p>• helps you to PRIORITISE 帮助你确定优先级</p>
+                        <p>• helps you to FOCUS 帮助你集中注意力</p>
+                        <p>• improves TIME MANAGEMENT 改善时间管理</p>
+                        <p>• reduces STRESS 减少压力</p>
+                        <p>• increases PRODUCTIVITY 提高效率</p>
+                        <p>• increases CONFIDENCE 增加自信</p>
+                        <p style="margin-top: 15px;"><strong>How organised are you?</strong> 你有多有组织性？</p>
+                        <p>问卷将帮助你评估自己的学习习惯，分为A类（有组织）和B类（需改进）。</p>
+                        <p style="margin-top: 10px; font-style: italic;">"If you do some work each day, rather than leaving it all to the last minute, you will feel more in control."</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">四、地理 Case Study 总结（可选）</h3>
+                    <div class="original-content">
+                        <div class="original-content-header">📜 说明</div>
+                        <p>地理共分为<strong>10个章节</strong>，每个章节的最后都会有Case study—案例分析。</p>
+                        <p>如有时间，请根据模板，对感兴趣的章节完成对问题的摘抄，或者自行收集信息。</p>
+                        <p>如果引用资料，请注明引用的出处（例：BBC news + 网站链接）</p>
+                    </div>
+
+                    <h4 style="margin-top: 20px; margin-bottom: 15px; font-size: 15px; color: var(--color-navy);">Case Study 参考资源链接</h4>
+                    <div class="book-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));">
+                        <div class="book-item">
+                            <div class="book-emoji">🌊</div>
+                            <div class="book-title">River Flooding</div>
+                            <div class="book-author">英国洪水案例 2019</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-emoji">🏖️</div>
+                            <div class="book-title">Coastal Erosion</div>
+                            <div class="book-author">Holderness海岸</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-emoji">🌳</div>
+                            <div class="book-title">Ecosystems</div>
+                            <div class="book-author">马来西亚雨林砍伐</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-emoji">🏚️</div>
+                            <div class="book-title">Earthquake</div>
+                            <div class="book-author">2011日本地震</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-emoji">🌋</div>
+                            <div class="book-title">Volcano</div>
+                            <div class="book-author">樱岛火山</div>
+                        </div>
+                        <div class="book-item">
+                            <div class="book-emoji">❄️</div>
+                            <div class="book-title">Climate Change</div>
+                            <div class="book-author">Beast from the East</div>
+                        </div>
+                    </div>
+
+                    <div class="chapter-box" style="margin-top: 20px;">
+                        <div class="chapter-title">Case Study 模板格式</div>
+                        <ul class="chapter-list">
+                            <li><strong>Location</strong> - 在哪里发生的</li>
+                            <li><strong>When</strong> - 什么时间发生的</li>
+                            <li><strong>Impacts</strong> - 有什么影响</li>
+                            <li><strong>Responses</strong> - 有什么处理措施</li>
+                            <li><strong>References</strong> - 引用网站链接/资料</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="地理/上海赫贤高中4.5年地理寒假作业.pdf" target="_blank" class="pdf-link">查看地理作业PDF原文（含问卷和Case Study模板）</a>
+            </section>
+
+            <!-- Contacts Section -->
+            <section id="contacts" class="section">
+                <div class="section-header">
+                    <div class="section-icon contacts">👥</div>
+                    <div>
+                        <h2 class="section-title">教师联系方式</h2>
+                        <div class="section-title-en">Teacher Contacts</div>
+                    </div>
+                </div>
+
+                <div class="info-box" style="margin-bottom: 30px;">
+                    <div class="info-box-title">📧 温馨提示</div>
+                    <div class="info-box-content">
+                        如果学生需要求助解决任何学习问题，或对学科作业有疑问，请发送邮件咨询学科组长。
+                        <strong>假期期间，老师可能无法及时回复邮件，请见谅。</strong>
+                    </div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-avatar english">📖</div>
+                        <div class="contact-info">
+                            <h4>英语 English</h4>
+                            <p>计老师 <a href="mailto:ji.helen@hdschools.org">ji.helen@hdschools.org</a></p>
+                            <p>朱老师 <a href="mailto:zhu.angela@hdschools.org">zhu.angela@hdschools.org</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-avatar chinese">📝</div>
+                        <div class="contact-info">
+                            <h4>中文 Chinese</h4>
+                            <p>牛老师 <a href="mailto:niu.karida@hdschools.org">niu.karida@hdschools.org</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-avatar math">📐</div>
+                        <div class="contact-info">
+                            <h4>数学 Mathematics</h4>
+                            <p>郭老师 <a href="mailto:guo.phoebe@hdschools.org">guo.phoebe@hdschools.org</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-avatar physics">⚡</div>
+                        <div class="contact-info">
+                            <h4>物理 Physics</h4>
+                            <p>陈老师 <a href="mailto:chen.claire@hdschools.org">chen.claire@hdschools.org</a></p>
+                            <p>刘老师 <a href="mailto:liu.richard@hdschools.org">liu.richard@hdschools.org</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-avatar chemistry">🧪</div>
+                        <div class="contact-info">
+                            <h4>化学 Chemistry</h4>
+                            <p>卢老师 <a href="mailto:lu.grace@hdschools.org">lu.grace@hdschools.org</a></p>
+                            <p>欧阳老师 <a href="mailto:ouyang.jessica@hdschools.org">ouyang.jessica@hdschools.org</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-avatar biology">🌿</div>
+                        <div class="contact-info">
+                            <h4>生物 Biology</h4>
+                            <p>刘老师 <a href="mailto:Liu.Vicky@hdschools.org">Liu.Vicky@hdschools.org</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-avatar economics">📊</div>
+                        <div class="contact-info">
+                            <h4>经济 & 商科</h4>
+                            <p>陶老师 <a href="mailto:tao.elline@hdschools.org">tao.elline@hdschools.org</a></p>
+                            <p>吴老师 <a href="mailto:wu.candice@hdschools.org">wu.candice@hdschools.org</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-avatar geography">🌍</div>
+                        <div class="contact-info">
+                            <h4>地理 Geography</h4>
+                            <p>李老师 <a href="mailto:Li.Chen@hdschools.org">Li.Chen@hdschools.org</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">上海赫贤学校高中部</div>
+                    <div class="footer-info" style="margin-top: 10px;">HD Shanghai High School</div>
+                </div>
+                <div class="footer-info" style="text-align: right;">
+                    上海市松江区茸北路336号<br>
+                    336 Rongbei Rd, Songjiang District, Shanghai<br>
+                    Tel: +86 21 2309 1039 · <a href="https://hdschools.org" target="_blank">hdschools.org</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+        });
+
+        // Active nav link
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-20% 0px -60% 0px' });
+
+        sections.forEach(section => observer.observe(section));
+
+        // Smooth scroll
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                document.querySelector(targetId)?.scrollIntoView({ behavior: 'smooth' });
+                document.querySelector('.nav').classList.remove('open');
+            });
+        });
+
+        // Card animations
+        const cards = document.querySelectorAll('.card');
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        cards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            cardObserver.observe(card);
+        });
+    </script>
+</body>
+</html>

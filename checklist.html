@@ -954,19 +954,6 @@
                 flex-direction: row;
                 align-items: center;
             }
-
-            /* 移动端 tooltip 显示在上方，避免被下面内容遮挡 */
-            .badge-tooltip {
-                top: auto;
-                bottom: calc(100% + 12px);
-            }
-
-            .badge-tooltip::after {
-                top: 100%;
-                bottom: auto;
-                border-top-color: var(--text-primary);
-                border-bottom-color: transparent;
-            }
         }
     </style>
 </head>

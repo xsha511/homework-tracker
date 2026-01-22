@@ -399,8 +399,8 @@
             try {
                 const loadingTask = pdfjsLib.getDocument({
                     url: url,
-                    rangeChunkSize: 65536, // 64KB chunks for lazy loading
-                    disableAutoFetch: true, // 禁用自动获取，实现真正的懒加载
+                    rangeChunkSize: 65536,
+                    disableAutoFetch: true,
                     disableStream: false
                 });
 
@@ -408,6 +408,8 @@
                     if (progress.total > 0) {
                         const percent = Math.round((progress.loaded / progress.total) * 100);
                         loadingProgress.textContent = `加载中 ${percent}%`;
+                    } else {
+                        loadingProgress.textContent = `已加载 ${Math.round(progress.loaded / 1024)} KB`;
                     }
                 };
 
@@ -415,15 +417,19 @@
                 totalPagesSpan.textContent = pdfDoc.numPages;
                 pageInput.max = pdfDoc.numPages;
 
-                // 创建所有页面的占位符
+                // 只获取第一页的尺寸，用于估算其他页面
+                const firstPage = await pdfDoc.getPage(1);
+                defaultViewport = firstPage.getViewport({ scale: currentScale });
+
+                // 用统一尺寸创建占位符（不获取每页的实际尺寸）
                 for (let i = 1; i <= pdfDoc.numPages; i++) {
                     createPagePlaceholder(i);
                 }
 
                 loadingOverlay.classList.add('hidden');
 
-                // 初始渲染可见页面
-                renderVisiblePages();
+                // 立即渲染第一页
+                await renderPage(1);
 
                 // 监听滚动以懒加载
                 window.addEventListener('scroll', debounce(renderVisiblePages, 100));
@@ -435,20 +441,19 @@
             }
         }
 
-        // 创建页面占位符
-        async function createPagePlaceholder(pageNum) {
-            const page = await pdfDoc.getPage(pageNum);
-            const viewport = page.getViewport({ scale: currentScale });
+        // 默认视口尺寸
+        let defaultViewport = null;
 
+        // 创建页面占位符（不加载页面数据）
+        function createPagePlaceholder(pageNum) {
             const wrapper = document.createElement('div');
             wrapper.className = 'page-wrapper';
             wrapper.id = `page-${pageNum}`;
-            wrapper.style.width = viewport.width + 'px';
-            wrapper.style.height = viewport.height + 'px';
+            wrapper.style.width = defaultViewport.width + 'px';
+            wrapper.style.height = defaultViewport.height + 'px';
             wrapper.dataset.pageNum = pageNum;
 
-            // 占位符内容
-            wrapper.innerHTML = `<div class="page-loading" style="width:${viewport.width}px;height:${viewport.height}px;">第 ${pageNum} 页</div>`;
+            wrapper.innerHTML = `<div class="page-loading" style="width:${defaultViewport.width}px;height:${defaultViewport.height}px;">第 ${pageNum} 页</div>`;
 
             container.appendChild(wrapper);
         }

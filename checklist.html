@@ -1469,6 +1469,51 @@
             }
         }
 
+        async function loadFromSupabase() {
+            if (!supabaseClient) return false;
+
+            try {
+                // 加载任务进度
+                const { data: progressData, error: progressError } = await supabaseClient
+                    .from('progress')
+                    .select('task_id')
+                    .eq('user_id', USER_ID)
+                    .eq('completed', true);
+
+                if (progressError) throw progressError;
+
+                if (progressData && progressData.length > 0) {
+                    completedTasks = new Set(progressData.map(p => p.task_id));
+                }
+
+                // 加载用户统计
+                const { data: statsData, error: statsError } = await supabaseClient
+                    .from('user_stats')
+                    .select('*')
+                    .eq('user_id', USER_ID)
+                    .single();
+
+                if (statsError && statsError.code !== 'PGRST116') throw statsError;
+
+                if (statsData) {
+                    userStats = {
+                        level: statsData.level || 1,
+                        streak_days: statsData.streak_days || 0,
+                        last_active: statsData.last_active,
+                        badges: statsData.badges || {},
+                        total_completed: statsData.total_completed || 0
+                    };
+                }
+
+                saveToStorage();
+                console.log('从云端加载成功');
+                return true;
+            } catch (e) {
+                console.warn('云端加载失败，使用本地数据', e);
+                return false;
+            }
+        }
+
         function saveToStorage() {
             localStorage.setItem('hd_homework_progress', JSON.stringify([...completedTasks]));
             localStorage.setItem('hd_homework_stats', JSON.stringify(userStats));

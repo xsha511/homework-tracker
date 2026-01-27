@@ -1952,57 +1952,57 @@
 
             // ===== 学科专属 =====
             // 英语达人
-            const englishTotal = subjectCompletions['英语']?.total || 0;
-            const englishDone = subjectCompletions['英语']?.completed || 0;
+            const englishTotal = subjectCompletions['english']?.total || 0;
+            const englishDone = subjectCompletions['english']?.completed || 0;
             if (englishDone >= englishTotal && englishTotal > 0) userStats.badges.english = 3;
             else if (englishDone >= 6) userStats.badges.english = 2;
             else if (englishDone >= 3) userStats.badges.english = 1;
 
             // 中文才子
-            const chineseTotal = subjectCompletions['中文']?.total || 0;
-            const chineseDone = subjectCompletions['中文']?.completed || 0;
+            const chineseTotal = subjectCompletions['chinese']?.total || 0;
+            const chineseDone = subjectCompletions['chinese']?.completed || 0;
             if (chineseDone >= chineseTotal && chineseTotal > 0) userStats.badges.chinese = 3;
             else if (chineseDone >= 4) userStats.badges.chinese = 2;
             else if (chineseDone >= 2) userStats.badges.chinese = 1;
 
             // 数学天才
-            const mathTotal = subjectCompletions['数学']?.total || 0;
-            const mathDone = subjectCompletions['数学']?.completed || 0;
+            const mathTotal = subjectCompletions['math']?.total || 0;
+            const mathDone = subjectCompletions['math']?.completed || 0;
             if (mathDone >= mathTotal && mathTotal > 0) userStats.badges.math = 3;
             else if (mathDone >= 4) userStats.badges.math = 2;
             else if (mathDone >= 2) userStats.badges.math = 1;
 
             // 物理新星
-            const physicsTotal = subjectCompletions['综合科学-物理']?.total || 0;
-            const physicsDone = subjectCompletions['综合科学-物理']?.completed || 0;
+            const physicsTotal = subjectCompletions['physics']?.total || 0;
+            const physicsDone = subjectCompletions['physics']?.completed || 0;
             if (physicsDone >= physicsTotal && physicsTotal > 0) userStats.badges.physics = 3;
             else if (physicsDone >= 4) userStats.badges.physics = 2;
             else if (physicsDone >= 2) userStats.badges.physics = 1;
 
             // 化学大师
-            const chemTotal = subjectCompletions['综合科学-化学']?.total || 0;
-            const chemDone = subjectCompletions['综合科学-化学']?.completed || 0;
+            const chemTotal = subjectCompletions['chemistry']?.total || 0;
+            const chemDone = subjectCompletions['chemistry']?.completed || 0;
             if (chemDone >= chemTotal && chemTotal > 0) userStats.badges.chemistry = 3;
             else if (chemDone >= 6) userStats.badges.chemistry = 2;
             else if (chemDone >= 3) userStats.badges.chemistry = 1;
 
             // 生物专家
-            const bioTotal = subjectCompletions['综合科学-生物']?.total || 0;
-            const bioDone = subjectCompletions['综合科学-生物']?.completed || 0;
+            const bioTotal = subjectCompletions['biology']?.total || 0;
+            const bioDone = subjectCompletions['biology']?.completed || 0;
             if (bioDone >= bioTotal && bioTotal > 0) userStats.badges.biology = 3;
             else if (bioDone >= 6) userStats.badges.biology = 2;
             else if (bioDone >= 3) userStats.badges.biology = 1;
 
             // 经济学家
-            const econTotal = subjectCompletions['经济']?.total || 0;
-            const econDone = subjectCompletions['经济']?.completed || 0;
+            const econTotal = subjectCompletions['economics']?.total || 0;
+            const econDone = subjectCompletions['economics']?.completed || 0;
             if (econDone >= econTotal && econTotal > 0) userStats.badges.economics = 3;
             else if (econDone >= 6) userStats.badges.economics = 2;
             else if (econDone >= 3) userStats.badges.economics = 1;
 
             // 地理探险家
-            const geoTotal = subjectCompletions['地理']?.total || 0;
-            const geoDone = subjectCompletions['地理']?.completed || 0;
+            const geoTotal = subjectCompletions['geography']?.total || 0;
+            const geoDone = subjectCompletions['geography']?.completed || 0;
             if (geoDone >= geoTotal && geoTotal > 0) userStats.badges.geography = 3;
             else if (geoDone >= 6) userStats.badges.geography = 2;
             else if (geoDone >= 3) userStats.badges.geography = 1;

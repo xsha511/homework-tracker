@@ -1120,6 +1120,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <script>
+        // ========== Supabase 配置 ==========
+        const SUPABASE_URL = 'https://kaliqpyebqxjxbxggdyp.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImthbGlxcHllYnF4anhieGdnZHlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkwNTY1NDYsImV4cCI6MjA4NDYzMjU0Nn0.dnLCowhw12oatyMb6CF2YvRyDxw31G2ap89SJLGb9po';
+
+        let supabaseClient = null;
+        try {
+            supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        } catch (e) {
+            console.warn('Supabase 初始化失败，将使用本地存储', e);
+        }
+
+        // 固定用户 ID（家庭共享模式）
+        const USER_ID = 'family_shared';
+
         // ========== 数据配置 ==========
         const subjects = {
             english: { name: '英语', icon: '🇬🇧', color: 'english' },

@@ -1399,8 +1399,20 @@
         const startDate = new Date('2026-01-31');
 
         // ========== 初始化 ==========
-        function init() {
+        async function init() {
+            // 先加载本地缓存（保证快速显示）
             loadFromStorage();
+
+            // 尝试从云端加载最新数据
+            const cloudLoaded = await loadFromSupabase();
+            if (cloudLoaded) {
+                // 云端数据加载成功，重新渲染
+                renderDayView();
+                renderSubjectView();
+                renderBadges();
+                updateProgress();
+            }
+
             checkStreakReset(); // 检查连续打卡是否需要重置
             renderDayView();
             renderSubjectView();

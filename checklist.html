@@ -1418,7 +1418,7 @@
             }
 
             checkStreakReset(); // 检查连续打卡是否需要重置
-            checkAchievements(); // 重新计算徽章
+            checkAchievements(false); // 重新计算徽章（不弹窗）
             renderDayView();
             renderSubjectView();
             renderBadges();
@@ -1893,7 +1893,7 @@
             }).join('');
         }
 
-        function checkAchievements() {
+        function checkAchievements(showModal = true) {
             const totalCompleted = completedTasks.size;
             const totalRequired = tasks.filter(t => t.required).length;
             const completedRequired = tasks.filter(t => t.required && completedTasks.has(t.id)).length;
@@ -2019,12 +2019,14 @@
             else if (weekendCompleted >= 10) userStats.badges.weekend = 2;
             else if (weekendCompleted >= 5) userStats.badges.weekend = 1;
 
-            // 显示新徽章
-            for (const [badgeId, level] of Object.entries(userStats.badges)) {
-                if (!oldBadges[badgeId] || oldBadges[badgeId] < level) {
-                    const badge = badges.find(b => b.id === badgeId);
-                    if (badge) showAchievement(badge, level);
-                    break;
+            // 显示新徽章（仅在 showModal 为 true 时）
+            if (showModal) {
+                for (const [badgeId, level] of Object.entries(userStats.badges)) {
+                    if (!oldBadges[badgeId] || oldBadges[badgeId] < level) {
+                        const badge = badges.find(b => b.id === badgeId);
+                        if (badge) showAchievement(badge, level);
+                        break;
+                    }
                 }
             }
 

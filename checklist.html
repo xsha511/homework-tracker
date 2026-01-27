@@ -1519,6 +1519,51 @@
             localStorage.setItem('hd_homework_stats', JSON.stringify(userStats));
         }
 
+        async function saveToSupabase() {
+            if (!supabaseClient) return;
+
+            try {
+                const completedArray = [...completedTasks];
+
+                // 先删除该用户的所有进度记录
+                await supabaseClient
+                    .from('progress')
+                    .delete()
+                    .eq('user_id', USER_ID);
+
+                // 批量插入当前完成的任务
+                if (completedArray.length > 0) {
+                    const progressRows = completedArray.map(taskId => ({
+                        user_id: USER_ID,
+                        task_id: taskId,
+                        completed: true,
+                        completed_at: new Date().toISOString()
+                    }));
+
+                    await supabaseClient
+                        .from('progress')
+                        .insert(progressRows);
+                }
+
+                // 更新用户统计（upsert）
+                await supabaseClient
+                    .from('user_stats')
+                    .upsert({
+                        user_id: USER_ID,
+                        level: userStats.level,
+                        streak_days: userStats.streak_days,
+                        last_active: userStats.last_active,
+                        badges: userStats.badges,
+                        total_completed: userStats.total_completed,
+                        updated_at: new Date().toISOString()
+                    }, { onConflict: 'user_id' });
+
+                console.log('同步到云端成功');
+            } catch (e) {
+                console.warn('云端保存失败', e);
+            }
+        }
+
         function resetAllData() {
             const password = prompt('请输入密码以重置进度：');
             if (password !== '625917') {

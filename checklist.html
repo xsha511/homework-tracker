@@ -1729,6 +1729,7 @@
                 checkAchievements();
             }
             saveToStorage();
+            saveToSupabase(); // 异步同步到云端
             updateStats();
             renderDayView();
             renderSubjectView();

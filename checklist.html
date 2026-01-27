@@ -1125,10 +1125,14 @@
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImthbGlxcHllYnF4anhieGdnZHlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkwNTY1NDYsImV4cCI6MjA4NDYzMjU0Nn0.dnLCowhw12oatyMb6CF2YvRyDxw31G2ap89SJLGb9po';
 
         let supabaseClient = null;
-        try {
-            supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-        } catch (e) {
-            console.warn('Supabase 初始化失败，将使用本地存储', e);
+        if (window.supabase && window.supabase.createClient) {
+            try {
+                supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            } catch (e) {
+                console.warn('Supabase 初始化失败，将使用本地存储', e);
+            }
+        } else {
+            console.warn('Supabase SDK 未加载，将使用本地存储');
         }
 
         // 固定用户 ID（家庭共享模式）
@@ -1410,7 +1414,7 @@
                 renderDayView();
                 renderSubjectView();
                 renderBadges();
-                updateProgress();
+                updateStats();
             }
 
             checkStreakReset(); // 检查连续打卡是否需要重置
@@ -1593,7 +1597,7 @@
             renderDayView();
             renderSubjectView();
             renderBadges();
-            updateProgress();
+            updateStats();
             saveToSupabase(); // 同步重置到云端
         }
 

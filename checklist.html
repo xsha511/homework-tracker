@@ -1221,9 +1221,9 @@
             { id: 'en_poster', subject: 'english', title: '制作《秘密花园》海报', required: true, date: '2026-02-17', time: 90,
               detail: '制作A4/A3彩色海报，包含书名、作者、关键词，发挥创意！' },
 
-            // 视频（选做）
-            { id: 'en_video', subject: 'english', title: '录制英文视频', required: false, date: '2026-02-21', time: 60,
-              detail: '【选做】录制3-5分钟英文视频：可以是采访、旅行介绍、活动记录或厨艺展示。' },
+            // 视频
+            { id: 'en_video', subject: 'english', title: '录制英文视频', required: true, date: '2026-02-21', time: 60,
+              detail: '录制3-5分钟英文视频：可以是采访、旅行介绍、活动记录或厨艺展示。存入U盘，内容要有信息量！' },
 
             // ===== 中文 =====
             // 阅读《呼兰河传》- 约7章
@@ -1247,18 +1247,18 @@
               detail: '给书中的"祖父"写一封信，谈谈你对他的印象和感受，500-600字。' },
 
             // 书法 - 每隔两天练习
-            { id: 'cn_calligraphy_1', subject: 'chinese', title: '书法练习 #1', required: true, date: '2026-02-01', time: 15,
-              detail: '硬笔书法练习15分钟，临摹字帖。' },
-            { id: 'cn_calligraphy_2', subject: 'chinese', title: '书法练习 #2', required: true, date: '2026-02-04', time: 15,
-              detail: '硬笔书法练习，注意笔画顺序。' },
-            { id: 'cn_calligraphy_3', subject: 'chinese', title: '书法练习 #3', required: true, date: '2026-02-07', time: 15,
-              detail: '硬笔书法练习。' },
-            { id: 'cn_calligraphy_4', subject: 'chinese', title: '书法练习 #4', required: true, date: '2026-02-10', time: 15,
-              detail: '硬笔书法练习。' },
-            { id: 'cn_calligraphy_5', subject: 'chinese', title: '书法练习 #5', required: true, date: '2026-02-13', time: 15,
-              detail: '硬笔书法练习。' },
-            { id: 'cn_calligraphy_6', subject: 'chinese', title: '书法练习 #6', required: true, date: '2026-02-16', time: 15,
-              detail: '硬笔书法练习。' },
+            { id: 'cn_calligraphy_1', subject: 'chinese', title: '书法练习 #1', required: false, date: '2026-02-01', time: 15,
+              detail: '【选做】硬笔书法练习15分钟，临摹字帖。' },
+            { id: 'cn_calligraphy_2', subject: 'chinese', title: '书法练习 #2', required: false, date: '2026-02-04', time: 15,
+              detail: '【选做】硬笔书法练习，注意笔画顺序。' },
+            { id: 'cn_calligraphy_3', subject: 'chinese', title: '书法练习 #3', required: false, date: '2026-02-07', time: 15,
+              detail: '【选做】硬笔书法练习。' },
+            { id: 'cn_calligraphy_4', subject: 'chinese', title: '书法练习 #4', required: false, date: '2026-02-10', time: 15,
+              detail: '【选做】硬笔书法练习。' },
+            { id: 'cn_calligraphy_5', subject: 'chinese', title: '书法练习 #5', required: false, date: '2026-02-13', time: 15,
+              detail: '【选做】硬笔书法练习。' },
+            { id: 'cn_calligraphy_6', subject: 'chinese', title: '书法练习 #6', required: false, date: '2026-02-16', time: 15,
+              detail: '【选做】硬笔书法练习。' },
             { id: 'cn_poem', subject: 'chinese', title: '书法作品：摘抄诗歌', required: true, date: '2026-02-20', time: 30,
               detail: '选一首喜欢的诗歌，用硬笔书法工整抄写，作为最终作品交给老师。' },
 
@@ -1279,8 +1279,19 @@
               detail: '预习1.6 Order of operations (p.26-30)，BODMAS法则。' },
             { id: 'math_1_7', subject: 'math', title: '预习1.7 舍入与估算', required: true, date: '2026-02-18', time: 45,
               detail: '预习1.7 Rounding and estimating (p.31-36)，significant figures。' },
+            // Chapter 2: Making sense of algebra 代数入门
+            { id: 'math_2_1', subject: 'math', title: '预习2.1 用字母表示未知数', required: true, date: '2026-02-19', time: 45,
+              detail: '预习2.1 Using letters to represent unknown values (p.40-42)，理解代数表达式的基本概念，做课后例题。' },
+            { id: 'math_2_2', subject: 'math', title: '预习2.2 代入', required: true, date: '2026-02-19', time: 40,
+              detail: '预习2.2 Substitution (p.43-46)，练习将数值代入代数表达式求值。' },
+            { id: 'math_2_3', subject: 'math', title: '预习2.3 化简表达式', required: true, date: '2026-02-20', time: 50,
+              detail: '预习2.3 Simplifying expressions (p.47-52)，学习合并同类项、化简代数式。' },
+            { id: 'math_2_4', subject: 'math', title: '预习2.4 括号运算', required: true, date: '2026-02-20', time: 45,
+              detail: '预习2.4 Working with brackets (p.53-56)，学习展开和分解括号。' },
+            { id: 'math_2_5', subject: 'math', title: '预习2.5 指数', required: true, date: '2026-02-21', time: 45,
+              detail: '预习2.5 Indices (p.57-60)，学习代数中的指数运算法则。' },
             { id: 'math_vocab', subject: 'math', title: '整理数学英文词汇', required: true, date: '2026-02-21', time: 40,
-              detail: '整理Unit 1所有数学专有词汇，英文+中文，方便开学后查阅。' },
+              detail: '整理Unit 1所有数学专有词汇（Ch1+Ch2），英文+中文，方便开学后查阅。' },
             { id: 'math_extra', subject: 'math', title: '阅读数学课外书', required: false, date: '2026-02-21', time: 60,
               detail: '【选做】阅读《烧掉数学书》《学好数学并不难》等推荐书籍。' },
 
@@ -1325,8 +1336,10 @@
               detail: '复习并背诵文件4中的生物关键词汇。' },
             { id: 'bio_exercise', subject: 'biology', title: 'B1-B5练习题', required: true, date: '2026-02-20', time: 60,
               detail: '完成文件3中B1-B5的练习题。' },
-            { id: 'bio_bbc', subject: 'biology', title: '观看BBC纪录片', required: false, date: '2026-02-21', time: 50,
-              detail: '【选做】观看《七个世界一个星球》或《绿色星球》纪录片。' },
+            { id: 'bio_syllabus', subject: 'biology', title: '了解生物考试大纲', required: true, date: '2026-02-19', time: 30,
+              detail: '阅读文件5生物大纲，了解考试要求和各章节考试重点。' },
+            { id: 'bio_bbc', subject: 'biology', title: '观看BBC纪录片', required: true, date: '2026-02-21', time: 50,
+              detail: '观看《七个世界一个星球》或《绿色星球》纪录片。' },
 
             // ===== 经济 =====
             { id: 'econ_ch1', subject: 'economics', title: 'Ch1 经济问题的本质', required: true, date: '2026-02-04', time: 40,
@@ -1371,7 +1384,7 @@
             // 学科专属
             { id: 'english', icon: '🇬🇧', name: '英语达人', levels: [3, 6, 10], desc: ['英语完成3项', '英语完成6项', '英语全完成'] },
             { id: 'chinese', icon: '📖', name: '中文才子', levels: [2, 4, 7], desc: ['中文完成2项', '中文完成4项', '中文全完成'] },
-            { id: 'math', icon: '🧮', name: '数学天才', levels: [2, 4, 6], desc: ['数学完成2项', '数学完成4项', '数学全完成'] },
+            { id: 'math', icon: '🧮', name: '数学天才', levels: [3, 7, 15], desc: ['数学完成3项', '数学完成7项', '数学全完成'] },
             { id: 'physics', icon: '⚛️', name: '物理新星', levels: [2, 4, 6], desc: ['物理完成2项', '物理完成4项', '物理全完成'] },
             { id: 'chemistry', icon: '🧪', name: '化学大师', levels: [3, 6, 10], desc: ['化学完成3项', '化学完成6项', '化学全完成'] },
             { id: 'biology', icon: '🧬', name: '生物专家', levels: [3, 6, 10], desc: ['生物完成3项', '生物完成6项', '生物全完成'] },
@@ -1970,8 +1983,8 @@
             const mathTotal = subjectCompletions['math']?.total || 0;
             const mathDone = subjectCompletions['math']?.completed || 0;
             if (mathDone >= mathTotal && mathTotal > 0) userStats.badges.math = 3;
-            else if (mathDone >= 4) userStats.badges.math = 2;
-            else if (mathDone >= 2) userStats.badges.math = 1;
+            else if (mathDone >= 7) userStats.badges.math = 2;
+            else if (mathDone >= 3) userStats.badges.math = 1;
 
             // 物理新星
             const physicsTotal = subjectCompletions['physics']?.total || 0;

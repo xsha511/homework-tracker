@@ -1,0 +1,578 @@
+{
+  "timestamp": "2026-02-17T15:31:42.276Z",
+  "progress": [
+    {
+      "id": "e6aaa45b-5baa-4e08-9320-375c0318220e",
+      "user_id": "family_shared",
+      "task_id": "math_calculator",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "732cbfc4-e6a1-42da-8686-1fcbdf953bf8",
+      "user_id": "family_shared",
+      "task_id": "phy_syllabus",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "ff368243-ec98-4af2-a43c-c90a3a325e6b",
+      "user_id": "family_shared",
+      "task_id": "en_read_1",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "1d6c968c-437b-4604-9a69-fd172b36d798",
+      "user_id": "family_shared",
+      "task_id": "en_read_2",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "8ed786d3-2400-4809-983b-1008abf71b71",
+      "user_id": "family_shared",
+      "task_id": "en_read_3",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "f372213b-78d7-4de9-97a8-e9fecbdd3eca",
+      "user_id": "family_shared",
+      "task_id": "math_1_1",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "aa12700e-9eb3-453d-969e-950d4aefe4a4",
+      "user_id": "family_shared",
+      "task_id": "math_1_2",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "3210d4f4-8443-458c-b9ca-1f9998dd4db4",
+      "user_id": "family_shared",
+      "task_id": "math_1_3",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "38000a5e-8217-407c-94d9-86a3560ee1a7",
+      "user_id": "family_shared",
+      "task_id": "bio_b1",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "6a40f569-c917-48b0-ba79-48fcfc023f6e",
+      "user_id": "family_shared",
+      "task_id": "math_1_4",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "a3124dc9-49d8-428b-992d-4baf0c2f78af",
+      "user_id": "family_shared",
+      "task_id": "math_1_5",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "d58b2447-972b-41d9-93be-9899d57feea5",
+      "user_id": "family_shared",
+      "task_id": "bio_bbc",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "08860c6c-744e-4df4-9951-c36351950e5e",
+      "user_id": "family_shared",
+      "task_id": "bio_b2",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "9687ac93-4745-46f5-8603-c4372af72c5c",
+      "user_id": "family_shared",
+      "task_id": "math_1_6",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "c6fcd5b1-dcb6-47f0-bbef-26432334f13f",
+      "user_id": "family_shared",
+      "task_id": "chem_syllabus",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "c0d1edca-6df6-4233-8e9c-e6357e6fb5df",
+      "user_id": "family_shared",
+      "task_id": "bio_b3",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "20edb83d-4d33-4b98-8c70-cd5070ec4744",
+      "user_id": "family_shared",
+      "task_id": "math_1_7",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "1a59436a-397b-451f-bca6-a3ecbbf080fe",
+      "user_id": "family_shared",
+      "task_id": "geo_questionnaire",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "69752f6e-0bcb-4c30-ba20-486a105cb8f6",
+      "user_id": "family_shared",
+      "task_id": "math_vocab",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "285492d9-aa16-4a8f-b081-46a8bbbdd0f5",
+      "user_id": "family_shared",
+      "task_id": "econ_ch1",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "2bae6779-48d0-4e72-81c1-9044aa1aa6bb",
+      "user_id": "family_shared",
+      "task_id": "econ_ch2",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "6d29230e-dd0d-4a16-b38a-a39b242026dc",
+      "user_id": "family_shared",
+      "task_id": "econ_ch3",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "02629877-cebd-4ace-a2f9-eb57f3f53664",
+      "user_id": "family_shared",
+      "task_id": "econ_ch4",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "40dc881c-8994-4a3e-a639-d12d65d0b1e5",
+      "user_id": "family_shared",
+      "task_id": "cn_read_1",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "54756933-d64b-4293-8d8f-9172d601b185",
+      "user_id": "family_shared",
+      "task_id": "en_diary_1",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "06a1b58a-5b40-4842-9529-4aec2c26b41e",
+      "user_id": "family_shared",
+      "task_id": "cn_read_2",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "83bfb0a3-0fa5-4c51-aa30-0b13561d8a09",
+      "user_id": "family_shared",
+      "task_id": "en_vocab_1",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "4d7d1add-f47f-44bd-8866-d53e9203bd72",
+      "user_id": "family_shared",
+      "task_id": "en_diary_2",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "598403f0-e28b-4741-b49f-b6ee46b15011",
+      "user_id": "family_shared",
+      "task_id": "cn_read_3",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "e5118002-603e-4f30-86e0-ff40d011c5d4",
+      "user_id": "family_shared",
+      "task_id": "en_read_4",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "1d7dcc9b-30bc-415c-aa7d-50a0b6e55b3a",
+      "user_id": "family_shared",
+      "task_id": "chem_vocab_1",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "3b31547d-3157-407c-b83e-d68edcc22467",
+      "user_id": "family_shared",
+      "task_id": "en_read_5",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "c2d15a7c-0360-4e2e-8350-893521561620",
+      "user_id": "family_shared",
+      "task_id": "en_diary_3",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "cd38a51a-3a2b-4cc3-a764-362a1f15dd66",
+      "user_id": "family_shared",
+      "task_id": "en_read_6",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "90e32dbf-7145-492d-92da-202bc3cedfb7",
+      "user_id": "family_shared",
+      "task_id": "en_vocab_2",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "d4c8fc85-d0c0-4592-bd70-ef9d5b9c9320",
+      "user_id": "family_shared",
+      "task_id": "econ_extra",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "de581a1b-e487-45e1-b20e-47949557f396",
+      "user_id": "family_shared",
+      "task_id": "geo_vocab_1",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "df2cbf64-50bd-48de-b361-d250c4266e1f",
+      "user_id": "family_shared",
+      "task_id": "en_diary_4",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "e10d3437-df93-4301-8de2-5000fbc87fd5",
+      "user_id": "family_shared",
+      "task_id": "en_read_7",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "505065a6-fe45-427e-87cc-5f6720a268be",
+      "user_id": "family_shared",
+      "task_id": "chem_ch1_read",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "41b458dd-6299-4e8b-8fee-093810d8f680",
+      "user_id": "family_shared",
+      "task_id": "en_read_8",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "94351a58-61a1-4322-9c76-b0eeddd3cd5e",
+      "user_id": "family_shared",
+      "task_id": "cn_read_4",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "7e19ce49-517b-487e-8627-7bf08b8c1b48",
+      "user_id": "family_shared",
+      "task_id": "en_vocab_3",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "ee0f284d-3e55-4079-a51f-a36fe49464e5",
+      "user_id": "family_shared",
+      "task_id": "en_read_9",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "6c8776ab-5d01-4e26-bc36-947a158d4124",
+      "user_id": "family_shared",
+      "task_id": "en_diary_5",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "5bb8cf10-7300-4f29-9669-73049bf89c54",
+      "user_id": "family_shared",
+      "task_id": "chem_ch1_ex",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "32ad5c32-8c7e-41b4-8ed7-0da9735bf047",
+      "user_id": "family_shared",
+      "task_id": "phy_vocab_1",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "75a3cb86-3740-4591-b091-09f87c873a6c",
+      "user_id": "family_shared",
+      "task_id": "econ_mindmap1",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "a849b88e-533c-4baf-a040-76afe41f24da",
+      "user_id": "family_shared",
+      "task_id": "en_diary_6",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "e1114313-a3d1-450d-bf36-9443f2f3da56",
+      "user_id": "family_shared",
+      "task_id": "geo_vocab_2",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "bc6a20cd-222b-42df-98bc-27d7b64b87aa",
+      "user_id": "family_shared",
+      "task_id": "cn_read_5",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "9e32b328-772f-44f0-94cb-9d5e75bd167c",
+      "user_id": "family_shared",
+      "task_id": "en_diary_7",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "24df27bb-7883-48da-9dbe-e6cd8aa027a9",
+      "user_id": "family_shared",
+      "task_id": "en_review",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "fddffe55-c83c-4161-87d8-1f20708611d6",
+      "user_id": "family_shared",
+      "task_id": "chem_vocab_2",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "30c12494-b902-4ea2-9286-e086a1b3f0b4",
+      "user_id": "family_shared",
+      "task_id": "bio_b4",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "3d3bb78a-9f2e-4041-87b0-c3e4bc8e82ea",
+      "user_id": "family_shared",
+      "task_id": "bio_b5",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "ed69844d-b976-4e13-86e5-31760da439cf",
+      "user_id": "family_shared",
+      "task_id": "en_diary_8",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "e2576a38-538d-4cd3-a7bf-ecf87c00f274",
+      "user_id": "family_shared",
+      "task_id": "en_sentence_1",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "b33d73f6-5177-42a4-b7f3-19efd7552de5",
+      "user_id": "family_shared",
+      "task_id": "cn_read_6",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "7f6c49f9-d1d1-46cb-9132-74b2ff63210e",
+      "user_id": "family_shared",
+      "task_id": "en_sentence_2",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "b8cd6503-5786-442f-a3ab-0a60b41f7bc5",
+      "user_id": "family_shared",
+      "task_id": "chem_ch2_read",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "10c25c30-f8ad-4958-b1f3-72b78c96a786",
+      "user_id": "family_shared",
+      "task_id": "phy_vocab_2",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "5da7d9d9-df3c-49a8-9127-31756071ffe1",
+      "user_id": "family_shared",
+      "task_id": "geo_syllabus",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "fb4c014f-4e9b-479c-b14c-5a10ab9ce9b7",
+      "user_id": "family_shared",
+      "task_id": "en_sentence_3",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "b508c099-138a-4964-878a-22f182c1f22d",
+      "user_id": "family_shared",
+      "task_id": "en_diary_9",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "82c27abc-6475-4e69-8249-55f7b3c09fbf",
+      "user_id": "family_shared",
+      "task_id": "bio_keywords",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "3a19b5e7-8367-4ce6-8a80-7cd45cf1f4a4",
+      "user_id": "family_shared",
+      "task_id": "math_extra",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    },
+    {
+      "id": "2b6300eb-6f3c-4f85-9f56-7f96e66112b8",
+      "user_id": "family_shared",
+      "task_id": "en_poster",
+      "completed": true,
+      "completed_at": "2026-02-17T15:05:08.954+00:00",
+      "created_at": "2026-02-17T15:05:09.242635+00:00"
+    }
+  ],
+  "user_stats": [
+    {
+      "id": "11f67e72-1914-49c9-a99e-20ffa0f0ce58",
+      "user_id": "family_shared",
+      "level": 1,
+      "streak_days": 2,
+      "last_active": "2026-02-17",
+      "badges": {
+        "fire": 3,
+        "math": 3,
+        "master": 1,
+        "biology": 2,
+        "chinese": 2,
+        "english": 2,
+        "halfway": 3,
+        "physics": 1,
+        "weekend": 3,
+        "required": 2,
+        "chemistry": 2,
+        "economics": 2,
+        "geography": 1,
+        "early_bird": 3,
+        "all_rounder": 3
+      },
+      "total_completed": 0,
+      "created_at": "2026-01-27T03:28:56.289979+00:00",
+      "updated_at": "2026-02-17T15:05:09.176+00:00"
+    }
+  ]
+}

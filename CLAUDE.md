@@ -23,10 +23,24 @@ python3 -m http.server 8000
 
 ### 数据存储
 
-- 任务数据内嵌在 `checklist.html` 的 `tasks[]` 数组中（207 项任务）
+- 任务数据内嵌在 `checklist.html` 的 `tasks[]` 数组中（93 项任务，84 必做 + 9 选做）
 - 用户进度通过 `localStorage` 持久化：
   - `hd_homework_progress` - 已完成任务
   - `hd_homework_stats` - 统计数据（连续打卡等）
+
+### 云端同步 (Supabase)
+
+用户进度通过 Supabase 实现多设备同步，配置在 `checklist.html` 中：
+- **URL**: `https://kaliqpyebqxjxbxggdyp.supabase.co`
+- **Anon Key**: 硬编码在 `checklist.html:1125`
+- **User ID**: `family_shared`（固定值，家庭共享模式）
+- **策略**: 写时同步（本地操作立即更新 localStorage，异步同步到 Supabase；加载时云端优先）
+
+数据库表：
+- `progress` - 任务完成记录（user_id, task_id, completed, completed_at）
+- `user_stats` - 用户统计（level, streak_days, last_active, badges, total_completed）
+
+备份：修改任务结构前，先通过 Supabase REST API 导出数据到本地 JSON 文件。
 
 ### 设计系统
 
@@ -40,6 +54,20 @@ python3 -m http.server 8000
 大型 PDF 文件托管在阿里云 OSS（已在 .gitignore 中排除）：
 - 域名：`xsha511.oss-cn-shanghai.aliyuncs.com`
 - 本地预处理版本存放在 `/pdf-linearized/`
+
+### 作业数据来源
+
+任务内容必须以老师原始 PDF 文档为准，不能仅依赖 `index.html`：
+- `英语/春季班英语寒假作业.pdf`
+- `中文/中文寒假作业.pdf`
+- `数学/上海赫贤高中IG 0580数学作业指南.pdf`
+- `综合科学-物理/0653 物理学科预习说明.pdf`
+- `综合科学-化学/化学作业说明.pdf`
+- `综合科学-生物/文件1-生物寒假作业-必看.pdf`
+- `经济/上海赫贤高中IG经济作业指南.pdf`
+- `地理/上海赫贤高中4.5年地理寒假作业.pdf`
+
+添加/修改任务时，务必核对原始 PDF 确认必做/选做状态。
 
 ## 添加/修改任务
 
